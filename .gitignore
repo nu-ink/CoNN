@@ -1,0 +1,91 @@
+# CoNN research workspace — initial, conservative Git exclusions
+# This file controls Git tracking only. It does NOT remove local files.
+# Review `git status --short --untracked-files=all` before the first commit.
+
+# Python environments (including those nested in historical projects)
+.venv/
+venv/
+env/
+ENV/
+__pypackages__/
+
+# Python caches, test caches, and build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# IDE and operating-system noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+
+# Credentials and machine-local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Large binary model/checkpoint artifacts — keep locally and register hashes
+# Explicitly approve Git LFS or external archival before uploading these.
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Large binary numerical arrays — preserve locally with manifest references
+# Remove a rule intentionally if a particular small fixture belongs in Git.
+*.npy
+*.npz
+
+# Dataset archives — preserve locally; track provenance/manifests in Git
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# IMPORTANT: Intentionally do NOT ignore CSV, JSON, Markdown, reports,
+# experiment directories, or run logs globally: they may be research evidence.
+# Do not use `git add .` until the complete staged-file list is reviewed.
+
+
+# Python virtual environments
+.venv/
+.venv_*/
+venv/
+env/
+ENV/
+
+# Python package download caches
+.pip-cache/
+.pip-cache*/
+pip-cache/
+
+# Local debug output
+/debug.log
+
+# Oversized historical Phase 2/3 diagnostic artifact
+/CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/analysis/diagnostics.csv
