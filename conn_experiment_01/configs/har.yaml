@@ -1,0 +1,17 @@
+version: experiment2_har_v1
+hidden_sizes: [64, 64]
+batch_size: 128
+total_steps: 3200
+eval_interval: 160
+learning_rates: [0.01, 0.05, 0.1]
+tuning_seeds: [30, 31, 32, 33, 34]
+replication_seeds: [300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319]
+conditions: [A, S08, S25, D, B, C]
+representations: [engineered, temporal]
+d50_start: 0.08
+d50_end: 1.0
+release_fraction: 0.7
+optimizer: sgd
+momentum: 0.0
+weight_decay: 0.0
+device: cpu

@@ -1,0 +1,6 @@
+{
+  "state": "evaluated",
+  "rows": 24,
+  "test_endpoint_evaluations_per_fit": 3,
+  "selection": "none; predefined checkpoints"
+}

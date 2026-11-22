@@ -1,0 +1,28 @@
+{
+  "stage": "pilot",
+  "seeds": [
+    3910,
+    3911
+  ],
+  "n_features": 100,
+  "groups": 5,
+  "hidden": [
+    32,
+    32
+  ],
+  "n_train": 512,
+  "n_val": 256,
+  "n_test": 2048,
+  "feature_noise": 0.3,
+  "label_flip": 0.05,
+  "total_steps": 400,
+  "batch_size": 32,
+  "eval_interval": 50,
+  "lr": 0.1,
+  "d50_start": 0.08,
+  "d50_end": 1.0,
+  "release_fraction": 0.7,
+  "practical_effect": 0.02,
+  "overhead_limit": 1.5,
+  "threads": 1
+}

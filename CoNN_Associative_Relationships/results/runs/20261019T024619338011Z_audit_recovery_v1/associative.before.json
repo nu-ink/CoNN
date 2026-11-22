@@ -1,0 +1,202 @@
+{
+  "E:\\CoNN\\CoNN_Associative_Relationships\\.pytest_cache\\.gitignore": {
+    "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd",
+    "bytes": 37,
+    "mtime_ns": 1792376889164656900
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\.pytest_cache\\CACHEDIR.TAG": {
+    "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+    "bytes": 191,
+    "mtime_ns": 1792376889165157900
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\.pytest_cache\\README.md": {
+    "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad",
+    "bytes": 302,
+    "mtime_ns": 1792376889164656900
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\.pytest_cache\\v\\cache\\lastfailed": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2,
+    "mtime_ns": 1792377098320710700
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\.pytest_cache\\v\\cache\\nodeids": {
+    "sha256": "089f16b898cf047f03aa44b3f4cffd628bbe74cec8a57a52be0732b2a69b0b45",
+    "bytes": 1487,
+    "mtime_ns": 1792377098320210300
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\audit\\inspection.json": {
+    "sha256": "b86e77101e377e9b52e1583993b51022175bd03af49181c9ac8a0663093fb827",
+    "bytes": 2558,
+    "mtime_ns": 1792377102039368600
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\audit\\normalization_history.md": {
+    "sha256": "288cd6a313d5a761eb899c3eef71b86b68018bd4cbc00ed874b6755729fe5024",
+    "bytes": 2790,
+    "mtime_ns": 1792376625326221700
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\config\\phase01.yaml": {
+    "sha256": "c8a945aa8833a7f17fd48ac0321351c3707be9eb6e8805264d4bbdeae4ae49f2",
+    "bytes": 326,
+    "mtime_ns": 1792376606236591300
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\MANIFEST.json": {
+    "sha256": "55a9ac3bf581fc334ef6269eb3232646e8fd34f947e028e5c5133039dbd3d0c0",
+    "bytes": 800,
+    "mtime_ns": 1792376865219036700
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\PROTOCOL_v2.md": {
+    "sha256": "e97d35bab3e684cd4ce09fe8dc8e8bafa22371b6f9c0c4801b1fd84eb0f01c48",
+    "bytes": 20675,
+    "mtime_ns": 1792376756378008900
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\pyproject.toml": {
+    "sha256": "a61424de363c48ede7a95f7003ed9a5bb08c3da7e2f10836639d377ea3765db6",
+    "bytes": 534,
+    "mtime_ns": 1792376609236232600
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\README.md": {
+    "sha256": "8e5de22f764acf2e5d377944deb12e2600adab6a3b4441acd580e3dd30044030",
+    "bytes": 1749,
+    "mtime_ns": 1792376763225691600
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\results\\checkpoints\\.gitkeep": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "mtime_ns": 1792376625992611800
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\results\\metrics\\.gitkeep": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "mtime_ns": 1792376626366828200
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\results\\plots\\.gitkeep": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "mtime_ns": 1792376626737519700
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\results\\relationship_maps\\.gitkeep": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "mtime_ns": 1792376627018176000
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\scripts\\__pycache__\\inspect.cpython-311.pyc": {
+    "sha256": "9a4e9976fe75e1b15229bf372455a85fca1cc53ac9f1b7301b01bb90696e421b",
+    "bytes": 846,
+    "mtime_ns": 1792377955478146100
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\scripts\\audit_recovery.py": {
+    "sha256": "6e3226623fadc9ecd30dc10f4b4fa6c29a97d3d89da8c139c8a392581893378a",
+    "bytes": 10352,
+    "mtime_ns": 1792377978187633100
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\scripts\\inspect.py": {
+    "sha256": "fdd3a3820fcd7b9c1ef4a0909fb6219f53bc32b0a7dde5f0e8f59fab4c9d2209",
+    "bytes": 587,
+    "mtime_ns": 1792377956341037300
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\__init__.py": {
+    "sha256": "251bda59e96403cc3a6871b9484c8316fa8f062b27edbcf139cc272d401f80f7",
+    "bytes": 213,
+    "mtime_ns": 1792376452955872500
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\__pycache__\\__init__.cpython-311.pyc": {
+    "sha256": "9141fdcf105ceded7aff720ee4f446686e72c2c1f7437575f8d608737d389607",
+    "bytes": 404,
+    "mtime_ns": 1792376882923075000
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\__pycache__\\data.cpython-311.pyc": {
+    "sha256": "815e1ab52fdf0c2a7edc5bbc721d4036ea095a7e0b5559b35a20fdc2496ee3ce",
+    "bytes": 16261,
+    "mtime_ns": 1792377092096136000
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\__pycache__\\gate.cpython-311.pyc": {
+    "sha256": "f64d5aeb8df70970a91bd72b599b4232daa33abec26aa8057c93ea7f8ea6e36c",
+    "bytes": 3439,
+    "mtime_ns": 1792376884675498500
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\__pycache__\\geometry.cpython-311.pyc": {
+    "sha256": "020ecc320fb9dc07518c2a949f6cd45e09356cc588c239371e173ffe8edf9739",
+    "bytes": 2466,
+    "mtime_ns": 1792376884677002500
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\__pycache__\\inspect.cpython-311.pyc": {
+    "sha256": "b00446fcde03d6d05e71b29c6f1db996bea7bde2642afaeba30a3883dd55cc89",
+    "bytes": 6752,
+    "mtime_ns": 1792377098787818200
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\__pycache__\\paths.cpython-311.pyc": {
+    "sha256": "eeafb13de124d61a0ac7582afb18c385fdf88b0c8ccb2a31ff2d47ff4569056b",
+    "bytes": 1467,
+    "mtime_ns": 1792376882929572500
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\__pycache__\\protocol.cpython-311.pyc": {
+    "sha256": "edf39f2765bdc93e4d5ee2bd9e0e4f96506eb5f020f94d3fcc7f6a5f67dc65b0",
+    "bytes": 2169,
+    "mtime_ns": 1792376882931072600
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\data.py": {
+    "sha256": "8c9d7514387df28331095a5863a849a97b3fd8ae1a68ea64cc67e110806ff7eb",
+    "bytes": 9383,
+    "mtime_ns": 1792376904115202700
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\gate.py": {
+    "sha256": "8e04a81cf316234a0790f39b07caff07a73c19ac87485a184fecafc9be49e91f",
+    "bytes": 2188,
+    "mtime_ns": 1792376470551490100
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\geometry.py": {
+    "sha256": "b8de2664ffb61aa29a9d4d5e66e7038fb9d463d140da3f337772c98411394c17",
+    "bytes": 1399,
+    "mtime_ns": 1792376477111402700
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\inspect.py": {
+    "sha256": "494e52f3b13867a3af5df4ced5376cb5b811b28c367efd940d2e97d0c1d76797",
+    "bytes": 4488,
+    "mtime_ns": 1792377976614507700
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\paths.py": {
+    "sha256": "cb82eded65c5783fb07ed8b40ec42a9b07f3a8daa1f3931367c3ec406cbce726",
+    "bytes": 680,
+    "mtime_ns": 1792376456554271100
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\protocol.py": {
+    "sha256": "beee933ce243c87c4e1cf5185ce31a66c8b827360e16b96909dbfb26d0d99cd1",
+    "bytes": 897,
+    "mtime_ns": 1792376460549118300
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\tests\\__pycache__\\test_data.cpython-311-pytest-9.1.1.pyc": {
+    "sha256": "4d684b441360e34474dacf87fc42734e57e77d94fd05e521ab10243cb898b57f",
+    "bytes": 39430,
+    "mtime_ns": 1792377091996119300
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\tests\\__pycache__\\test_gate.cpython-311-pytest-9.1.1.pyc": {
+    "sha256": "2da755eb850d45d315f9dce5390867b2f958fccb023163c0a91bb80cfabce8a7",
+    "bytes": 34828,
+    "mtime_ns": 1792376882955080900
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\tests\\__pycache__\\test_protocol.cpython-311-pytest-9.1.1.pyc": {
+    "sha256": "53a854c883de6497455ecdda518bbabef5dcf08455a428afc6b26668f92c4471",
+    "bytes": 16495,
+    "mtime_ns": 1792377093845672100
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\tests\\test_data.py": {
+    "sha256": "b01ffd473624baf5c5f783e90f4e5fd261c99a509287ded0c4029cdb5e5f8202",
+    "bytes": 5144,
+    "mtime_ns": 1792376906758845200
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\tests\\test_entrypoint.py": {
+    "sha256": "f0bc6abd1fdb3245ff70c73831b592458d215213dacbb4cba1cfa80c3c2ccef6",
+    "bytes": 1075,
+    "mtime_ns": 1792377977391328100
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\tests\\test_gate.py": {
+    "sha256": "51e29c9c881a74cc4dec3c25bc56aa37982e99bbfe6cb98cb9e77f09828fac37",
+    "bytes": 4162,
+    "mtime_ns": 1792376646371358500
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\tests\\test_protocol.py": {
+    "sha256": "67cbb8c3b0c11e9ff49ac7c43292e8c6bfa5829ad2a0d39ee4530e361480c196",
+    "bytes": 2145,
+    "mtime_ns": 1792376907360671900
+  }
+}

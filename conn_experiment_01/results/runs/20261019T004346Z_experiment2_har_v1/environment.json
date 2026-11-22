@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-19T00:52:07.097661+00:00",
+  "python": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
+  "executable": "E:\\CoNN\\conn_experiment_01\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "torch": "2.14.1+cpu",
+  "numpy": "2.4.6",
+  "pandas": "3.0.6",
+  "runtime_flags": {
+    "torch_num_threads": 1,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "workers": 6,
+  "device": "cpu",
+  "command": [
+    "E:\\CoNN\\conn_experiment_01\\src\\conn_exp\\experiment2.py",
+    "--run-dir",
+    "results/runs/20261019T004346Z_experiment2_har_v1",
+    "--workers",
+    "6"
+  ],
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "git_revision": null,
+  "source_revision": "99009c10d7a6c7840aeec6a5d22a4b36a4a2742988f2f2311207142dc92d9846"
+}

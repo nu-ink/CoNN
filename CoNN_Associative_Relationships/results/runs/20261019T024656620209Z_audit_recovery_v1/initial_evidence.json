@@ -1,0 +1,29 @@
+{
+  "classification": "Not implemented (training, context, memory); Phase 0/1 implementation and inspection exist",
+  "historical_inspection_is_not_training_log": true,
+  "prior_pytest_nodeids": [
+    "tests/test_data.py::test_archive_and_prepared_hashes_match_the_protocol",
+    "tests/test_data.py::test_development_loader_refuses_the_official_test_split",
+    "tests/test_data.py::test_experiment2_normalization_inverts_on_fit_subjects_only",
+    "tests/test_data.py::test_grouped_development_folds_cover_training_subjects_once",
+    "tests/test_data.py::test_loaders_do_not_write_into_experiment2",
+    "tests/test_data.py::test_no_training_test_subject_leakage",
+    "tests/test_data.py::test_raw_128_step_windows_exist_for_both_official_splits",
+    "tests/test_data.py::test_row_order_is_not_treated_as_overlap_provenance",
+    "tests/test_gate.py::test_effective_weight_and_original_module_detach_the_gate",
+    "tests/test_gate.py::test_gate_equals_one_at_zero_distance",
+    "tests/test_gate.py::test_gate_is_in_unit_interval_and_underflow_may_be_zero",
+    "tests/test_gate.py::test_geometry_matches_imported_coordinates",
+    "tests/test_gate.py::test_increasing_tau_does_not_decrease_gate",
+    "tests/test_gate.py::test_positive_tau_matches_imported_implementation",
+    "tests/test_gate.py::test_tau_floor_is_configurable_and_non_positive_tau_fails",
+    "tests/test_protocol.py::test_development_folds_match_the_declared_generator",
+    "tests/test_protocol.py::test_manifest_hash_matches_protocol_bytes",
+    "tests/test_protocol.py::test_protocol_states_the_research_question_and_success_rules",
+    "tests/test_protocol.py::test_tau_schedule_constants_match_the_recorded_formula"
+  ],
+  "prior_pytest_lastfailed": {},
+  "process_inventory_limitation": "PowerShell Get-CimInstance Win32_Process returned Access denied; Get-Process python* returned no rows before audit",
+  "inspection_result_models_trained_field": "literal zero in source, not an independently maintained training registry",
+  "snapshot_note": "Snapshot reflects this audit invocation. The first run preserves the original source; later runs include documented repairs."
+}

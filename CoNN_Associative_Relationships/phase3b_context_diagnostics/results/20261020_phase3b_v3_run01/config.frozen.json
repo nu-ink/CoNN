@@ -1,0 +1,102 @@
+{
+  "version": "phase3b_v3",
+  "steps": 3200,
+  "learning_rate": 0.1,
+  "batch_size": 128,
+  "seeds": [
+    400,
+    401,
+    402,
+    403,
+    404
+  ],
+  "folds": [
+    [
+      14,
+      21,
+      29
+    ],
+    [
+      6,
+      7,
+      17
+    ],
+    [
+      22,
+      23,
+      28
+    ],
+    [
+      8,
+      11,
+      26
+    ],
+    [
+      5,
+      15,
+      16
+    ],
+    [
+      3,
+      25,
+      30
+    ],
+    [
+      1,
+      19,
+      27
+    ]
+  ],
+  "hidden_sizes": [
+    64,
+    64
+  ],
+  "optimizer": "SGD",
+  "momentum": 0,
+  "weight_decay": 0,
+  "gradient_clipping": false,
+  "factor_seed": 30031,
+  "factor_draw_dtype": "float64",
+  "factor_draw_order": [
+    "ih.u",
+    "ih.v",
+    "hh.u",
+    "hh.v"
+  ],
+  "bootstrap_seed": 7000031,
+  "bootstrap_resamples": 10000,
+  "shuffled_training_offset": 6000011,
+  "evaluation_randomization_seed": 8000029,
+  "pilot_seeds": [
+    400
+  ],
+  "pilot_folds": [
+    0
+  ],
+  "pilot_conditions": [
+    "dense_C0",
+    "dense_C1",
+    "dense_C2",
+    "dense_C3",
+    "dense_C4",
+    "gaussian_C0",
+    "gaussian_C1",
+    "gaussian_C2",
+    "gaussian_C3",
+    "gaussian_C4"
+  ],
+  "pilot_steps": 3200,
+  "maximum_full_grid_fits": 525,
+  "maximum_pilot_fits": 10,
+  "maximum_logical_updates": 1712000,
+  "maximum_wall_seconds": 21600,
+  "inference_max_abs_tolerance": 1e-06,
+  "forward_delta_threshold": 1e-06,
+  "normalized_frobenius_floor": 0.0001,
+  "svd_relative_rank_tolerance": 1e-10,
+  "normalization": "frobenius_difference_divided_by_max_pair_attenuation_norm",
+  "null_quantile": 0.95,
+  "null_aggregation": "matched_seed_fold_layer_context_pair_from_gaussian_shuffled",
+  "primary": "gaussian_C4-minus-gaussian_masked",
+  "official_test_evaluations": 0
+}

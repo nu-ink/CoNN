@@ -1,0 +1,6 @@
+{
+  "state": "failed",
+  "error": "AssertionError('gate invariant failed')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\CoNN\\experiments\\experiment_04\\src\\conn_exp04\\runner.py\", line 165, in train_run\n    write_json(seed_dir / 'gate_audit.json', gates.audit())\n  File \"E:\\CoNN\\experiments\\experiment_04\\src\\conn_exp04\\core.py\", line 159, in audit\n    raise AssertionError('gate invariant failed')\nAssertionError: gate invariant failed\n",
+  "wall_seconds": 0.02066690000356175
+}

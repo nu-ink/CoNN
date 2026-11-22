@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\CoNN_Associative_Relationships\results\runs
+Exists: True
+Files: 13652
+Bytes: 20879536500
+Reason: Directory containing three audit_recovery runs that preceded the phase 2/3 grid. They are not separate scientific experiments.
+Per-file SHA-256 was not computed for this referenced tree.

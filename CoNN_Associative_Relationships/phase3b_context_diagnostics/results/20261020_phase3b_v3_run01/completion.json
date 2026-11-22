@@ -1,0 +1,83 @@
+{
+  "version": "phase3b_v3",
+  "status": "completed",
+  "grid_fits": 455,
+  "pilot_fits": 10,
+  "omitted_grid_fits": 70,
+  "training_optimizer_updates": 1488000,
+  "additional_diagnostic_optimizer_calls": 940,
+  "backend": "cpu",
+  "unit_tests_passed_distinct": 19,
+  "unit_test_runs": 2,
+  "unit_tests_failed": 0,
+  "official_test_model_evaluations": 0,
+  "finite_final_model_states": 465,
+  "execution_seconds": 4090.9380000000237,
+  "primary": {
+    "family": "primary",
+    "a": "gaussian_C4",
+    "b": "gaussian_masked",
+    "mean": 0.0021339832267019214,
+    "subject_sd": 0.005159161971100433,
+    "seed_sd": 0.002926468286497447,
+    "ci_low": 0.00011565544771546819,
+    "ci_high": 0.004446269568044705,
+    "paired_subject_dz": 0.4136298179153211,
+    "practical_threshold_reached": false,
+    "descriptive_ci_excludes_zero_positive": true
+  },
+  "gaussian_C4_level1_fits": 35,
+  "level2_pair_passes": 49,
+  "level2_pair_denominator": 175,
+  "level3_predictive_threshold_met": false,
+  "historical_preservation_passed": true,
+  "protocol_seal": {
+    "protocol_sha256": "901e57c4d5dcc9bf63b05eb297c75948698db232eec15361248f8c791157e72c",
+    "config_sha256": "044b0ad52720d3b7c234beec28d4bc416c212deca94b2b6fa657cb9a376310cf",
+    "source_manifest_sha256": "96eff6c7314032940eca43356ab4092f748ce220d1143e9fcefc47f2468900d7"
+  },
+  "final_report_sha256": "d197cde3114cd2742e9fd20215e8eddc418bdb284958791d8908e228d5bfa39b",
+  "executive_summary_sha256": "1641dfce8f9757051f7eab96cd13651ce52d5792b83a255d4b5d0a4695e592cf",
+  "reporting_repair": {
+    "resolved": true,
+    "types": [
+      "NumPy bool JSON",
+      "legacy Windows console encoding"
+    ],
+    "recovery": "execution_extensions/recovery_analysis_v2",
+    "repair_checks_passed": 6,
+    "contrast_subject_seed_csvs_byte_identical": true,
+    "optimizer_updates": 0,
+    "all_failure_evidence_preserved": true
+  },
+  "preserved_failure_evidence": {
+    "results\\failures\\1792516498883190900.json": {
+      "sha256": "ebc8453f76b3d9eae5d1d235026074127c4e0c77b982de9ec7be34976472e823",
+      "resolved_by": "recovery_analysis_v2"
+    },
+    "results\\20261020_phase3b_v3_run01\\execution_extensions\\delivery_review_v1\\failure.json": {
+      "sha256": "798072307151b788f2d45ad03a43e4533811a15f0ed9db805fc649896130cbd4",
+      "resolved_by": "delivery_review_v2"
+    },
+    "results\\20261020_phase3b_v3_run01\\execution_extensions\\finalization_driver_v1\\failure.json": {
+      "sha256": "cabf9897b3d538ab18370b3d590cb960c45f456cd098f66a298d10e70e0ed18f",
+      "resolved_by": "recovery_analysis_v2"
+    },
+    "results\\20261020_phase3b_v3_run01\\execution_extensions\\final_qa_v1\\failure.json": {
+      "sha256": "b1604ccc5ec4bad5fc795a76a975643aafac9a32c883f303cf1314554b059c2d",
+      "resolved_by": "recovery_analysis_v2"
+    },
+    "results\\20261020_phase3b_v3_run01\\execution_extensions\\forward_rank_sensitivity_v1\\failure.json": {
+      "sha256": "8733a97f42342ef59ab412e753816cb9f9f616ffb3f79a7b28a679a78b56a83f",
+      "resolved_by": "recovery_analysis_v2"
+    },
+    "results\\20261020_phase3b_v3_run01\\execution_extensions\\measured_summary_driver_v1\\failure.json": {
+      "sha256": "7ecdf985b64f9c67d672de0dcb342e79d96d742a86635dcbf7fe023a5b714eee",
+      "resolved_by": "recovery_analysis_v2"
+    },
+    "results\\20261020_phase3b_v3_run01\\execution_extensions\\recovery_analysis_v1\\failure.json": {
+      "sha256": "f0255e28d8f568c96edd4406456302707488476946bb844539e33d4b1b0f0661",
+      "resolved_by": "recovery_analysis_v2"
+    }
+  }
+}

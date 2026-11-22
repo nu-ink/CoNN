@@ -1,0 +1,11 @@
+%% Aligned versus scrambled geometry
+%% Sources: experiments/experiment_04/src/conn_exp04/{core,runner,analysis}.py
+%% Historical sources: conn_experiment_01/src/conn_exp/{gates,geometry,models,schedules}.py
+%% Verified references: core.generate_split, core.Gates.audit, conn_exp.gates.apply_row_permutation
+flowchart TB
+  A["Structured feature groups share latent measurements and interactions"] --> B["Aligned: high gate values near each hidden location"]
+  C["Same Gaussian row values"] --> D["Scrambled: seeded independent column permutation in each row"]
+  B --> E["Gates.audit: exact sorted row equality and float64 energy checks"]
+  D --> E
+  E --> F["Source assignment and topology change; row energy stays fixed"]
+  G["Negative task: permute observed columns, keep assigned coordinates"] --> H["Assigned locality loses its generative relationship"]

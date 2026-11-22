@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\conn_experiment_01\results\runs\20261019T004346Z_experiment2_har_v1\prepared
+Exists: True
+Files: 22
+Bytes: 71084497
+Reason: Prepared arrays and scalers derived from the archive.
+Per-file SHA-256 was not computed for this referenced tree.

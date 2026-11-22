@@ -1,0 +1,46 @@
+{
+  "status": "development_completed",
+  "completed_utc": "2026-10-19T03:55:40.218797+00:00",
+  "fits": 1050,
+  "completed_logical_optimizer_updates": 3360000,
+  "conditions": 10,
+  "folds": 7,
+  "engineering_seeds": 5,
+  "learning_rates_per_condition": 3,
+  "official_test_model_evaluations": 0,
+  "phase4_implemented": false,
+  "execution_attempts": [
+    {
+      "directory": "20261019T031113913449Z",
+      "stage": "first_seed",
+      "workers": 6,
+      "already_completed": 0,
+      "elapsed_seconds": 59.80991260000155,
+      "failed_attempts": 0,
+      "completion_manifest": true
+    },
+    {
+      "directory": "20261019T031630805191Z",
+      "stage": "all",
+      "workers": 6,
+      "already_completed": 42,
+      "elapsed_seconds": 457.25351079998654,
+      "failed_attempts": 1,
+      "completion_manifest": false
+    },
+    {
+      "directory": "20261019T032616400101Z",
+      "stage": "all",
+      "workers": 8,
+      "already_completed": 305,
+      "elapsed_seconds": 1329.1596151000122,
+      "failed_attempts": 0,
+      "completion_manifest": true
+    }
+  ],
+  "pngs_verified": 18,
+  "report_sha256": "37ee898cb5818d22ef83e689b0167eb403a401f6be89da539631f19935f3ab9c",
+  "successful_grid_io_retry_events": 7,
+  "final_verification_sha256": "305d6b7e84bc6783c0725cd99a2d90fa7ce431c42171e6ef7660a47ea127e7cf",
+  "limitations": "Engineering CV with fixed-scaler preprocessing overlap and selection reuse; not independent confirmation."
+}

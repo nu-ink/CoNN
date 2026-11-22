@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\conn_experiment_01\data\raw\uci_har_original.zip
+Exists: True
+Files: 1
+Bytes: 61005872
+Reason: Official UCI HAR archive. Not duplicated.
+Per-file SHA-256 was not computed for this referenced tree.

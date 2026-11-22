@@ -1,0 +1,6 @@
+{
+  "source_sha256": "7e85b4607bd23a84619e65791d1bf876bf12f16a79c8cd06f571e2769e2b72c8",
+  "no_training": true,
+  "trigger": "execution completed AND original analysis_summary.complete true",
+  "target_sha256": "42b7df642f56db1be5afa0cb860b4e3f8bd58029129440863dbe484105f997e1"
+}

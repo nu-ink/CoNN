@@ -1,0 +1,13 @@
+{
+  "grid_fits": 455,
+  "grid_updates": 1456000,
+  "pilot_fits": 10,
+  "pilot_updates": 32000,
+  "completed_fit_training_updates": 1488000,
+  "benchmark_one_step_updates": 880,
+  "gradient_sweep_one_step_updates": 42,
+  "unit_test_optimizer_updates": 18,
+  "unit_test_accounting": "two full 19-test runs; three resume cases with three updates each per run",
+  "interrupted_training_steps": 0,
+  "official_test_evaluations": 0
+}

@@ -1,0 +1,5 @@
+{
+  "max_abs_logit_difference": 2.2351741790771484e-08,
+  "atol": 1e-06,
+  "rtol": 1e-05
+}

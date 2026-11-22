@@ -1,0 +1,134 @@
+[
+  {
+    "Id": 352,
+    "CPU": 188.703125,
+    "WorkingSet64": 1202077696,
+    "PeakWorkingSet64": 1235890176
+  },
+  {
+    "Id": 9612,
+    "CPU": 0.015625,
+    "WorkingSet64": 5021696,
+    "PeakWorkingSet64": 5132288
+  },
+  {
+    "Id": 10288,
+    "CPU": 188.75,
+    "WorkingSet64": 1204879360,
+    "PeakWorkingSet64": 1231499264
+  },
+  {
+    "Id": 18228,
+    "CPU": 0.640625,
+    "WorkingSet64": 52342784,
+    "PeakWorkingSet64": 52404224
+  },
+  {
+    "Id": 20012,
+    "CPU": 188.875,
+    "WorkingSet64": 1199976448,
+    "PeakWorkingSet64": 1233088512
+  },
+  {
+    "Id": 20936,
+    "CPU": 0.015625,
+    "WorkingSet64": 4984832,
+    "PeakWorkingSet64": 5095424
+  },
+  {
+    "Id": 27724,
+    "CPU": 0.03125,
+    "WorkingSet64": 5066752,
+    "PeakWorkingSet64": 5083136
+  },
+  {
+    "Id": 27840,
+    "CPU": 0.015625,
+    "WorkingSet64": 4984832,
+    "PeakWorkingSet64": 5091328
+  },
+  {
+    "Id": 28844,
+    "CPU": 188.53125,
+    "WorkingSet64": 1199910912,
+    "PeakWorkingSet64": 1230131200
+  },
+  {
+    "Id": 29328,
+    "CPU": 0.0,
+    "WorkingSet64": 5066752,
+    "PeakWorkingSet64": 5103616
+  },
+  {
+    "Id": 33108,
+    "CPU": 2.4375,
+    "WorkingSet64": 209207296,
+    "PeakWorkingSet64": 209240064
+  },
+  {
+    "Id": 34092,
+    "CPU": 2.359375,
+    "WorkingSet64": 234061824,
+    "PeakWorkingSet64": 234061824
+  },
+  {
+    "Id": 34560,
+    "CPU": 0.0,
+    "WorkingSet64": 5070848,
+    "PeakWorkingSet64": 5087232
+  },
+  {
+    "Id": 34704,
+    "CPU": 188.3125,
+    "WorkingSet64": 1199353856,
+    "PeakWorkingSet64": 1232384000
+  },
+  {
+    "Id": 34728,
+    "CPU": 188.5,
+    "WorkingSet64": 1202302976,
+    "PeakWorkingSet64": 1232109568
+  },
+  {
+    "Id": 36256,
+    "CPU": 1.296875,
+    "WorkingSet64": 94773248,
+    "PeakWorkingSet64": 94842880
+  },
+  {
+    "Id": 36436,
+    "CPU": 0.84375,
+    "WorkingSet64": 55164928,
+    "PeakWorkingSet64": 55222272
+  },
+  {
+    "Id": 37456,
+    "CPU": 0.78125,
+    "WorkingSet64": 58142720,
+    "PeakWorkingSet64": 58212352
+  },
+  {
+    "Id": 39020,
+    "CPU": 13.4375,
+    "WorkingSet64": 136597504,
+    "PeakWorkingSet64": 142995456
+  },
+  {
+    "Id": 40012,
+    "CPU": 188.703125,
+    "WorkingSet64": 1201397760,
+    "PeakWorkingSet64": 1232973824
+  },
+  {
+    "Id": 40296,
+    "CPU": 188.390625,
+    "WorkingSet64": 1220276224,
+    "PeakWorkingSet64": 1230512128
+  },
+  {
+    "Id": 41168,
+    "CPU": 0.015625,
+    "WorkingSet64": 4988928,
+    "PeakWorkingSet64": 5095424
+  }
+]

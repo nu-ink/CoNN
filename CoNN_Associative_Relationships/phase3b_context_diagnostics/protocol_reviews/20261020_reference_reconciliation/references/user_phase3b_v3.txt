@@ -1,0 +1,460 @@
+# CoNN Phase 3B v3 — Final Diagnostic and Identification Amendment
+
+## Mission
+
+Strengthen the Phase 3B experimental protocol before training.
+
+Work in:
+
+`E:\CoNN\CoNN_Associative_Relationships\phase3b_context_diagnostics`
+
+Do not overwrite previous CoNN experiments or previously frozen research artifacts.
+
+Read the full Phase 3B v2 specification. Apply the corrections below to the new versioned protocol before performance training.
+
+This amendment addresses experimental identifiability, numerical thresholds, statistical power, sensor-mask artifacts, and reliable execution.
+
+If Phase 3B training has already started, do not retroactively describe this amendment as preregistered. Preserve the existing runs and classify subsequent training under a newly versioned protocol.
+
+---
+
+## 1. Gradient-only initialization sweep
+
+The historical contextual gate was:
+
+\[
+C(c)=1-0.475\,\sigma(U_c)\sigma(V_c)^T
+\]
+
+with rank 2.
+
+Historical initialization:
+
+- U = −6
+- V = 0
+
+The previous revised initialization U = −4.5 may still have insufficient gradient strength.
+
+Before training new models, evaluate the following deterministic initialization candidates:
+
+| Candidate | Initial U | Initial V |
+|---|---:|---:|
+| G0 | −6.0 | 0 |
+| G1 | −5.0 | 0 |
+| G2 | −4.5 | 0 |
+| G3 | −4.0 | 0 |
+| G4 | −3.0 | 0 |
+| G5 | −2.0 | 0 |
+| G6 | −1.0 | 0 |
+
+For each candidate, calculate:
+
+- Initial mean attenuation
+- Initial mean C
+- Closed-form local derivatives
+- Actual loss-gradient norm on a fixed diagnostic minibatch
+- Context-to-base gradient norm ratio
+- Estimated SGD update magnitude at LR = 0.1
+- Fraction of representable parameter updates in float32
+- Forward modulation change after one optimizer step
+- Sensitivity across all three contexts
+
+Use the same frozen base-model weights, diagnostic minibatches, context codes, and random streams for every candidate.
+
+Run the sweep without training full models or examining validation classification scores.
+
+Do not select the initialization that produces the best classification accuracy.
+
+### Diagnostic interpretation
+
+Use a gradient-ratio reference of 1e−3 as an engineering target, not a scientific success criterion.
+
+Report whether each candidate reaches that ratio.
+
+Also report actual representability and forward effects; the ratio alone is not a sufficient indicator of learning.
+
+Retain U = −4.5 as the frozen C2/C4 initialization for the primary v3 comparison.
+
+If a stronger candidate appears necessary, do not silently replace C2/C4. Document it as a separately proposed follow-up intervention requiring a versioned amendment.
+
+This keeps the original factorial comparison interpretable.
+
+---
+
+## 2. Precisely define the causal hypotheses
+
+### H1 — Symmetry restriction
+
+Identical rank-component columns constrain the attenuation matrix to rank at most one.
+
+Prediction: symmetry-breaking initialization should increase effective attenuation rank, but it need not improve learning or prediction.
+
+### H2 — Weak-gradient dynamics
+
+Sigmoid saturation and bilinear factor coupling may produce small gradients.
+
+Prediction: less-saturated initialization increases gradient and update magnitudes, although predictive usefulness may remain unchanged.
+
+### H3 — Numerical representability
+
+Some parameter updates disappear in float32.
+
+Prediction: float64 master parameters preserve updates, but improvements to forward behavior occur only if the resulting C changes survive conversion to model dtype.
+
+### H4 — Architectural redundancy
+
+The shared weight matrices and attenuation-only contextual gate may allow the base network to compensate for modulation.
+
+Prediction: context parameters can change substantially without providing additional predictive value.
+
+### H5 — Limited contextual information
+
+Sensor availability may be recoverable from the masked inputs.
+
+Prediction: correctly supplied context codes offer little benefit over masked non-context models, even with numerically active gates.
+
+Do not declare H4 or H5 proven from failure to improve classification. Distinguish evidence of redundancy from unresolved optimization limitations.
+
+---
+
+## 3. Context representation and placement
+
+Preserve the existing three categorical contexts:
+
+- 0: Both sensor groups present
+- 1: Accelerometer group present
+- 2: Gyroscope group present
+
+Each context must occur with probability 1/3 in the training masking curriculum, subject to deterministic balancing.
+
+Use the historical factor lookup and layer placement.
+
+Document which source and destination dimensions are controlled by C for each layer.
+
+### Live-support analysis
+
+For each context, identify connections whose source inputs can be nonzero under that context.
+
+Calculate first-layer contextual differentiation on these live-support connections rather than all entries indiscriminately.
+
+Report second-layer differentiation separately, where contextual modulation is not directly neutralized by zero-valued sensor inputs.
+
+Do not interpret differences involving permanently zeroed first-layer inputs as learned sensor-specific relationships.
+
+---
+
+## 4. Quantitative numerical criteria
+
+Freeze tolerances before training.
+
+### Level 1 — Numerical learning
+
+Require all of the following:
+
+1. Finite, analytically consistent gradients.
+2. At least one actual context-parameter update beyond storage rounding.
+3. A measurable modulation change on live-support entries.
+4. No violation of the declared C bounds.
+
+Use `max_abs_delta_C >= 1e−6` on live-support entries as the provisional float32 forward-level threshold for a positive learning claim.
+
+Additionally report float64 changes below this threshold without calling them successful float32 forward learning.
+
+### C3 futility criterion
+
+After the declared pilot, if C3 has representable float64 parameter updates but `max_abs_delta_C < 1e−6` in the actual forward dtype on live-support entries, classify C3 as failing the functional numerical criterion.
+
+Stop additional C3 full-grid fits under the preregistered futility rule.
+
+Retain its pilot measurements, log the omitted fits, and do not substitute another model.
+
+### Level 2 — Functional context differentiation
+
+Require:
+
+- Different learned attenuation matrices on their comparable live-support entries.
+- Pairwise normalized Frobenius differences exceeding a frozen engineering floor of 1e−4.
+- An effect exceeding the 95th percentile of the corresponding shuffled-code diagnostic null.
+- Measurable same-weight output changes beyond established numerical inference tolerance.
+
+Report the distribution of all three pairwise context contrasts.
+
+For comparisons between contexts, use the intersection of their live-support entries. Analyze non-intersecting entries separately.
+
+Do not claim Level 2 if the only detected variation comes from first-layer masking artifacts.
+
+### Level 3 — Predictive benefit
+
+Primary contrast:
+
+Gaussian C4 minus Gaussian masked, no learned context.
+
+Require:
+
+- Mean paired macro-F1 improvement of at least +0.005.
+- Lower endpoint of the descriptive 95% subject-bootstrap interval greater than zero.
+- Valid Level 2 evidence if the conclusion specifically attributes the benefit to learned context differentiation.
+
+Label the result an exploratory development success, never independent confirmation.
+
+Numerical thresholds are operational research choices, not established universal standards for neural representation learning.
+
+---
+
+## 5. Symmetry and effective-rank verification
+
+Analyze:
+
+\[
+A(c)=1-C(c)
+\]
+
+not just C.
+
+Compute singular values in float64.
+
+Report:
+
+\[
+r_{\mathrm{effective}}=\sigma_2/\sigma_1
+\]
+
+for the nominal rank-two attenuation matrix.
+
+At initialization, use 0.01 as a diagnostic target for the ratio, with numerical-rank tolerance explicitly recorded.
+
+If C1's specified ±0.2 deterministic perturbation does not achieve this value, report the limitation rather than silently increasing the perturbation.
+
+Verify whether symmetry is broken after training and whether the additional component makes a functional difference.
+
+Preserve the original C0 implementation unchanged.
+
+---
+
+## 6. Capacity and information controls
+
+Maintain the previous conditions C0–C4 for Dense and Gaussian architectures.
+
+Include:
+
+- Dense masked without context
+- Gaussian masked without context
+- Gaussian C4 with constant context code
+- Gaussian C4 with randomized training context codes
+
+Add:
+
+**Gaussian C4 — Frozen-at-initialization context gate**
+
+Preserve the C4 modulation values at initialization and train the remaining network weights normally.
+
+This determines whether the initial nonidentity attenuation itself contributes to performance without learned modulation.
+
+Do not implement the frozen gate by disabling C or setting it to one.
+
+Report the allocated parameter count and the number of trainable parameters separately.
+
+Total planned full-grid conditions increase from 14 to 15.
+
+With seven folds, five seeds, and 3,200 steps, the maximum full grid is:
+
+- 525 fits
+- 1,680,000 logical optimizer updates
+
+Allow up to 10 additional pilot trajectories.
+
+Recompute actual work if the C3 futility rule omits full-grid fits.
+
+Do not count skipped or omitted fits as completed.
+
+---
+
+## 7. Context permutations
+
+For the three context codes, enumerate all five nonidentity permutations:
+
+- (0, 2, 1)
+- (1, 0, 2)
+- (1, 2, 0)
+- (2, 0, 1)
+- (2, 1, 0)
+
+Evaluate the trained contextual models using each permutation with identical frozen network weights and identical sensor input masks.
+
+Record effects individually and aggregated.
+
+For the train-time shuffled-code control:
+
+- Randomize code assignment independently of the actual sensor mask.
+- Preserve code frequencies.
+- Use deterministic seeds.
+- Preserve the standard masking curriculum.
+- Evaluate under both correctly matched true codes and randomized codes.
+- Explain that these evaluations represent different code distributions relative to training.
+
+This distinguishes sensitivity to context-code identity from actual information about available sensors.
+
+---
+
+## 8. Random-stream and execution control
+
+Use independent random streams for:
+
+- Base network initialization
+- Context factor initialization
+- Training batch order
+- Sensor-mask curriculum
+- Training-time shuffled codes
+- Evaluation permutations
+- Bootstrap resampling
+
+Changing the number of context parameters must not change base-model initialization or training batch sequences.
+
+Use the same CPU or CUDA backend for the entire paired performance grid.
+
+For full-model same-backend replay, require identical predictions when deterministic operations are supported. Where exact reproducibility is unavailable, predeclare and verify tensor-level numerical tolerances rather than relying on a broad macro-F1 tolerance.
+
+Reserve a 0.001 macro-F1 reproducibility tolerance only for explicitly identified cross-backend or statistical reproduction checks, not exact checkpoint replay.
+
+Record deterministic-algorithm settings, CUDA library details, and GPU model if applicable.
+
+---
+
+## 9. Historical uncertainty and prospective precision
+
+Before freezing the new performance analysis, read the existing Phase 3 per-subject paired results.
+
+Estimate:
+
+- Paired subject-level standard deviation
+- Descriptive expected bootstrap interval width
+- Minimum effect that might be distinguishable with 21 development subjects
+
+Use existing historical data only. Do not run new training to estimate these values.
+
+Record the estimate before Phase 3B results are examined.
+
+If the historical uncertainty suggests the +0.005 effect is unlikely to be resolved, retain the endpoint but report that the development study may be inconclusive.
+
+Do not claim the experiment is adequately powered merely because it contains five seeds.
+
+### Subject macro-F1
+
+Calculate per-subject macro-F1 over the classes present in that subject's ground-truth labels.
+
+For a present class with no predicted positives, define precision as zero. Include false-positive effects in the class confusion calculations.
+
+Never silently change the supported-class set between competing models for the same subject.
+
+Preserve the same averaging policy across all conditions and compare it with the prior Phase 2/3 metric implementation.
+
+If this definition differs from the frozen historical metric, retain the historical endpoint definition for the primary comparison and report the alternative as a sensitivity analysis, not a retrospective replacement.
+
+### Bootstrap method
+
+Use 10,000 paired subject-cluster bootstrap resamples, with the same resampled subjects applied to both conditions and all seeds.
+
+Use percentile 95% intervals.
+
+Report subject-level paired effects and per-seed effects separately.
+
+Recognize that overlapping cross-validation training sets remain a dependence limitation.
+
+---
+
+## 10. Multiple comparisons
+
+Only one primary comparison is designated.
+
+The predeclared secondary family is:
+
+1. Gaussian C4 versus Gaussian constant-code
+2. Gaussian C4 versus Gaussian shuffled-code
+3. Dense C4 versus Dense masked
+
+Use the same primary macro-F1 aggregation policy.
+
+If formal secondary hypothesis tests are reported, apply Holm correction across these three comparisons.
+
+Other C0–C4 comparisons, context-specific metrics, diagnostic ablations, and additional plots remain exploratory.
+
+Do not choose a new primary comparison after viewing performance outcomes.
+
+---
+
+## 11. Training and verification
+
+Use the previously frozen architecture, mask policy, original Gaussian schedule, and SGD settings.
+
+Do not modify Experiment 2 or earlier CoNN protocols.
+
+Before full training:
+
+1. Verify original gate equivalence.
+2. Run gradient-only initialization sweep.
+3. Run analytical and numerical gradient tests.
+4. Validate attenuation rank.
+5. Validate live-support masks.
+6. Run context permutation tests.
+7. Validate checkpoint serialization.
+8. Run the bounded pilot.
+9. Apply the declared C3 futility rule.
+10. Freeze the full-grid execution manifest.
+
+For independent verification, use a separate Python script that reads saved prediction files and recomputes accuracy, per-class recall, macro-F1, and subject-level summaries.
+
+The verification script must not call the training implementation's metric-summary routines.
+
+Check checkpoint hashes and compare reported optimizer-step counts against actual execution records.
+
+Never fabricate missing training metrics or fill missing fits using interpolation.
+
+---
+
+## 12. Reporting and completion requirements
+
+Create:
+
+- `PROTOCOL_PHASE3B_v3.md`
+- `reports/GRADIENT_INITIALIZATION_SWEEP.md`
+- `reports/HISTORICAL_PRECISION_ESTIMATE.md`
+- `reports/PHASE3B_FINAL_REPORT.md`
+- `reports/PHASE3B_EXECUTIVE_SUMMARY.md`
+- `reports/REPAIR_AND_DEVIATION_LOG.md`
+
+The final report must explicitly explain:
+
+1. Whether context-parameter symmetry was successfully broken.
+2. Whether changing initialization improved gradient strength.
+3. Whether float64 master parameters solved storage-update rounding.
+4. Whether changes in C survived float32 forward conversion.
+5. Whether context matrices differed on live-support entries.
+6. Whether differentiation exceeded the shuffled-code null.
+7. Whether the revised context gate affected predictions.
+8. Whether Gaussian C4 improved macro-F1 beyond masked Gaussian.
+9. Whether any improvement exceeded the +0.005 minimum effect of interest.
+10. Whether apparent gains can be explained by fixed attenuation, extra parameters, or optimizer behavior.
+11. Whether the data support H1, H2, H3, H4 or H5.
+12. Whether future associative-memory experiments are justified.
+
+Include the exact completed fit count, optimizer updates, backend, test outcomes, source hashes, diagnostic measurements, paired confidence intervals, and reproducibility commands.
+
+Generate the plots and visualization outputs required by the full v2 specification, including gradient curves, rank spectra, modulation comparisons, fixed-representation interventions, masked-sensor performance, capacity controls, uncertainty intervals, and CPU/CUDA benchmarking.
+
+A successful implementation does not imply scientific success.
+
+If an error, numerical failure, source hash mismatch, or execution-cap violation occurs, preserve the evidence and stop the affected work rather than silently changing the experimental design.
+
+**Final instruction**
+
+Implement this as a versioned amendment to Phase 3B, incorporating all unchanged requirements from v2.
+
+Run the diagnostic stages, then the bounded development experiment when its verification gates pass.
+
+Preserve every earlier CoNN artifact.
+
+Do not evaluate the official HAR test set.
+
+Do not implement Phase 4 associative memory.
+
+Complete the work with an evidence-based technical report and a plain-language executive summary.

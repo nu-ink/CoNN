@@ -1,0 +1,11 @@
+[
+  {
+    "total_steps": 3200,
+    "lr": null,
+    "B_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 2.384185791015625e-07,
+    "C_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 2.288818359375e-05
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "audit_completed_utc": "2026-10-19T02:47:26.463367+00:00",
+  "elapsed_seconds": 29.843232199986232,
+  "pytest_exit_code": 0,
+  "new_models_trained": 0,
+  "new_final_test_model_evaluations": 0,
+  "training_resume": "not authorized in phase_0_and_1 scope; training entry point does not exist",
+  "gpu_smoke": "not run: CPU-only PyTorch",
+  "context_tests": "not implemented; not run",
+  "memory_tests": "not implemented; not run"
+}

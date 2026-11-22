@@ -1,0 +1,11 @@
+{
+  "report_images_resolve": true,
+  "files": {
+    "reports\\EXPERIMENT_AUDIT_AND_RESULTS.md": "080ea37e28425223bdf4754a568d1158264f98ab90bc92ed1a40d15f9845706b",
+    "scripts\\audit_recovery.py": "86c1d628842ce671f8faecb86fd889f339fb3c91eb0d8c49e939bc693556d808",
+    "scripts\\inspect.py": "fdd3a3820fcd7b9c1ef4a0909fb6219f53bc32b0a7dde5f0e8f59fab4c9d2209",
+    "src\\conn_assoc\\inspect.py": "494e52f3b13867a3af5df4ced5376cb5b811b28c367efd940d2e97d0c1d76797",
+    "tests\\test_entrypoint.py": "f0bc6abd1fdb3245ff70c73831b592458d215213dacbb4cba1cfa80c3c2ccef6"
+  },
+  "note": "Original scientific protocol unchanged; no new model training."
+}

@@ -1,0 +1,26 @@
+{
+  "notation_restored": true,
+  "report_hashes": {
+    "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\research_report.md": {
+      "before": "46c8e9fef7c2f3ad47728be09a198c7d8f82d947f0532f32b3854828beac37bf",
+      "after": "d197cde3114cd2742e9fd20215e8eddc418bdb284958791d8908e228d5bfa39b"
+    },
+    "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\reports\\PHASE3B_FINAL_REPORT.md": {
+      "before": "46c8e9fef7c2f3ad47728be09a198c7d8f82d947f0532f32b3854828beac37bf",
+      "after": "d197cde3114cd2742e9fd20215e8eddc418bdb284958791d8908e228d5bfa39b"
+    },
+    "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\reports\\PHASE3B_FINAL_REPORT.md": {
+      "before": "46c8e9fef7c2f3ad47728be09a198c7d8f82d947f0532f32b3854828beac37bf",
+      "after": "d197cde3114cd2742e9fd20215e8eddc418bdb284958791d8908e228d5bfa39b"
+    },
+    "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\reports\\PHASE3B_EXECUTIVE_SUMMARY.md": {
+      "before": "18fc7ead4869d60a36df90be48834f435abf5b0336a0d6a752e1eaceb055595e",
+      "after": "1641dfce8f9757051f7eab96cd13651ce52d5792b83a255d4b5d0a4695e592cf"
+    },
+    "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\reports\\PHASE3B_EXECUTIVE_SUMMARY.md": {
+      "before": "18fc7ead4869d60a36df90be48834f435abf5b0336a0d6a752e1eaceb055595e",
+      "after": "1641dfce8f9757051f7eab96cd13651ce52d5792b83a255d4b5d0a4695e592cf"
+    }
+  },
+  "optimizer_updates": 0
+}

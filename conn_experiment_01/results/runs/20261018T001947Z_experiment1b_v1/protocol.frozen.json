@@ -1,0 +1,157 @@
+{
+  "version": "1B-v1",
+  "created_utc": "2026-10-18T00:19:48.614428+00:00",
+  "base_config": {
+    "experiment_name": "conn_experiment_01",
+    "task": "and",
+    "seed_list": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "n_features": 100,
+    "motif_length": 6,
+    "motif_amplitude": 1.0,
+    "region_a": [
+      8,
+      32
+    ],
+    "region_b": [
+      68,
+      92
+    ],
+    "template_a": [
+      1.0,
+      1.0,
+      -1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "template_b": [
+      1.0,
+      -1.0,
+      1.0,
+      -1.0,
+      1.0,
+      -1.0
+    ],
+    "noise_std": 0.15,
+    "n_distractors": 2,
+    "distractor_amplitude": 0.5,
+    "n_train": 512,
+    "n_val": 128,
+    "n_test": 128,
+    "batch_size": 32,
+    "hidden_sizes": [
+      32,
+      32
+    ],
+    "total_steps": 400,
+    "eval_interval": 20,
+    "lr": 0.1,
+    "momentum": 0.0,
+    "weight_decay": 0.0,
+    "optimizer": "sgd",
+    "d50_start": 0.08,
+    "d50_end": 1.0,
+    "release_fraction": 0.7,
+    "tau_floor": 1e-06,
+    "far_quantile": 0.75,
+    "distance_bin_edges": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "probe_l2": 0.001,
+    "device": "cpu",
+    "primary_treatment": "D",
+    "primary_control": "B_prime",
+    "primary_control_name": "row_shuffle",
+    "primary_metric": "final_test_accuracy",
+    "primary_task": "and",
+    "lr_grid": [
+      0.01,
+      0.05,
+      0.1
+    ],
+    "lr_selection": "shared_initial",
+    "tau_start": 0.06794574402304153,
+    "tau_end": 0.8493218002880191,
+    "release_step": 280,
+    "permutation_rule": "within_row_column_permutation_frozen",
+    "distance": "absolute_difference_on_unit_interval",
+    "optimizer_foreach": false,
+    "optimizer_fused": false,
+    "test_protocol": "final_step_only",
+    "lr_grid_executed": false
+  },
+  "base_config_sha256": "d0c1381a689bf3a675dfba4f01af1add76ab9fc3550c5df012d40790176bae14",
+  "pilot": "E:\\CoNN\\conn_experiment_01\\results\\runs\\20261017T235839Z_pilot",
+  "pilot_config_sha256": "7fc6f09cb4c4d15396568c603b3880484091146bb3f627ce41db82bf081b2545",
+  "lr_grid": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "duration_grid": [
+    400,
+    800,
+    1600,
+    3200
+  ],
+  "conditions": [
+    "A",
+    "A_prime",
+    "B_prime",
+    "C",
+    "D",
+    "E",
+    "S"
+  ],
+  "tuning_seeds": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "replication_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119
+  ],
+  "candidates_per_condition": 12,
+  "tuning_runs_per_condition": 60,
+  "selection": "per-condition per-duration mean validation accuracy descending, mean validation loss ascending, lr ascending; common duration by macro mean across seven selected conditions, accuracy descending, loss ascending, steps ascending",
+  "test_usage": "zero tuning evaluations; once per replication model, final step only; ablations validation only",
+  "primary": "paired final test accuracy D minus B_prime, independent replication only",
+  "interval": "two-sided Student t 95% on seed differences, df=19; sole primary contrast",
+  "effect_size": "Cohen dz = mean paired difference / sample SD of differences; raw mean also in percentage points",
+  "diagnostics": "20 equally spaced measurement intervals plus schedule boundaries; train/val curves, effective weights, per-unit row gate energy, fixed-batch pre-step gradients, train-fit motif probes",
+  "checkpoint_ablation": "reload pre-release and post-release checkpoints at identical weights, plus final; far=base distance >= linear quantile .75; suppress ih, hh, both; validation loss/accuracy changes; no retraining",
+  "duration_interpretation": "fresh training at each duration with schedule scaled to that budget, not checkpoints from one 3200-step trajectory",
+  "source_manifest_sha256": "2e18a83d3633d3061d741cd27adeb130bdb638144360b16cda318938178aefd8"
+}

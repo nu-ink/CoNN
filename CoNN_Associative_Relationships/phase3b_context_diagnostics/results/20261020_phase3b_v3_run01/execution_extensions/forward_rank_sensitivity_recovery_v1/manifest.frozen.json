@@ -1,0 +1,11 @@
+{
+  "source_sha256": "ef656c61a7af3ad01c1f2e80962b351f5224a62bb8560203dec2fd047ef45efc",
+  "scope": "existing checkpoint diagnostic sensitivity only",
+  "optimizer_updates": 0,
+  "frozen_primary_analysis_unchanged": true,
+  "tolerance_relative": 1e-10,
+  "definitions": [
+    "float64 factor reference attenuation",
+    "actual float32 forward C then float64 A/SVD"
+  ]
+}

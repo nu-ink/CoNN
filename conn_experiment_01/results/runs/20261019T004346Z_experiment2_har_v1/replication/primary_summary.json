@@ -1,0 +1,18 @@
+{
+  "representation": "engineered",
+  "contrast": "D_minus_B",
+  "metric": "macro_f1",
+  "primary": true,
+  "n": 20,
+  "mean": -0.005010381183344426,
+  "sd": 0.00789428190924834,
+  "t_crit": 2.093024054408263,
+  "ci_low": -0.008705018845212718,
+  "ci_high": -0.0013157435214761351,
+  "spans_zero": false,
+  "cohen_dz": -0.6346848568296813,
+  "mean_percentage_points": -0.5010381183344426,
+  "positive_seeds": 3,
+  "tied_seeds": 0,
+  "negative_seeds": 17
+}

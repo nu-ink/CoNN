@@ -1,0 +1,18 @@
+%% Held-out evaluation and reporting
+%% Sources: experiments/experiment_04/src/conn_exp04/{core,runner,analysis}.py
+%% Historical sources: conn_experiment_01/src/conn_exp/{gates,geometry,models,schedules}.py
+%% Verified references: runner.evaluate_run, core.metrics, analysis.analyze, analysis.paired, analysis.holm
+flowchart TB
+  A["All 80 confirmatory fits marked trained"] --> B["evaluate_run: independently generate test split"]
+  B --> C["Load fixed pre-release and final checkpoints"]
+  C --> D["Pre-release: original gate"]
+  C --> E["Immediate release: same weights, exact ones"]
+  C --> F["Final: 1600 updates, exact ones"]
+  D --> G["metrics: accuracy, binary F1, BCE; save predictions"]
+  E --> G
+  F --> G
+  G --> H["analyze: verify pairing; ten independent seed differences"]
+  H --> I["Primary exact one-sided sign-flip; descriptive 95 percent t interval"]
+  H --> J["Six secondary two-sided tests with Holm adjustment"]
+  I --> K["Evidence-limited report and artifact integrity checks"]
+  J --> K

@@ -1,0 +1,58 @@
+{
+  "measurements": [
+    {
+      "device": "cpu",
+      "condition": "P2_dense",
+      "updates": 200,
+      "warmup_updates": 20,
+      "seconds": 0.19784119998803362,
+      "batches_per_second": 1010.9117818335966,
+      "samples_per_second": 129396.70807470036,
+      "parameter_count": 78342,
+      "peak_gpu_allocated_bytes": 0,
+      "cpu_fallback": false,
+      "timing": "sequential isolated warmed-up synchronized, float32 TF32 off"
+    },
+    {
+      "device": "cpu",
+      "condition": "P2_gaussian",
+      "updates": 200,
+      "warmup_updates": 20,
+      "seconds": 0.4069686000002548,
+      "batches_per_second": 491.4384058128189,
+      "samples_per_second": 62904.11594404082,
+      "parameter_count": 78342,
+      "peak_gpu_allocated_bytes": 0,
+      "cpu_fallback": false,
+      "timing": "sequential isolated warmed-up synchronized, float32 TF32 off"
+    },
+    {
+      "device": "cuda:0",
+      "condition": "P2_dense",
+      "updates": 200,
+      "warmup_updates": 20,
+      "seconds": 0.31913600000552833,
+      "batches_per_second": 626.6920685743239,
+      "samples_per_second": 80216.58477751346,
+      "parameter_count": 78342,
+      "peak_gpu_allocated_bytes": 69616640,
+      "cpu_fallback": false,
+      "timing": "sequential isolated warmed-up synchronized, float32 TF32 off"
+    },
+    {
+      "device": "cuda:0",
+      "condition": "P2_gaussian",
+      "updates": 200,
+      "warmup_updates": 20,
+      "seconds": 0.4139376000093762,
+      "batches_per_second": 483.1646122397911,
+      "samples_per_second": 61845.07036669326,
+      "parameter_count": 78342,
+      "peak_gpu_allocated_bytes": 70779392,
+      "cpu_fallback": false,
+      "timing": "sequential isolated warmed-up synchronized, float32 TF32 off"
+    }
+  ],
+  "chosen_device": "cpu",
+  "selection_rule": "highest mean training batches/s over dense and Gaussian, no validation scores"
+}

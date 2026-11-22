@@ -1,0 +1,75 @@
+path,bytes,crc32
+UCI HAR Dataset/,0,0
+UCI HAR Dataset/.DS_Store,6148,1837629546
+__MACOSX/,0,0
+__MACOSX/UCI HAR Dataset/,0,0
+__MACOSX/UCI HAR Dataset/._.DS_Store,120,3168213492
+UCI HAR Dataset/activity_labels.txt,80,174665653
+__MACOSX/UCI HAR Dataset/._activity_labels.txt,226,1067960987
+UCI HAR Dataset/features.txt,15785,3455016856
+__MACOSX/UCI HAR Dataset/._features.txt,226,1067960987
+UCI HAR Dataset/features_info.txt,2809,174009698
+__MACOSX/UCI HAR Dataset/._features_info.txt,226,1067960987
+UCI HAR Dataset/README.txt,6304,771760453
+__MACOSX/UCI HAR Dataset/._README.txt,605,2162635977
+UCI HAR Dataset/test/,0,0
+UCI HAR Dataset/test/Inertial Signals/,0,0
+UCI HAR Dataset/test/Inertial Signals/body_acc_x_test.txt,6041350,3450045414
+__MACOSX/UCI HAR Dataset/test/,0,0
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/,0,0
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_acc_x_test.txt,226,1067960987
+UCI HAR Dataset/test/Inertial Signals/body_acc_y_test.txt,6041350,1354568003
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_acc_y_test.txt,226,1067960987
+UCI HAR Dataset/test/Inertial Signals/body_acc_z_test.txt,6041350,202585059
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_acc_z_test.txt,226,1067960987
+UCI HAR Dataset/test/Inertial Signals/body_gyro_x_test.txt,6041350,4104979870
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_gyro_x_test.txt,226,1067960987
+UCI HAR Dataset/test/Inertial Signals/body_gyro_y_test.txt,6041350,3678452784
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_gyro_y_test.txt,226,1067960987
+UCI HAR Dataset/test/Inertial Signals/body_gyro_z_test.txt,6041350,2335185906
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_gyro_z_test.txt,226,1067960987
+UCI HAR Dataset/test/Inertial Signals/total_acc_x_test.txt,6041350,1893028905
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/._total_acc_x_test.txt,226,1067960987
+UCI HAR Dataset/test/Inertial Signals/total_acc_y_test.txt,6041350,1477050693
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/._total_acc_y_test.txt,226,1067960987
+UCI HAR Dataset/test/Inertial Signals/total_acc_z_test.txt,6041350,520423832
+__MACOSX/UCI HAR Dataset/test/Inertial Signals/._total_acc_z_test.txt,226,1067960987
+__MACOSX/UCI HAR Dataset/test/._Inertial Signals,226,1067960987
+UCI HAR Dataset/test/subject_test.txt,7934,4177211457
+__MACOSX/UCI HAR Dataset/test/._subject_test.txt,226,1067960987
+UCI HAR Dataset/test/X_test.txt,26458166,450830634
+__MACOSX/UCI HAR Dataset/test/._X_test.txt,226,1067960987
+UCI HAR Dataset/test/y_test.txt,5894,2519232482
+__MACOSX/UCI HAR Dataset/test/._y_test.txt,226,1067960987
+__MACOSX/UCI HAR Dataset/._test,226,1067960987
+UCI HAR Dataset/train/,0,0
+UCI HAR Dataset/train/Inertial Signals/,0,0
+UCI HAR Dataset/train/Inertial Signals/body_acc_x_train.txt,15071600,2256315986
+__MACOSX/UCI HAR Dataset/train/,0,0
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/,0,0
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_acc_x_train.txt,226,1067960987
+UCI HAR Dataset/train/Inertial Signals/body_acc_y_train.txt,15071600,3773623758
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_acc_y_train.txt,226,1067960987
+UCI HAR Dataset/train/Inertial Signals/body_acc_z_train.txt,15071600,2150343408
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_acc_z_train.txt,226,1067960987
+UCI HAR Dataset/train/Inertial Signals/body_gyro_x_train.txt,15071600,3196888648
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_gyro_x_train.txt,226,1067960987
+UCI HAR Dataset/train/Inertial Signals/body_gyro_y_train.txt,15071600,1476506171
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_gyro_y_train.txt,226,1067960987
+UCI HAR Dataset/train/Inertial Signals/body_gyro_z_train.txt,15071600,4109481361
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_gyro_z_train.txt,226,1067960987
+UCI HAR Dataset/train/Inertial Signals/total_acc_x_train.txt,15071600,428816939
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/._total_acc_x_train.txt,226,1067960987
+UCI HAR Dataset/train/Inertial Signals/total_acc_y_train.txt,15071600,3361362555
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/._total_acc_y_train.txt,226,1067960987
+UCI HAR Dataset/train/Inertial Signals/total_acc_z_train.txt,15071600,568619776
+__MACOSX/UCI HAR Dataset/train/Inertial Signals/._total_acc_z_train.txt,226,1067960987
+__MACOSX/UCI HAR Dataset/train/._Inertial Signals,226,1067960987
+UCI HAR Dataset/train/subject_train.txt,20152,2744091019
+__MACOSX/UCI HAR Dataset/train/._subject_train.txt,226,1067960987
+UCI HAR Dataset/train/X_train.txt,66006256,3523448285
+__MACOSX/UCI HAR Dataset/train/._X_train.txt,226,1067960987
+UCI HAR Dataset/train/y_train.txt,14704,619885709
+__MACOSX/UCI HAR Dataset/train/._y_train.txt,226,1067960987
+__MACOSX/UCI HAR Dataset/._train,226,1067960987
+__MACOSX/._UCI HAR Dataset,226,1067960987

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "scope": "gate/linear/autograd primitive on eight real fit-split windows; no optimizer or model training",
+  "input_shape": [
+    8,
+    1152
+  ],
+  "output_shape": [
+    8,
+    64
+  ],
+  "finite_quadratic_objective": 0.0005134638049639761,
+  "gradient_norm": 0.013985566794872284,
+  "gradient_max_abs_formula_error": 0.0,
+  "model_weights_updated": false,
+  "checkpoints_written": false,
+  "classification_metrics": null
+}

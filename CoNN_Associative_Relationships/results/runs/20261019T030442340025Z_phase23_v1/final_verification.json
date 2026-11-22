@@ -1,0 +1,17 @@
+{
+  "verified_utc": "2026-10-19T03:49:30.453555+00:00",
+  "fits": 1050,
+  "optimizer_updates": 3360000,
+  "checkpoint_files": 5250,
+  "prediction_rows_rescored": 13895280,
+  "finite_gradient_records": 22050,
+  "pre_post_release_weight_pairs_identical": 1050,
+  "official_test_model_evaluations": 0,
+  "original_experiment2_files_unchanged": 5529,
+  "prior_associative_files_unchanged": 193,
+  "cpu_environment_requirements_unchanged": true,
+  "paired_base_initialization_verified": true,
+  "validation_fold_row_and_subject_isolation_verified": true,
+  "amendment_sha256": "8ed6dcdbefaa0c22b02fb9ec2c449d45e66e0e7e5ce8bf4b4ce7e783af0eab30",
+  "all_grid_hashes_verified": true
+}

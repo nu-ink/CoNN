@@ -1,0 +1,18 @@
+{
+  "task": "and",
+  "contrast": "P_minus_D",
+  "primary": true,
+  "metric": "native_final_test_accuracy",
+  "n": 20,
+  "mean": 0.018359375,
+  "sd": 0.03961573689566034,
+  "t_crit": 2.093024054408263,
+  "ci_low": -0.00018136058810978156,
+  "ci_high": 0.03690011058810978,
+  "spans_zero": true,
+  "cohen_dz": 0.46343641286680587,
+  "mean_percentage_points": 1.8359375,
+  "positive_seeds": 13,
+  "tied_seeds": 1,
+  "negative_seeds": 6
+}

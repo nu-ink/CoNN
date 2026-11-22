@@ -1,0 +1,14 @@
+{
+  "backend": "cpu",
+  "omitted_conditions": [
+    "dense_C3",
+    "gaussian_C3"
+  ],
+  "omitted_fits": 70,
+  "omission_reason": "predeclared C3 forward futility after3200 pilot steps",
+  "full_grid_fits": 455,
+  "pilot_fits": 10,
+  "source_manifest_sha256": "96eff6c7314032940eca43356ab4092f748ce220d1143e9fcefc47f2468900d7",
+  "protocol_sha256": "901e57c4d5dcc9bf63b05eb297c75948698db232eec15361248f8c791157e72c",
+  "maximum_wall_seconds": 21600
+}

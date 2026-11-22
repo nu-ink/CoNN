@@ -1,0 +1,24 @@
+{
+  "contrast": {
+    "n": 5,
+    "mean": 0.021875,
+    "sd": 0.011587810136086975,
+    "t_crit": 2.7764451051977987,
+    "ci_low": 0.007486833336000113,
+    "ci_high": 0.03626316666399988,
+    "spans_zero": false,
+    "metric": "final_test_accuracy",
+    "treatment": "D",
+    "control": "B_prime",
+    "control_name": "row_shuffle",
+    "task": "and",
+    "pre_registered_and_pilot": true
+  },
+  "audit": {
+    "B_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "C_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  }
+}

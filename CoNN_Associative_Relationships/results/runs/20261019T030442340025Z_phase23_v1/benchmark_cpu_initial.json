@@ -1,0 +1,32 @@
+{
+  "measurements": [
+    {
+      "device": "cpu",
+      "condition": "P2_dense",
+      "updates": 200,
+      "warmup_updates": 20,
+      "seconds": 0.18499459998565726,
+      "batches_per_second": 1081.1126379662223,
+      "samples_per_second": 138382.41765967646,
+      "parameter_count": 78342,
+      "peak_gpu_allocated_bytes": 0,
+      "cpu_fallback": true,
+      "timing": "sequential isolated warmed-up synchronized, float32 TF32 off"
+    },
+    {
+      "device": "cpu",
+      "condition": "P2_gaussian",
+      "updates": 200,
+      "warmup_updates": 20,
+      "seconds": 0.3744867999921553,
+      "batches_per_second": 534.0642180290189,
+      "samples_per_second": 68360.21990771442,
+      "parameter_count": 78342,
+      "peak_gpu_allocated_bytes": 0,
+      "cpu_fallback": true,
+      "timing": "sequential isolated warmed-up synchronized, float32 TF32 off"
+    }
+  ],
+  "chosen_device": "cpu",
+  "selection_rule": "highest mean training batches/s over dense and Gaussian, no validation scores"
+}

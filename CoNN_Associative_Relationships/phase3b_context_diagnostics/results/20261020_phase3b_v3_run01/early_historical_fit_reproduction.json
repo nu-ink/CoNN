@@ -1,0 +1,30 @@
+[
+  {
+    "condition": "dense_C0",
+    "seed": 400,
+    "fold": 0,
+    "exact_final_tensors": true,
+    "exact_saved_predictions": true
+  },
+  {
+    "condition": "dense_masked",
+    "seed": 400,
+    "fold": 0,
+    "exact_final_tensors": true,
+    "exact_saved_predictions": true
+  },
+  {
+    "condition": "gaussian_C0",
+    "seed": 400,
+    "fold": 0,
+    "exact_final_tensors": true,
+    "exact_saved_predictions": true
+  },
+  {
+    "condition": "gaussian_masked",
+    "seed": 400,
+    "fold": 0,
+    "exact_final_tensors": true,
+    "exact_saved_predictions": true
+  }
+]

@@ -1,0 +1,14 @@
+flowchart LR
+  E01[Experiment 01<br/>synthetic AND pilot]
+  E1B[Experiment 1B<br/>tuning and replication]
+  E1C[Experiment 1C<br/>locality versus collapse]
+  E02[Experiment 02<br/>UCI HAR]
+  P23[Associative Phase 2/3]
+  P3B[Phase 3B v3]
+  E04[Experiment 04<br/>PROPOSED - NOT IMPLEMENTED]
+  E01 --> E1B
+  E1B --> E1C
+  E01 --> E02
+  E02 --> P23
+  P23 --> P3B
+  P3B -. next controlled study .-> E04

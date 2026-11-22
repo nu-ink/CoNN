@@ -1,0 +1,7 @@
+{
+  "source_sha256": "3d46ee31a7dc4d2d8f73d409d5743653874bcbc9edd3806324005ad8b38b0d45",
+  "role": "measured scientific synthesis only",
+  "primary_statistics_source": "analysis/paired_contrasts.csv",
+  "no_new_models_or_model_selection": true,
+  "primary_rule_unchanged": true
+}

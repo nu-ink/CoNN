@@ -1,0 +1,54 @@
+[
+  {
+    "Name": "cublas64_13.dll",
+    "Length": 50288240
+  },
+  {
+    "Name": "cublasLt64_13.dll",
+    "Length": 477896816
+  },
+  {
+    "Name": "cudart64_13.dll",
+    "Length": 470640
+  },
+  {
+    "Name": "cudnn_adv64_9.dll",
+    "Length": 106547312
+  },
+  {
+    "Name": "cudnn_cnn64_9.dll",
+    "Length": 1532528
+  },
+  {
+    "Name": "cudnn_engines_precompiled64_9.dll",
+    "Length": 221832304
+  },
+  {
+    "Name": "cudnn_engines_runtime_compiled64_9.dll",
+    "Length": 31745136
+  },
+  {
+    "Name": "cudnn_engines_tensor_ir64_9.dll",
+    "Length": 155248
+  },
+  {
+    "Name": "cudnn_ext64_9.dll",
+    "Length": 130160
+  },
+  {
+    "Name": "cudnn_graph64_9.dll",
+    "Length": 110908016
+  },
+  {
+    "Name": "cudnn_heuristic64_9.dll",
+    "Length": 58741360
+  },
+  {
+    "Name": "cudnn_ops64_9.dll",
+    "Length": 36770416
+  },
+  {
+    "Name": "cudnn64_9.dll",
+    "Length": 267888
+  }
+]

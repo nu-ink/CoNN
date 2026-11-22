@@ -1,0 +1,30 @@
+{
+  "analyses_generated": true,
+  "optimizer_accounting": {
+    "grid_fits": 455,
+    "grid_updates": 1456000,
+    "pilot_fits": 10,
+    "pilot_updates": 32000,
+    "completed_fit_training_updates": 1488000,
+    "benchmark_one_step_updates": 880,
+    "gradient_sweep_one_step_updates": 42,
+    "unit_test_optimizer_updates": 18,
+    "unit_test_accounting": "two full 19-test runs; three resume cases with three updates each per run",
+    "interrupted_training_steps": 0,
+    "official_test_evaluations": 0
+  },
+  "historical_preservation_passed": true,
+  "primary_analysis_unchanged": {
+    "family": "primary",
+    "a": "gaussian_C4",
+    "b": "gaussian_masked",
+    "mean": 0.0021339832267019214,
+    "subject_sd": 0.005159161971100433,
+    "seed_sd": 0.002926468286497447,
+    "ci_low": 0.00011565544771546819,
+    "ci_high": 0.004446269568044705,
+    "paired_subject_dz": 0.4136298179153211,
+    "practical_threshold_reached": false,
+    "descriptive_ci_excludes_zero_positive": true
+  }
+}

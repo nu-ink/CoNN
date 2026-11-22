@@ -1,0 +1,27 @@
+{
+  "changed_preexisting_files": [
+    {
+      "path": "scripts\\audit_recovery.py",
+      "before_sha256": "b14c125d330129dc5f0d94c6c359dd8f8a4c493b794ee8b4cf85f81aebd5bf70",
+      "after_sha256": "86c1d628842ce671f8faecb86fd889f339fb3c91eb0d8c49e939bc693556d808"
+    },
+    {
+      "path": "scripts\\inspect.py",
+      "before_sha256": "b023921390d2fa88d71272746fdf8dbc36f364a9fa5fb096277afbaf044de130",
+      "after_sha256": "fdd3a3820fcd7b9c1ef4a0909fb6219f53bc32b0a7dde5f0e8f59fab4c9d2209"
+    },
+    {
+      "path": "src\\conn_assoc\\inspect.py",
+      "before_sha256": "fe3b2954fa5b56731fbfdc4e98bc61d579bc759775280fcaafc74f2ebd6bb90a",
+      "after_sha256": "494e52f3b13867a3af5df4ced5376cb5b811b28c367efd940d2e97d0c1d76797"
+    }
+  ],
+  "new_files": [
+    "scripts/audit_recovery.py",
+    "tests/test_entrypoint.py",
+    "reports/EXPERIMENT_AUDIT_AND_RESULTS.md"
+  ],
+  "original_experiment2_entire_investigation_unchanged": true,
+  "original_experiment2_files": 5529,
+  "frozen_protocol_config_and_historical_audits_unchanged": true
+}

@@ -1,0 +1,15 @@
+# Repair and deviation log
+
+2026-10-20: The original Phase3B attachment was incomplete and v2 was unavailable. No Phase3B performance training occurred while awaiting it. The user supplied the complete v2 historical reference in the conversation; v3 supersedes conflicts. A labeled v2 synopsis, operative v3 protocol and explicit draw/normalization/pilot/execution choices were written before pilots. No historical artifacts were edited.
+
+Preflight: 5762 historical source/data manifest entries and all1050 historical fit completion manifests verified. Historical C0 logits and saved predictions matched exactly in six fixtures. Float64 finite differences and analytic gradients passed. Nineteen unit tests passed. An autograd scalar-conversion warning in diagnostic formatting was observed; values are read-only and no graph is reused afterward. It does not alter training. No scientific change was made.
+
+The earlier Phase23 verifier imported trainer metrics; Phase3B verification independently reconstructs confusion matrices and F1. Historical Monte Carlo bootstrap endpoints may differ because Phase3B uses its own explicitly frozen bootstrap random stream.
+
+The gradient-only sweep and benchmark use disposable one-step diagnostic fixtures. Backend benchmarks reset all model parameters before each update, so they do not create additional training trajectories or classification-based selection. Their optimizer calls are reported separately from pilot/grid logical updates. Full performance trajectories remain capped at525grid+10pilots. The cap includes computation time, with benchmark projection checked before pilots and measured pilot runtime checked before grid.
+
+C1 initial attenuation sigma2/sigma1 did not reach.01; prescribed perturbation was retained. U=-4.5 did not reach the engineering gradient-ratio reference in the sweep; frozen C2/C4 initialization was retained.
+
+No post-seal implementation repairs or protocol amendments at initial launch. Any later failures are preserved under results/failures and must be recorded here before resuming affected work.
+
+Execution-only extension: after the ten pilots and frozen grid manifest, a separately snapshotted/hashed ProcessPool driver uses four CPU processes for disjoint future seed blocks402-404. The original runner retains400-401. It stops queueing when the original runner begins401, leaving over90 intervening fits before any potential overlap. Frozen trainer/model/config/protocol files remain unchanged. This changes scheduling only, creates no extra fits or optimizer trajectories, and records exact canonical job paths and progress under execution_extensions/parallel_tail_v1. Final independent verification checks all pairing signatures, metrics, updates and checkpoints regardless of process. No validation outcomes choose scheduling or model settings.

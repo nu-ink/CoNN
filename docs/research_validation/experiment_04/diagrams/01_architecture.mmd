@@ -1,0 +1,14 @@
+%% Full experimental architecture
+%% Sources: experiments/experiment_04/src/conn_exp04/{core,runner,analysis}.py
+%% Historical sources: conn_experiment_01/src/conn_exp/{gates,geometry,models,schedules}.py
+%% Verified references: core.generate_split, core.Gates.at, runner.fit_condition, conn_exp.models.CoNNMLP
+flowchart TB
+  A["generate_split: independent latent groups"] --> B["100 observed features"]
+  B --> C["CoNNMLP.fc1: 100 to 32, gated"]
+  C --> D["ReLU"]
+  D --> E["CoNNMLP.fc2: 32 to 32, gated"]
+  E --> F["ReLU and dense output: one logit"]
+  F --> G["BCE loss and shared SGD"]
+  H["Gates.at: mlp, aligned, scrambled, uniform"] --> C
+  H --> E
+  I["Fixed coordinates and schedule; no learned geometry"] --> H

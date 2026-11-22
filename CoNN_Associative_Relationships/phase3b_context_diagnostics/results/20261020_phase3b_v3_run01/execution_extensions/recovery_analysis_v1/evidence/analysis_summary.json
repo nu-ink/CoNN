@@ -1,0 +1,17 @@
+{
+  "complete": false,
+  "grid_fits": 4,
+  "pilot_fits": 10,
+  "verification": {
+    "verified_fits": 14,
+    "verified_logical_updates": 44800,
+    "independent_metrics": true,
+    "official_test_model_evaluations": 0
+  },
+  "primary": null,
+  "gaussian_C4_level1_fits": 0,
+  "gaussian_C4_level1_denominator": 0,
+  "level2_passed_comparisons": 0,
+  "level2_denominator": 0,
+  "level3_predictive_criterion": false
+}

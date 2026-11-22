@@ -1,0 +1,9 @@
+flowchart LR
+  Ground[Ground-truth relationship] --> A[Aligned gate]
+  Ground -. future extension only .-> Learned[Learned relationship]
+  Ground --> Uniform[Uniform energy control]
+  Ground --> Scramble[Scrambled alignment]
+  A --> Metric[Paired held-out metric]
+  Uniform --> Metric
+  Scramble --> Metric
+  Learned -. NOT IMPLEMENTED .-> Metric

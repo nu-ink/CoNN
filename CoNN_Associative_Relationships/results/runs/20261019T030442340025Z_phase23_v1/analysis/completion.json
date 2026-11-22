@@ -1,0 +1,9 @@
+{
+  "fits": 1050,
+  "updates": 3360000,
+  "all_conditions_equal_budget": true,
+  "official_test_evaluations": 0,
+  "seed_count": 5,
+  "subject_count": 21,
+  "selection_post_cv": true
+}

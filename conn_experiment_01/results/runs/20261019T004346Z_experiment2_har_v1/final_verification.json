@@ -1,0 +1,23 @@
+{
+  "verified_utc": "2026-10-19T01:04:34.480567+00:00",
+  "prior_run_count": 4,
+  "prior_synthetic_artifacts_unchanged": true,
+  "source_live_and_snapshot_verified": true,
+  "prepared_arrays_and_coordinate_hashes_verified": true,
+  "scalers_independently_recomputed_from_fit_subjects_only": true,
+  "subject_partitions_disjoint": true,
+  "selection_recomputed_using_validation_only": true,
+  "audit_protocol_selection_and_test_order_verified": true,
+  "tuning_models": 180,
+  "final_models": 240,
+  "tuning_test_model_evaluations": 0,
+  "final_native_test_model_evaluations": 240,
+  "prediction_rows_independently_scored": 707280,
+  "checkpoint_files_verified": 1260,
+  "finite_gradient_rows": 184800,
+  "all_seed_energy_max_abs_gap": 0.000244140625,
+  "primary_statistics_independently_recomputed": true,
+  "pngs_verified": 18,
+  "pre_training_test_suite": "57 passed in 17.98s",
+  "verifier_sha256": "681c663cade2f7f939eb9c3656049a21507a94fe447972e1a786dec943a62c0b"
+}

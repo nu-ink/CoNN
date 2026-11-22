@@ -1,0 +1,17 @@
+{
+  "python": "3.11.1",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "torch": "2.14.1+cu130",
+  "numpy": "2.4.6",
+  "cuda_runtime": "13.0",
+  "cuda_available": true,
+  "devices": [
+    "NVIDIA GeForce RTX 3070 Ti",
+    "NVIDIA GeForce RTX 3070 Ti"
+  ],
+  "deterministic_algorithms": true,
+  "threads": 1,
+  "tf32": false,
+  "cublas_workspace_config": ":4096:8",
+  "date_basis": "user context 2026-10-20 America/Chicago"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "CoNN_Associative_Relationships",
+  "protocol_file": "PROTOCOL_v2.md",
+  "protocol_sha256": "e97d35bab3e684cd4ce09fe8dc8e8bafa22371b6f9c0c4801b1fd84eb0f01c48",
+  "hash_algorithm": "SHA-256",
+  "hashed_utc": "2026-10-19T02:27:45.208033+00:00",
+  "phase_status": "phase_0_and_1_only",
+  "final_test_evaluation": "not_started",
+  "git": {
+    "repository": false,
+    "commit": null,
+    "note": "No Git repository was present at freeze. This hash is the protocol record. A separate commit of PROTOCOL_v2.md is required before any final test evaluation if the directory is later placed under Git."
+  },
+  "experiment2_run": "conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1",
+  "archive_sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031"
+}

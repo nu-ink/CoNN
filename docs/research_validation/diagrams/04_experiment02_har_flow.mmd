@@ -1,0 +1,9 @@
+flowchart LR
+  ZIP[UCI HAR archive] --> Audit[Dataset and subject audit]
+  Audit --> Split[16 fit / 5 validation / 9 test subjects]
+  Split --> Eng[Engineered representation]
+  Split --> Temp[Temporal representation]
+  Eng --> LR[Validation-only LR]
+  Temp --> LR
+  LR --> Rep[20 paired seeds]
+  Rep --> Test[Final test macro-F1]

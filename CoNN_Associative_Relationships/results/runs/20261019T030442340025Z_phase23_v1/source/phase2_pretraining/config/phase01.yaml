@@ -1,0 +1,10 @@
+protocol: PROTOCOL_v2.md
+phase: phase_0_and_1
+tau_floor: 1.0e-6
+primary_representation: temporal
+representations:
+  - temporal
+  - engineered
+experiment2_run: ../conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1
+archive: ../conn_experiment_01/data/raw/uci_har_original.zip
+final_test_evaluation: not_started

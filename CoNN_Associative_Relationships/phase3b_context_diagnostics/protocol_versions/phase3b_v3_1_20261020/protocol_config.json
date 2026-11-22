@@ -1,0 +1,213 @@
+{
+  "version": "phase3b_v3_1",
+  "prospective_only": true,
+  "execution_ready": false,
+  "steps": 3200,
+  "learning_rate": 0.1,
+  "batch_size": 128,
+  "optimizer": "SGD",
+  "momentum": 0,
+  "weight_decay": 0,
+  "gradient_clipping": false,
+  "seeds": [
+    400,
+    401,
+    402,
+    403,
+    404
+  ],
+  "folds": [
+    [
+      14,
+      21,
+      29
+    ],
+    [
+      6,
+      7,
+      17
+    ],
+    [
+      22,
+      23,
+      28
+    ],
+    [
+      8,
+      11,
+      26
+    ],
+    [
+      5,
+      15,
+      16
+    ],
+    [
+      3,
+      25,
+      30
+    ],
+    [
+      1,
+      19,
+      27
+    ]
+  ],
+  "hidden_sizes": [
+    64,
+    64
+  ],
+  "factor_rank": 2,
+  "factor_seed": 30031,
+  "factor_draw_dtype": "float64",
+  "factor_draw_order": [
+    "ih.u",
+    "ih.v",
+    "hh.u",
+    "hh.v"
+  ],
+  "primary": "gaussian_C4-minus-gaussian_masked",
+  "conditions": [
+    "dense_C0",
+    "dense_C1",
+    "dense_C2",
+    "dense_C3",
+    "dense_C4",
+    "gaussian_C0",
+    "gaussian_C1",
+    "gaussian_C2",
+    "gaussian_C3",
+    "gaussian_C4",
+    "dense_masked",
+    "gaussian_masked",
+    "gaussian_constant",
+    "gaussian_shuffled",
+    "gaussian_frozen"
+  ],
+  "pilot_conditions": [
+    "dense_C0",
+    "dense_C1",
+    "dense_C2",
+    "dense_C3",
+    "dense_C4",
+    "gaussian_C0",
+    "gaussian_C1",
+    "gaussian_C2",
+    "gaussian_C3",
+    "gaussian_C4"
+  ],
+  "pilot_seed": 400,
+  "pilot_fold": 0,
+  "pilot_steps": 3200,
+  "maximum_full_grid_fits": 525,
+  "maximum_pilot_fits": 10,
+  "maximum_logical_training_updates": 1712000,
+  "maximum_wall_seconds": 21600,
+  "primary_minimum_effect": 0.005,
+  "primary_ci_lower_must_exceed": 0,
+  "bootstrap_seed": 7000031,
+  "bootstrap_resamples": 10000,
+  "bootstrap_method": "paired_subject_percentile_95",
+  "level2": {
+    "architectures_with_calibrated_null": [
+      "gaussian"
+    ],
+    "observed_condition": "gaussian_C4",
+    "null_condition": "gaussian_shuffled",
+    "null_fit_count": 35,
+    "null_pool_axes": [
+      "seed",
+      "fold"
+    ],
+    "null_stratify_axes": [
+      "layer",
+      "context_pair"
+    ],
+    "null_quantile": 0.95,
+    "numpy_quantile_method": "linear",
+    "null_must_be_complete": true,
+    "context_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "layers": [
+      "ih",
+      "hh"
+    ],
+    "support": "pair_intersection",
+    "empty_support": "undefined_reported",
+    "matrix_dtype": "float64_reference_attenuation",
+    "forward_dtype": "float32",
+    "normalization": "frobenius_difference_divided_by_max_pair_attenuation_norm_float64_tiny",
+    "engineering_floor_strictly_exceed": 0.0001,
+    "pair_layer_learning_delta_at_least": 1e-06,
+    "learning_rule": "at_least_one_code_in_pair_on_same_layer_common_support",
+    "isolated_logit_max_abs_strictly_exceed": 1e-06,
+    "probe_rows": "first_128_validation_rows_in_preserved_fold_order",
+    "ih_downstream_hh_code": 0,
+    "ih_probe_mask": {
+      "0,1": 1,
+      "0,2": 2,
+      "1,2": null
+    },
+    "hh_cached_h1_input_mask": 0,
+    "hh_cached_h1_ih_code": 0,
+    "all_pairs_reported": true,
+    "dense_null_claims": false
+  },
+  "c3_futility": {
+    "separate_architectures": true,
+    "threshold": 1e-06,
+    "omit_if": "maximum_over_complete_required_checkpoints_strictly_below_threshold",
+    "eligible_if": "maximum_at_least_threshold",
+    "requires_complete_verified_pilot": true,
+    "missing_checkpoint_action": "stop_no_futility_decision",
+    "master_update_is_additional_prerequisite": false,
+    "forward_dtype": "float32",
+    "periodic_completed_updates": [
+      160,
+      320,
+      480,
+      640,
+      800,
+      960,
+      1120,
+      1280,
+      1440,
+      1600,
+      1760,
+      1920,
+      2080,
+      2240,
+      2400,
+      2560,
+      2720,
+      2880,
+      3040,
+      3200
+    ],
+    "release_completed_updates": 2240,
+    "release_schedule_arguments": {
+      "pre": 2239,
+      "post": 2240
+    },
+    "final_completed_updates": 3200,
+    "final_schedule_argument": 3199,
+    "persist_all_required_states": true,
+    "include_final_and_release_identifiers": true,
+    "omitted_grid_fits_per_architecture": 35,
+    "replacement_fits": 0
+  },
+  "official_test_evaluations": 0,
+  "phase4_permitted": false
+}

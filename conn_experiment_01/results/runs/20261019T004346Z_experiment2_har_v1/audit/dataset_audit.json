@@ -1,0 +1,140 @@
+{
+  "completed_utc": "2026-10-19T00:44:50.087524+00:00",
+  "dataset_url": "https://archive.ics.uci.edu/static/public/240/human+activity+recognition+using+smartphones.zip",
+  "dataset_page": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
+  "dataset_doi": "10.24432/C54S4K",
+  "archive_path": "E:\\CoNN\\conn_experiment_01\\data\\raw\\uci_har_original.zip",
+  "archive_sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031",
+  "official_train_windows": 7352,
+  "official_test_windows": 2947,
+  "total_subjects": 30,
+  "classes": {
+    "1": "WALKING",
+    "2": "WALKING_UPSTAIRS",
+    "3": "WALKING_DOWNSTAIRS",
+    "4": "SITTING",
+    "5": "STANDING",
+    "6": "LAYING"
+  },
+  "engineered_features": 561,
+  "duplicate_feature_names": 84,
+  "duplicate_handling": "Retain every column by original integer ID; never merge equal names.",
+  "signal_channels": [
+    "body_acc_x",
+    "body_acc_y",
+    "body_acc_z",
+    "body_gyro_x",
+    "body_gyro_y",
+    "body_gyro_z",
+    "total_acc_x",
+    "total_acc_y",
+    "total_acc_z"
+  ],
+  "window_samples": 128,
+  "sampling_hz": 50,
+  "window_overlap_fraction": 0.5,
+  "split_sizes": {
+    "train": 5796,
+    "val": 1556,
+    "test": 2947
+  },
+  "partition": {
+    "fit_subjects": [
+      1,
+      3,
+      5,
+      6,
+      16,
+      17,
+      19,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "validation_subjects": [
+      7,
+      8,
+      11,
+      14,
+      15
+    ],
+    "test_subjects": [
+      2,
+      4,
+      9,
+      10,
+      12,
+      13,
+      18,
+      20,
+      24
+    ],
+    "split_seed": 104729,
+    "rule": "Keep official 9-subject test; choose 5 of 21 official train subjects with a fixed RNG permutation; remaining 16 fit. No labels or feature values enter assignment."
+  },
+  "representations": {
+    "engineered": {
+      "input_features": 561,
+      "scaler_fitted_on_subjects": [
+        1,
+        3,
+        5,
+        6,
+        16,
+        17,
+        19,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "scaler_dimensions": 561,
+      "constant_dimensions": 0,
+      "scaler_rule": "per-feature mean/std across training windows",
+      "layout_rule": "official_metadata_order_semantic_not_physical"
+    },
+    "temporal": {
+      "input_features": 1152,
+      "scaler_fitted_on_subjects": [
+        1,
+        3,
+        5,
+        6,
+        16,
+        17,
+        19,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "scaler_dimensions": 9,
+      "constant_dimensions": 0,
+      "scaler_rule": "per-channel mean/std across training windows and time",
+      "layout_rule": "within_window_time_channels_colocated"
+    }
+  },
+  "test_access": "Schema, finite values and subject/class counts audited. No model predictions or model selection on test.",
+  "vendor_preprocessing_limitation": "561 features are supplied normalized to [-1,1]; README does not identify which split fitted original normalization. Our normalization is train-subject-only and cannot undo unknown upstream choices. Temporal signals are also vendor-filtered windows, not untouched continuous recordings.",
+  "timing_limitation": "No complete session/timestamp metadata: within-window temporal order is available, continuous ordering across rows is not assumed.",
+  "source_documentation": "Official UCI page and archive README/features_info; archive documentation retained verbatim for provenance.",
+  "license_note": "Current UCI page lists CC BY 4.0; bundled 2013 README contains older noncommercial wording. Both source records are retained; this run performs research analysis without redistributing a modified dataset.",
+  "missing_values": false,
+  "models_trained": 0
+}

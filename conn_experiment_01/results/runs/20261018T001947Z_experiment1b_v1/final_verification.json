@@ -1,0 +1,20 @@
+{
+  "verified_utc": "2026-10-18T00:39:38.553259+00:00",
+  "pilot_unchanged": true,
+  "training_source_snapshot_verified": true,
+  "protocol_and_selection_seals_verified": true,
+  "freeze_precedes_replication": true,
+  "tuning_models": 420,
+  "replication_models": 140,
+  "tuning_test_evaluations": 0,
+  "replication_test_evaluations": 140,
+  "checkpoint_ablation_rows": 5040,
+  "pngs_verified": 38,
+  "all_metric_and_gradient_values_finite": true,
+  "primary_statistics_independently_recomputed": true,
+  "pre_training_test_suite": "38 passed in 13.90s",
+  "post_training_reporting_change": "Added all-condition mean table and explicit secondary S versus D interpretation; no training or selection changes.",
+  "postprocessing_source_sha256": "14cb7439365c0cb7d980755258f66c08cfca0c36a76cb48577efa627d535733b",
+  "verifier_sha256": "1493d874185645f93506205cc898a470e24ac93af60ef80c1c9f7c069f4901c4",
+  "frozen_training_source_manifest_sha256": "2e18a83d3633d3061d741cd27adeb130bdb638144360b16cda318938178aefd8"
+}

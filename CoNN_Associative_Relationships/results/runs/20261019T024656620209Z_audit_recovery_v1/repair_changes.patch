@@ -1,0 +1,101 @@
+--- before/scripts\audit_recovery.py
++++ after/scripts\audit_recovery.py
+@@ -19,6 +19,7 @@
+ from datetime import datetime, timezone
+ 
+ ROOT = Path(__file__).resolve().parents[1]
++sys.path[:] = [entry for entry in sys.path if Path(entry or ".").resolve() != ROOT / "scripts"]
+ sys.path.insert(0, str(ROOT / "src"))
+ OLD = ROOT.parent / "conn_experiment_01"
+ OLD_RUN = OLD / "results/runs/20261019T004346Z_experiment2_har_v1"
+@@ -66,7 +67,7 @@
+         "prior_pytest_lastfailed": json.loads((ROOT / ".pytest_cache/v/cache/lastfailed").read_text()),
+         "process_inventory_limitation": "PowerShell Get-CimInstance Win32_Process returned Access denied; Get-Process python* returned no rows before audit",
+         "inspection_result_models_trained_field": "literal zero in source, not an independently maintained training registry",
+-        "snapshot_note": "audit_recovery.py is newly added audit tooling; all other snapshot files predate this investigation",
++        "snapshot_note": "Snapshot reflects this audit invocation. The first run preserves the original source; later runs include documented repairs.",
+     })
+     env = dict(os.environ, PYTHONPATH=str(ROOT / "src"), PYTHONDONTWRITEBYTECODE="1", MPLBACKEND="Agg")
+     commands = []
+@@ -108,6 +109,7 @@
+     inspected = inspect.run_inspection()
+     write("inspection.json", inspected)
+     write("inspection_timing.json", {"seconds": time.perf_counter() - t, "entry": "conn_assoc.inspect.run_inspection()", "original_inspection_overwritten": False})
++    command("inspect_entrypoint_after", [sys.executable, "scripts/inspect.py", "--output", str(run / "inspection_cli.json")])
+     torch.manual_seed(104729)
+     torch.set_num_threads(1)
+     distance = geometry.pairwise_abs_distance(geometry.uniform_coordinates(64), geometry.temporal_input_coordinates())
+@@ -135,6 +137,8 @@
+         "input_shape": list(sample.shape), "output_shape": list(out.shape), "finite_quadratic_objective": float(objective.detach()),
+         "gradient_norm": float(weight.grad.norm()), "gradient_max_abs_formula_error": float((weight.grad-analytic).abs().max()),
+         "model_weights_updated": False, "checkpoints_written": False, "classification_metrics": None})
++    import matplotlib
++    matplotlib.use("Agg")
+     from matplotlib import pyplot as plt
+     fig, ax = plt.subplots(figsize=(7, 4))
+     d = torch.linspace(0, 1, 201)
+@@ -151,6 +155,16 @@
+     if history.exists():
+         historical = list(csv.DictReader(history.open(encoding="utf-8")))
+         write("historical_schema.json", {"columns": list(historical[0]) if historical else [], "rows": len(historical)})
++        comparisons = [r for r in historical if r["metric"] == "macro_f1" and r["contrast"] in ("D_minus_B", "D_minus_A")]
++        fig, ax = plt.subplots(figsize=(8, 4))
++        for i, row in enumerate(comparisons):
++            mean, lo, hi = (100 * float(row[k]) for k in ("mean", "ci_low", "ci_high"))
++            ax.errorbar(mean, i, xerr=[[mean-lo], [hi-mean]], fmt="o", capsize=4)
++        ax.set_yticks(range(len(comparisons)), [r["representation"] + " " + r["contrast"] for r in comparisons])
++        ax.axvline(0, color="grey", linestyle="--")
++        ax.set(xlabel="Macro-F1 difference (percentage points), seed 95% t CI",
++               title="Historical Experiment 2 only; no associative models trained")
++        fig.tight_layout(); fig.savefig(run / "historical_experiment2_comparisons.png", dpi=160); plt.close(fig)
+     after = manifest(old_files)
+     write("experiment2.after.json", after)
+     changed_old = [p for p in before if before[p] != after[p]]
+--- before/scripts\inspect.py
++++ after/scripts\inspect.py
+@@ -5,7 +5,11 @@
+ import sys
+ from pathlib import Path
+ 
+-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
++# A direct script launch puts scripts/ first on sys.path. This file must not
++# shadow Python's standard-library inspect module when NumPy/PyTorch import it.
++script_dir = Path(__file__).resolve().parent
++sys.path[:] = [entry for entry in sys.path if Path(entry or ".").resolve() != script_dir]
++sys.path.insert(0, str(script_dir.parent / "src"))
+ 
+ from conn_assoc.inspect import main
+ 
+--- before/src\conn_assoc\inspect.py
++++ after/src\conn_assoc\inspect.py
+@@ -3,6 +3,7 @@
+ from __future__ import annotations
+ 
+ import json
++import argparse
+ from datetime import datetime, timezone
+ 
+ import numpy as np
+@@ -84,10 +85,19 @@
+ 
+ 
+ def main() -> int:
++    parser = argparse.ArgumentParser(description="Read-only Phase 0/1 dataset inspection")
++    parser.add_argument("--output", type=str, help="New report path inside this experiment (default: audit/inspection.json)")
++    args = parser.parse_args()
++    from pathlib import Path
++    output = Path(args.output).resolve() if args.output else INSPECTION_PATH
++    if not output.is_relative_to(EXPERIMENT_ROOT.resolve()):
++        parser.error("--output must stay inside this experiment directory")
++    if args.output and output.exists():
++        parser.error("--output already exists; choose a new report path")
+     report = run_inspection()
+-    INSPECTION_PATH.parent.mkdir(parents=True, exist_ok=True)
+-    INSPECTION_PATH.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+-    print(f"PHASE 0/1 INSPECTION PASSED: {INSPECTION_PATH}")
++    output.parent.mkdir(parents=True, exist_ok=True)
++    output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
++    print(f"PHASE 0/1 INSPECTION PASSED: {output}")
+     return 0
+ 
+ 

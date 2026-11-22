@@ -1,0 +1,330 @@
+version: 1C-v1
+frozen_utc: '2026-10-18T02:49:23.875873+00:00'
+audit_sha256: e6a02198ff45e6ed27b0332e6d4b84f1bfb1718cdb93d0a6c057dfc58ce563d5
+base_config:
+  experiment_name: conn_experiment_01
+  task: and
+  seed_list:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  n_features: 100
+  motif_length: 6
+  motif_amplitude: 1.0
+  region_a:
+  - 8
+  - 32
+  region_b:
+  - 68
+  - 92
+  template_a:
+  - 1.0
+  - 1.0
+  - -1.0
+  - -1.0
+  - 1.0
+  - 1.0
+  template_b:
+  - 1.0
+  - -1.0
+  - 1.0
+  - -1.0
+  - 1.0
+  - -1.0
+  noise_std: 0.15
+  n_distractors: 2
+  distractor_amplitude: 0.5
+  n_train: 512
+  n_val: 128
+  n_test: 128
+  batch_size: 32
+  hidden_sizes:
+  - 32
+  - 32
+  total_steps: 400
+  eval_interval: 20
+  lr: 0.1
+  momentum: 0.0
+  weight_decay: 0.0
+  optimizer: sgd
+  d50_start: 0.08
+  d50_end: 1.0
+  release_fraction: 0.7
+  tau_floor: 1.0e-06
+  far_quantile: 0.75
+  distance_bin_edges:
+  - 0.0
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  - 1.0
+  probe_l2: 0.001
+  device: cpu
+  primary_treatment: D
+  primary_control: B_prime
+  primary_control_name: row_shuffle
+  primary_metric: final_test_accuracy
+  primary_task: and
+  lr_grid:
+  - 0.01
+  - 0.05
+  - 0.1
+  lr_selection: shared_initial
+  tau_start: 0.06794574402304153
+  tau_end: 0.8493218002880191
+  release_step: 280
+  permutation_rule: within_row_column_permutation_frozen
+  distance: absolute_difference_on_unit_interval
+  optimizer_foreach: false
+  optimizer_fused: false
+  test_protocol: final_step_only
+  lr_grid_executed: false
+total_steps: 3200
+release_step: 2240
+policies:
+  S:
+    name: S
+    path: fixed
+    terminal_d50: 0.08
+    dense_release: false
+  F:
+    name: F
+    path: fixed
+    terminal_d50: 0.25
+    dense_release: false
+  P:
+    name: P
+    path: smooth
+    terminal_d50: 0.25
+    dense_release: false
+  W:
+    name: W
+    path: smooth
+    terminal_d50: 1.0
+    dense_release: false
+  H:
+    name: H
+    path: fixed
+    terminal_d50: 1.0
+    dense_release: false
+  D:
+    name: D
+    path: smooth
+    terminal_d50: 1.0
+    dense_release: true
+dense_baseline: A exact dense at every step
+variants:
+  and:
+  - id: A
+    policy: A
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: S_aligned_q0
+    policy: S
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: S_shuffle_q0
+    policy: S
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: F_aligned_q0
+    policy: F
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: F_shuffle_q0
+    policy: F
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: P_aligned_q0
+    policy: P
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: P_shuffle_q0
+    policy: P
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: W_aligned_q0
+    policy: W
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: W_shuffle_q0
+    policy: W
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: H_aligned_q0
+    policy: H
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: H_shuffle_q0
+    policy: H
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: D_aligned_q0
+    policy: D
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: D_shuffle_q0
+    policy: D
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: S_aligned_q0.5
+    policy: S
+    shuffled: false
+    alignment_fraction: 0.5
+  - id: P_aligned_q0.5
+    policy: P
+    shuffled: false
+    alignment_fraction: 0.5
+  - id: D_aligned_q0.5
+    policy: D
+    shuffled: false
+    alignment_fraction: 0.5
+  - id: S_aligned_q1
+    policy: S
+    shuffled: false
+    alignment_fraction: 1.0
+  - id: P_aligned_q1
+    policy: P
+    shuffled: false
+    alignment_fraction: 1.0
+  - id: D_aligned_q1
+    policy: D
+    shuffled: false
+    alignment_fraction: 1.0
+  xor:
+  - id: A
+    policy: A
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: S_aligned_q0
+    policy: S
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: S_shuffle_q0
+    policy: S
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: F_aligned_q0
+    policy: F
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: F_shuffle_q0
+    policy: F
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: P_aligned_q0
+    policy: P
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: P_shuffle_q0
+    policy: P
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: W_aligned_q0
+    policy: W
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: W_shuffle_q0
+    policy: W
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: H_aligned_q0
+    policy: H
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: H_shuffle_q0
+    policy: H
+    shuffled: true
+    alignment_fraction: 0.0
+  - id: D_aligned_q0
+    policy: D
+    shuffled: false
+    alignment_fraction: 0.0
+  - id: D_shuffle_q0
+    policy: D
+    shuffled: true
+    alignment_fraction: 0.0
+tuning_seeds:
+- 10
+- 11
+- 12
+- 13
+- 14
+replication_seeds:
+- 200
+- 201
+- 202
+- 203
+- 204
+- 205
+- 206
+- 207
+- 208
+- 209
+- 210
+- 211
+- 212
+- 213
+- 214
+- 215
+- 216
+- 217
+- 218
+- 219
+learning_rate_grid:
+- 0.01
+- 0.05
+- 0.1
+tuning_models: 480
+replication_models: 640
+selection: 'One common LR per task: maximize mean final validation accuracy over all
+  13 q=0 core variants and five tuning seeds; ties lower mean validation loss then
+  lower LR. Every degradation variant also gets the full equal grid but does not enter
+  selection. Freeze task LRs before replication.'
+primary: 'AND: P_aligned_q0 minus D_aligned_q0, native final test accuracy on 20 new
+  paired seeds'
+primary_interval: two-sided 95% Student t on paired seed differences; df=19; sole
+  primary contrast
+secondary:
+- 'W-D: isolate exact dense release, common Gaussian prehistory and LR'
+- 'S-D: fixed locality versus full release'
+- 'P-F and W-H: schedule versus static at matched terminal Gaussian width'
+- aligned minus row-shuffled for all six terminal policies
+- '(P-P_shuffle)-(S-S_shuffle): alignment-by-expansion interaction'
+- D-B_prime analogue is a new secondary replication; historical 1B remains unchanged
+- 'XOR: repeat all core policy and alignment contrasts'
+- AND degradation q=.5 and q=1 versus q=0 for S,P,D, and difference versus dense baseline
+secondary_inference: descriptive, exploratory, unadjusted 95% intervals; no secondary
+  confirmatory claims
+alignment_degradation: Only input coordinates permuted; hidden geometry and all data
+  columns/labels unchanged. Independently ordered prefix of 50 or 100 coordinates
+  cyclically permuted; exactly 50%/100% moved; affected sets nested, mappings need
+  not be. Row-wise gate multisets and energy preserved. q is corruption fraction,
+  not physical displacement.
+random_streams:
+  data: 0
+  initialization: 1000003
+  order: 2000003
+  row_masks: 3000003
+  alignment: 4000003
+test_usage: No tuning test evaluation. Replication native final test exactly once.
+  Gate comparisons and far ablations use validation only. No test-selected redesign,
+  checkpoints, LRs or replacement seeds.
+checkpoints:
+- 'pre_release: 2240 updates, previous native gate'
+- 'post_release: same weights, next native gate'
+- 'final: 3200 updates'
+diagnostics: Every 160 updates plus same-weight release pair and final. Full train/val
+  curves; effective weights; per-unit gate energy; fixed first-minibatch dL/dW and
+  dL/dW_eff by base geometry bins; validation far ablation in ih, hh and jointly.
+  Serialized checkpoint reloads under native/dense gates.
+convergence: First measured validation accuracy >=.8,.9,.95; sampling interval 160
+  updates; missing threshold remains missing; no early stopping
+matched_parameters: 4321
+optimizer: original SGD momentum=0 weight_decay=0 foreach=False fused=False
+preservation: Before/after SHA256 manifest of every pre-existing run, including 1A/pilot
+  and 1B; no historical results pooled
+source_manifest_sha256: bdeb0bddf374d030a82ca24f18ffa198f8be2175201c615c22fe062e17c18784

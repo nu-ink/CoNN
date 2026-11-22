@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\conn_experiment_01\results\runs\20261019T004346Z_experiment2_har_v1\replication
+Exists: True
+Files: 3497
+Bytes: 583942550
+Reason: Final-evaluation jobs and checkpoints.
+Per-file SHA-256 was not computed for this referenced tree.

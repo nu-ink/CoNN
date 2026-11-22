@@ -1,0 +1,14 @@
+{
+  "n": 20,
+  "mean": 0.0484375,
+  "sd": 0.03171933740057599,
+  "t_crit": 2.093024054408263,
+  "ci_low": 0.0335923931344366,
+  "ci_high": 0.0632826068655634,
+  "spans_zero": false,
+  "cohen_dz": 1.527065316286223,
+  "mean_percentage_points": 4.84375,
+  "positive_seeds": 19,
+  "tied_seeds": 0,
+  "negative_seeds": 1
+}

@@ -1,0 +1,8 @@
+{
+  "paired_data_initialization_order": true,
+  "parameter_count": 4321,
+  "all_budgets_3200_steps": true,
+  "common_W_D_pre_release_weights_identical": true,
+  "per_unit_gate_energy_max_abs_gap": 2.288818359375e-05,
+  "test_evaluations": 0
+}

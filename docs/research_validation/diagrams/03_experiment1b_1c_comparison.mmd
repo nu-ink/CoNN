@@ -1,0 +1,8 @@
+flowchart TD
+  P[Pilot seeds 0-4<br/>exploratory] --> T[Tuning seeds 5-9]
+  T --> Grid[LR 0.01 0.05 0.1<br/>400 800 1600 3200]
+  Grid --> Select[Validation-only freeze]
+  Select --> R[1B replication seeds 100-119]
+  R --> Contrast1[Primary D - B prime]
+  Select -. same experimental family .-> C[1C locality variants]
+  C --> Contrast2[Primary P - D]

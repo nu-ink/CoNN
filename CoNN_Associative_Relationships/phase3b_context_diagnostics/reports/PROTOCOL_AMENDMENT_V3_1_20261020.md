@@ -1,0 +1,13 @@
+# Phase 3B prospective v3.1 amendment record
+
+The user explicitly approved A1, A2 and A3 on 2026-10-20 America/Chicago. The consolidated protocol is [PROTOCOL_PHASE3B_v3.md](../protocol_versions/phase3b_v3_1_20261020/PROTOCOL_PHASE3B_v3.md); exact decision text and the finalized companion configuration are in that version directory.
+
+- A1: Gaussian-only pooled empirical null from all 35 Gaussian shuffled fits, separately by layer and pair, NumPy linear 95th percentile, identical support/normalization/precision. Missing null fits prevent null-based classification. Dense receives no Gaussian-null Level 2 claim.
+- A2: A pair's common support must show >=1e-6 trained-versus-initial forward C change in the evaluated layer for at least one code in that pair. Require normalized pair difference >1e-4 and above its pooled null threshold, plus an isolated output effect >1e-6. IH varies only IH with HH=0; HH varies only HH with cached h1. All comparisons, failures and undefined empty intersections are reported.
+- A3: Require the complete verified periodic, pre-release, post-release and final C3 pilot checkpoint set. Use its maximum actual-forward live C change. Decisions are independent by architecture: <1e-6 omits that architecture's 35 grid fits; >=1e-6 leaves it eligible. No extra master-update prerequisite, missing-as-zero assumption, substitution or claim of predictive benefit.
+
+The design retains the fifteen-cell matrix, fixed LR .1, 3200-step fits, deterministic ten-fit pilot, seeds 400–404, seven historical folds, maximum 535 trajectories/1,712,000 training updates and 21600-second execution cap. Historical preprocessing and development-reuse limitations remain explicit. The 1e-6 output tolerance is retained and frozen before any future trained-model effects; untrained numerical verification gates must pass before use.
+
+The protocol seal records the prospective design and selected historical provenance. All A1–A3 ambiguities are resolved in this revision. Verification covers document/configuration consistency; it is not a claim that amended model code has been implemented or tested. Execution remains gated on a versioned implementation, required checkpoints, numerical tests, current measured throughput and source/config/data/environment manifests. The historical launcher must not be used as if it implemented v3.1.
+
+Earlier protocols, the original review draft, completed-run artifacts and historical classifications/statistics/conclusions were preserved. No new fits, optimizer updates, trained-model effect reanalysis, official HAR test evaluation or Phase 4 work occurred in this finalization. The amendment was prepared after prior results were known and applies only prospectively.

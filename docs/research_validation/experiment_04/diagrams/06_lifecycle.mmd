@@ -1,0 +1,20 @@
+%% Experiment lifecycle statechart
+%% Sources: experiments/experiment_04/src/conn_exp04/{core,runner,analysis}.py
+%% Historical sources: conn_experiment_01/src/conn_exp/{gates,geometry,models,schedules}.py
+%% Verified references: runner.create_run, runner.train_run, runner.evaluate_run, analysis.analyze
+stateDiagram-v2
+  [*] --> Created: create_run
+  Created --> Training: train_run
+  Training --> Trained: all fits complete
+  Training --> Failed: exception recorded
+  Training --> Interrupted: keyboard interrupt recorded
+  Trained --> Evaluating: evaluate_run creates evaluation directory
+  Evaluating --> Evaluated: all predefined endpoints saved
+  Evaluating --> EvaluationFailed: exception recorded
+  Evaluating --> EvaluationInterrupted: keyboard interrupt recorded
+  Evaluated --> Analyzed: analyze
+  Analyzed --> [*]
+  Failed --> [*]
+  Interrupted --> [*]
+  EvaluationFailed --> [*]
+  EvaluationInterrupted --> [*]

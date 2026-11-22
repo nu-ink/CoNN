@@ -1,0 +1,46 @@
+{
+  "run_id": "20261017T235744Z_smoke",
+  "experiment_version": "0.1.0",
+  "smoke": true,
+  "task": "and",
+  "seed_list": [
+    0
+  ],
+  "total_steps": 30,
+  "release_step": 21,
+  "release_fraction": 0.7,
+  "tau_start": 0.06794574402304153,
+  "tau_end": 0.8493218002880191,
+  "d50_start": 0.08,
+  "d50_end": 1.0,
+  "lr": 0.1,
+  "lr_grid": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "lr_selection": "shared_initial",
+  "lr_grid_executed": false,
+  "optimizer": "sgd",
+  "momentum": 0.0,
+  "weight_decay": 0.0,
+  "optimizer_foreach": false,
+  "device": "cpu",
+  "primary_treatment": "D",
+  "primary_control": "B_prime",
+  "primary_control_name": "row_shuffle",
+  "primary_metric": "final_test_accuracy",
+  "primary_task": "and",
+  "config_sha256": "add24a38c491191b3d930a62ed45a83ead1b2959bc92a060be00899575199ab3",
+  "coordinate_convention": "Input feature i and hidden unit j lie on the unit interval. Coordinate of index i among n positions is i/(n-1) for n>1, and 0.5 for n=1. Distance is the absolute difference. Gate matrix rows are destination units and columns are source units, matching PyTorch Linear.weight. Hidden units are fixed on this grid before training. Coordinates are not learned and do not depend on labels or on the evaluation split.",
+  "permutation_rule": "within_row_column_permutation_frozen",
+  "test_protocol_text": "Coordinates are functions of feature count and hidden width only. The test split is not an argument to geometry, schedules, masks, probes, or checkpoint selection. Probes fit on training motif labels and score validation. Test accuracy is computed once, after total_steps optimizer updates, and that value is the recorded score.",
+  "distance_bins_use": "unpermuted task coordinates for every condition, including B_prime and C",
+  "runtime_flags": {
+    "torch_num_threads": 1,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  }
+}

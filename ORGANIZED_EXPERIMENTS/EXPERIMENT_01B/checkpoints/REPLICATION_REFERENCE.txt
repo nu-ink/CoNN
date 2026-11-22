@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\conn_experiment_01\results\runs\20261018T001947Z_experiment1b_v1\replication
+Exists: True
+Files: 1596
+Bytes: 87758140
+Reason: Replication job directory, including checkpoints.
+Per-file SHA-256 was not computed for this referenced tree.

@@ -1,0 +1,76 @@
+experiment_name: conn_experiment_01
+task: and
+seed_list:
+- 0
+n_features: 100
+motif_length: 6
+motif_amplitude: 1.0
+region_a:
+- 8
+- 32
+region_b:
+- 68
+- 92
+template_a:
+- 1.0
+- 1.0
+- -1.0
+- -1.0
+- 1.0
+- 1.0
+template_b:
+- 1.0
+- -1.0
+- 1.0
+- -1.0
+- 1.0
+- -1.0
+noise_std: 0.15
+n_distractors: 2
+distractor_amplitude: 0.5
+n_train: 128
+n_val: 64
+n_test: 64
+batch_size: 32
+hidden_sizes:
+- 16
+- 16
+total_steps: 30
+eval_interval: 10
+lr: 0.1
+momentum: 0.0
+weight_decay: 0.0
+optimizer: sgd
+d50_start: 0.08
+d50_end: 1.0
+release_fraction: 0.7
+tau_floor: 1.0e-06
+far_quantile: 0.75
+distance_bin_edges:
+- 0.0
+- 0.2
+- 0.4
+- 0.6
+- 0.8
+- 1.0
+probe_l2: 0.001
+device: cpu
+primary_treatment: D
+primary_control: B_prime
+primary_control_name: row_shuffle
+primary_metric: final_test_accuracy
+primary_task: and
+lr_grid:
+- 0.01
+- 0.05
+- 0.1
+lr_selection: shared_initial
+tau_start: 0.06794574402304153
+tau_end: 0.8493218002880191
+release_step: 21
+permutation_rule: within_row_column_permutation_frozen
+distance: absolute_difference_on_unit_interval
+optimizer_foreach: false
+optimizer_fused: false
+test_protocol: final_step_only
+lr_grid_executed: false

@@ -1,0 +1,84 @@
+[
+  {
+    "name": "01_architecture",
+    "title": "Full experimental architecture",
+    "references": [
+      "core.generate_split",
+      "core.Gates.at",
+      "runner.fit_condition",
+      "conn_exp.models.CoNNMLP"
+    ]
+  },
+  {
+    "name": "02_dataset",
+    "title": "Synthetic data generation",
+    "references": [
+      "core.stream",
+      "core.target_score",
+      "core.generate_split"
+    ]
+  },
+  {
+    "name": "03_gating",
+    "title": "Gaussian and control calculations",
+    "references": [
+      "core.Gates.at",
+      "conn_exp.geometry.make_task_geometry",
+      "conn_exp.geometry.pairwise_abs_distance",
+      "conn_exp.gates.gaussian_gate",
+      "conn_exp.models.GatedLinear.forward",
+      "conn_exp.schedules.schedule_at"
+    ]
+  },
+  {
+    "name": "04_alignment",
+    "title": "Aligned versus scrambled geometry",
+    "references": [
+      "core.generate_split",
+      "core.Gates.audit",
+      "conn_exp.gates.apply_row_permutation"
+    ]
+  },
+  {
+    "name": "05_training",
+    "title": "Actual training execution flow",
+    "references": [
+      "runner.train_run",
+      "runner.fit_condition",
+      "runner.save_checkpoint",
+      "core.Gates.at"
+    ]
+  },
+  {
+    "name": "06_lifecycle",
+    "title": "Experiment lifecycle statechart",
+    "references": [
+      "runner.create_run",
+      "runner.train_run",
+      "runner.evaluate_run",
+      "analysis.analyze"
+    ]
+  },
+  {
+    "name": "07_evaluation",
+    "title": "Held-out evaluation and reporting",
+    "references": [
+      "runner.evaluate_run",
+      "core.metrics",
+      "analysis.analyze",
+      "analysis.paired",
+      "analysis.holm"
+    ]
+  },
+  {
+    "name": "08_history",
+    "title": "Comparison with previous CoNN experiments",
+    "references": [
+      "conn_exp.experiment1b",
+      "conn_exp.experiment1c",
+      "conn_exp.experiment2",
+      "core.generate_split",
+      "runner.train_run"
+    ]
+  }
+]

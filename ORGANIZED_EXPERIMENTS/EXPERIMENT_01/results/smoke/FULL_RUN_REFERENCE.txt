@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\conn_experiment_01\results\runs\20261017T235744Z_smoke
+Exists: True
+Files: 44
+Bytes: 1804756
+Reason: Full smoke or pilot run, including checkpoints, curves, and plots.
+Per-file SHA-256 was not computed for this referenced tree.

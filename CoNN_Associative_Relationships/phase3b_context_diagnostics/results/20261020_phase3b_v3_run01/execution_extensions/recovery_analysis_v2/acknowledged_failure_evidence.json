@@ -1,0 +1,47 @@
+{
+  "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\failures\\1792516498883190900.json": {
+    "sha256": "ebc8453f76b3d9eae5d1d235026074127c4e0c77b982de9ec7be34976472e823",
+    "record": {
+      "exception": "TypeError('Object of type bool is not JSON serializable')",
+      "traceback": "Traceback (most recent call last):\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\run.py\", line 29, in <module>\n    try: main()\n         ^^^^^^\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\run.py\", line 20, in main\n    execute(run)\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\src\\training.py\", line 263, in execute\n    report(run)\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\src\\reporting.py\", line 213, in report\n    write(run/'analysis_summary.json',{'complete':complete,'grid_fits':len(jobs),'pilot_fits':len(pilots),'verification':verification,\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\src\\common.py\", line 17, in write\n    tmp.write_text(json.dumps(value,indent=2,allow_nan=False)+'\\n',encoding='utf-8')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\encoder.py\", line 202, in encode\n    chunks = list(chunks)\n             ^^^^^^^^^^^^\n  File \"C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\encoder.py\", line 432, in _iterencode\n    yield from _iterencode_dict(o, _current_indent_level)\n  File \"C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\encoder.py\", line 406, in _iterencode_dict\n    yield from chunks\n  File \"C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\encoder.py\", line 406, in _iterencode_dict\n    yield from chunks\n  File \"C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\encoder.py\", line 439, in _iterencode\n    o = _default(o)\n        ^^^^^^^^^^^\n  File \"C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type bool is not JSON serializable\n",
+      "argv": [
+        ".\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\run.py",
+        "execute"
+      ]
+    }
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\execution_extensions\\finalization_driver_v1\\failure.json": {
+    "sha256": "cabf9897b3d538ab18370b3d590cb960c45f456cd098f66a298d10e70e0ed18f",
+    "record": {
+      "exception": "RuntimeError(\"Execution failure evidence found: [WindowsPath('E:/CoNN/CoNN_Associative_Relationships/phase3b_context_diagnostics/results/failures/1792516498883190900.json')]\")",
+      "traceback": "Traceback (most recent call last):\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\finalize_when_ready.py\", line 38, in <module>\n    try:main()\n        ^^^^^^\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\finalize_when_ready.py\", line 25, in main\n    if failure:raise RuntimeError(f'Execution failure evidence found: {failure}')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Execution failure evidence found: [WindowsPath('E:/CoNN/CoNN_Associative_Relationships/phase3b_context_diagnostics/results/failures/1792516498883190900.json')]\n"
+    }
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\execution_extensions\\final_qa_v1\\failure.json": {
+    "sha256": "b1604ccc5ec4bad5fc795a76a975643aafac9a32c883f303cf1314554b059c2d",
+    "record": {
+      "exception": "RuntimeError(\"Preserved prior failure: [WindowsPath('E:/CoNN/CoNN_Associative_Relationships/phase3b_context_diagnostics/results/20261020_phase3b_v3_run01/execution_extensions/finalization_driver_v1/failure.json'), WindowsPath('E:/CoNN/CoNN_Associative_Relationships/phase3b_context_diagnostics/results/20261020_phase3b_v3_run01/execution_extensions/forward_rank_sensitivity_v1/failure.json')]\")",
+      "traceback": "Traceback (most recent call last):\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\final_qa.py\", line 89, in <module>\n    try:main()\n        ^^^^^^\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\final_qa.py\", line 24, in main\n    if failure:raise RuntimeError(f'Preserved prior failure: {failure}')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Preserved prior failure: [WindowsPath('E:/CoNN/CoNN_Associative_Relationships/phase3b_context_diagnostics/results/20261020_phase3b_v3_run01/execution_extensions/finalization_driver_v1/failure.json'), WindowsPath('E:/CoNN/CoNN_Associative_Relationships/phase3b_context_diagnostics/results/20261020_phase3b_v3_run01/execution_extensions/forward_rank_sensitivity_v1/failure.json')]\n"
+    }
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\execution_extensions\\forward_rank_sensitivity_v1\\failure.json": {
+    "sha256": "8733a97f42342ef59ab412e753816cb9f9f616ffb3f79a7b28a679a78b56a83f",
+    "record": {
+      "exception": "RuntimeError(\"Preserved earlier failure: [WindowsPath('E:/CoNN/CoNN_Associative_Relationships/phase3b_context_diagnostics/results/20261020_phase3b_v3_run01/execution_extensions/finalization_driver_v1/failure.json')]\")",
+      "traceback": "Traceback (most recent call last):\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\forward_rank_sensitivity.py\", line 69, in <module>\n    try:main()\n        ^^^^^^\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\forward_rank_sensitivity.py\", line 25, in main\n    if failures:raise RuntimeError(f'Preserved earlier failure: {failures}')\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Preserved earlier failure: [WindowsPath('E:/CoNN/CoNN_Associative_Relationships/phase3b_context_diagnostics/results/20261020_phase3b_v3_run01/execution_extensions/finalization_driver_v1/failure.json')]\n"
+    }
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\execution_extensions\\measured_summary_driver_v1\\failure.json": {
+    "sha256": "7ecdf985b64f9c67d672de0dcb342e79d96d742a86635dcbf7fe023a5b714eee",
+    "record": {
+      "error": "Earlier execution failure: inspect preserved failure.json files"
+    }
+  },
+  "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\execution_extensions\\recovery_analysis_v1\\failure.json": {
+    "sha256": "f0255e28d8f568c96edd4406456302707488476946bb844539e33d4b1b0f0661",
+    "record": {
+      "exception": "UnicodeEncodeError('charmap', '# Phase3B v3 executive summary\\r\\n\\r\\nCompleted: 455 grid fits and 10 pilot fits, 1,488,000 verified completed-fit updates on cpu. No official test subjects were evaluated.\\r\\n\\r\\nGaussianC4\u2212masked primary macro-F1 difference +0.00213398, descriptive95%CI [+0.00011566,+0.00444627]. Practical +.005 threshold and positive lower interval: False.\\r\\n\\r\\nC4 numerical learning: 35/35 fits; functional pair/layer tests: 49/175 passed. Symmetry breaking worked numerically, but the added rank component was initially below the diagnostic target. Less saturation strengthened fixed-batch gradients; float64 storage must still pass the float32 forward criterion.\\r\\n\\r\\nThese development measurements do not establish associative memory or prove architectural redundancy or limited contextual information. Historical experiments were preserved. See the final report, exact fit records and diagnostic CSVs.\\r\\n', 182, 183, 'character maps to <undefined>')",
+      "traceback": "Traceback (most recent call last):\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\recover_reporting.py\", line 97, in <module>\n    try:main()\n        ^^^^^^\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\recover_reporting.py\", line 80, in main\n    load(fixed,'reporting_json_native').report(run)\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\execution_extensions\\recovery_analysis_v1\\code\\reporting_json_native.py\", line 216, in report\n    print(short,flush=True)\n  File \"C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\encodings\\cp1252.py\", line 19, in encode\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nUnicodeEncodeError: 'charmap' codec can't encode character '\\u2212' in position 182: character maps to <undefined>\n"
+    }
+  }
+}

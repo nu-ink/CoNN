@@ -1,0 +1,12 @@
+flowchart TD
+  C[Fixed pilot.yaml] --> D[generate_dataset seed stream]
+  C --> I[initial_state_dict init stream]
+  C --> O[minibatch_order order stream]
+  C --> M[draw_masks mask stream]
+  D --> T[Train seven conditions]
+  I --> T
+  O --> T
+  M --> T
+  T --> G[Gate schedule]
+  G --> W[W_eff = W x detached G]
+  W --> S[SGD final-step score]

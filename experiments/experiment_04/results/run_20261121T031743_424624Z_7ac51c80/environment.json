@@ -1,0 +1,29 @@
+{
+  "python": "3.10.1",
+  "executable": "C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+  "torch": "2.5.1+cu121",
+  "numpy": "1.26.4",
+  "psutil": "5.9.5",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 165 Stepping 5, GenuineIntel",
+  "logical_cpus": 20,
+  "device": "cpu",
+  "cuda_available": true,
+  "deterministic_algorithms": true,
+  "mkldnn": false,
+  "git_commit": null,
+  "git_note": "No repository; user authorized skipping Git checkout.",
+  "source_hashes": {
+    "experiments\\experiment_04\\src\\conn_exp04\\analysis.py": "d6c52e28c78947bb6018b59b5222e0b0dda024859c7d61b9bde5cfb0eaa69802",
+    "experiments\\experiment_04\\src\\conn_exp04\\core.py": "1f470e626ede36e5d69f090c6a6e678c508a14069135efcc2eaced01818132d2",
+    "experiments\\experiment_04\\src\\conn_exp04\\runner.py": "1b69c04d981e8349951a2bb312937c6fe1dd40a27e099205e536445609b5ce3a",
+    "experiments\\experiment_04\\src\\conn_exp04\\__init__.py": "a88d4b0e96bf6deb2d16b36b32cda774650183225d475f9d20c3acdd2af9e45b",
+    "experiments\\experiment_04\\scripts\\prepare.py": "b53f72efe16f3601b6f13465a48e2d8d801bbcba2d766257505b83ca6995dd3f",
+    "conn_experiment_01\\src\\conn_exp\\gates.py": "86f3740c1ccc9bc0df1843e4a629621ae66fdd93bf6dafd92bdfe03250c476a7",
+    "conn_experiment_01\\src\\conn_exp\\geometry.py": "9ffe85afe8eca79eeccf3ae2505e16cef38d2fca8eb17f46cf95c3ff97501bba",
+    "conn_experiment_01\\src\\conn_exp\\models.py": "1cf26d227a61a600e96d5ecb13a1f785b0507d19bfe52edaeba59c1f5f3f47a3",
+    "conn_experiment_01\\src\\conn_exp\\schedules.py": "1f1070256510d9b3da3d69b69e9a8ae24b6566f378922c9708d293fdbc7004f9",
+    "conn_experiment_01\\src\\conn_exp\\seeding.py": "f80b1f02f0d820249487d657363202c221eaa4f447796306a9d627766448da82",
+    "conn_experiment_01\\src\\conn_exp\\schema.py": "ac47ea41c96f2a97899f9732924117330c801d55c69bcbf24de008ad49dc4289"
+  }
+}

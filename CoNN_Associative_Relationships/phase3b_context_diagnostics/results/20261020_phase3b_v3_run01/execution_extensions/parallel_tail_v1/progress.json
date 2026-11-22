@@ -1,0 +1,16 @@
+{
+  "completed": 273,
+  "queued": 273,
+  "remaining_not_queued": 0,
+  "original_runner_status": {
+    "stage": "grid",
+    "last": [
+      "dense_C0",
+      400,
+      6
+    ],
+    "completed_grid_fits": 348,
+    "elapsed_seconds": 2716.6570000000065
+  },
+  "queue_open": true
+}

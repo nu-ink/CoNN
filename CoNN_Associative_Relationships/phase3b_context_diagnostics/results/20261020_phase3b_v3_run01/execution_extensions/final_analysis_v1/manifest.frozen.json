@@ -1,0 +1,8 @@
+{
+  "source_sha256": "42b7df642f56db1be5afa0cb860b4e3f8bd58029129440863dbe484105f997e1",
+  "role": "additive post-training diagnostic reporting",
+  "no_model_selection": true,
+  "training_source_manifest_sha256": "96eff6c7314032940eca43356ab4092f748ce220d1143e9fcefc47f2468900d7",
+  "primary_analysis_unchanged": true,
+  "plot_policy": "same initial/final color range within cell; separate delta panel"
+}

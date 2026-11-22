@@ -1,0 +1,8 @@
+flowchart TD
+  Context[External sensor context c] --> U[sigmoid U_c]
+  Context --> V[sigmoid V_c]
+  U --> Cfactor[1 - 0.475 sigmoidU sigmoidV T]
+  V --> Cfactor
+  Cfactor --> Mult[W_eff = W x G x C]
+  G[Gaussian schedule] --> Mult
+  Mult --> HAR[HAR classification]

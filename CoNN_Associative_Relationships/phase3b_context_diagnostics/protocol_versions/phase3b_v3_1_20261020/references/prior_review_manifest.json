@@ -1,0 +1,70 @@
+{
+  "reviewed_at_utc": "2026-10-20T17:41:07.467838+00:00",
+  "status": "review_draft_unresolved_not_frozen",
+  "content_checksum_is_not_protocol_seal": true,
+  "new_training_fits": 0,
+  "new_optimizer_updates": 0,
+  "official_test_evaluations": 0,
+  "phase4_started": false,
+  "open_ambiguities": [
+    "A1_null_population",
+    "A2_layer_attribution",
+    "A3_pilot_temporal_summary"
+  ],
+  "checks": {
+    "reference_matches_fully_read_file": true,
+    "root_protocol_retains_frozen_hash": true,
+    "run_and_source_protocols_match_root": true,
+    "seal_still_names_original_protocol": true,
+    "completed_run_still_names_original_protocol": true,
+    "matrix_exactly_fifteen_unique_cells": true,
+    "budget_525_grid_535_total_1712000_steps": true,
+    "two_c3_omissions_arithmetic": true,
+    "three_open_ambiguities_explicit": true,
+    "draft_explicitly_not_frozen": true,
+    "not_certified_conflict_free": true,
+    "training_not_started_by_review": true,
+    "all_observed_historical_inputs_unchanged_during_verification": true
+  },
+  "draft_sha256": "3c9e6a00c7f2eb5ca718682e5d420d8e3132d3130b3bfc845ab9498819f6c6d4",
+  "verifier_sha256": "14ed35434460b7f58b9285e26bab44a0e971779459bdc3df7b0ec3d5ebdeced5",
+  "inputs": {
+    "complete_v2_reference": {
+      "path": "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\PROTOCOL_PHASE3B_v2_reference.md",
+      "sha256": "844e8167bdf91cca4258c656b36a4372ea3886ca73068b74c25acdae430dcd0e"
+    },
+    "original_v3_amendment": {
+      "path": "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\references\\user_phase3b_v3.txt",
+      "sha256": "c8835e202d4673d58d42069ab90e0b72ead52431a0f112f4a2ab39ec8b7715f3"
+    },
+    "preserved_root_protocol": {
+      "path": "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\PROTOCOL_PHASE3B_v3.md",
+      "sha256": "901e57c4d5dcc9bf63b05eb297c75948698db232eec15361248f8c791157e72c"
+    },
+    "preserved_run_protocol": {
+      "path": "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\PROTOCOL_PHASE3B_v3.md",
+      "sha256": "901e57c4d5dcc9bf63b05eb297c75948698db232eec15361248f8c791157e72c"
+    },
+    "preserved_source_protocol": {
+      "path": "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\source\\PROTOCOL_PHASE3B_v3.md",
+      "sha256": "901e57c4d5dcc9bf63b05eb297c75948698db232eec15361248f8c791157e72c"
+    },
+    "preserved_configuration": {
+      "path": "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\config\\experiment.yaml",
+      "sha256": "c299e8a42cd2ce572e6f29f34c8c5ff062632a8487a079f7b6299d351c7c48a2"
+    },
+    "preserved_completion": {
+      "path": "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\results\\20261020_phase3b_v3_run01\\completion.json",
+      "sha256": "19c3ba57fc639d13bc45e0702db3dfbdb5c6c1588875a11610c5398a50501fa2"
+    },
+    "observed_reporting_implementation": {
+      "path": "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\src\\reporting.py",
+      "sha256": "af2ecdf9a32829789d0408ec77e9648bd9fdf276feb18effb3d5fd3d9bd079e7"
+    },
+    "observed_diagnostics_implementation": {
+      "path": "E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\src\\diagnostics.py",
+      "sha256": "bf7f55c009726c3f23722f37d16707fda6524ef1c03cfd22515dc39b9654bd2a"
+    }
+  },
+  "scope_limit": "Document and selected provenance checks; not a full artifact rehash or semantic proof."
+}

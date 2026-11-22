@@ -1,0 +1,2 @@
+Recorded during this investigation in the audit-driver tool output (not a historical training log):
+After pytest, inspection, and CPU primitive checks, matplotlib pyplot.subplots selected Tk and raised _tkinter.TclError: Cannot find a usable init.tcl. Audit tooling subsequently selects matplotlib.use("Agg") explicitly. Original tool session: 10447, exit 1.

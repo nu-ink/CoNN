@@ -1,0 +1,4 @@
+{
+  "exception": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\delivery_review.py\", line 86, in <module>\n    try:main()\n        ^^^^^^\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\phase3b_context_diagnostics\\scripts\\delivery_review.py\", line 48, in main\n    assert re.findall(r'[+\u2212-]?\\d+\\.\\d+(?:[eE][\u2212+-]?\\d+)?',old)==re.findall(r'[+\u2212-]?\\d+\\.\\d+(?:[eE][\u2212+-]?\\d+)?',new)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

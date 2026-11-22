@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "parsed_files": [
+    "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\data.py",
+    "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\gate.py",
+    "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\geometry.py",
+    "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\inspect.py",
+    "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\paths.py",
+    "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\protocol.py",
+    "E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\__init__.py"
+  ]
+}

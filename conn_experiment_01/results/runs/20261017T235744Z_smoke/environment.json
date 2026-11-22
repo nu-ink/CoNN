@@ -1,0 +1,19 @@
+{
+  "python": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
+  "python_executable": "E:\\CoNN\\conn_experiment_01\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "torch": "2.14.1+cpu",
+  "numpy": "2.4.6",
+  "pandas": "3.0.6",
+  "cuda_available": false,
+  "device": "cpu",
+  "command": "e:\\CoNN\\conn_experiment_01\\src\\conn_exp\\runner.py --config configs/pilot.yaml --smoke",
+  "config_sha256": "add24a38c491191b3d930a62ed45a83ead1b2959bc92a060be00899575199ab3",
+  "runtime_flags": {
+    "torch_num_threads": 1,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  }
+}

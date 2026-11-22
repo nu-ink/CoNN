@@ -1,0 +1,13 @@
+{
+  "scope": "restore standard technical notation after whitespace review",
+  "replacements": {
+    "macro-F 1": "macro-F1",
+    "Float 64": "Float64",
+    "Float 32": "Float32",
+    "float 64": "float64",
+    " v 3": " v3",
+    " v 2": " v2",
+    "rule.19": "rule. 19"
+  },
+  "optimizer_updates": 0
+}

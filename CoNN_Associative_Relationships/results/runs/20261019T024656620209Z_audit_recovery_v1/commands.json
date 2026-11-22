@@ -1,0 +1,87 @@
+[
+  {
+    "name": "git_workspace",
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "E:\\CoNN",
+    "exit_code": 128,
+    "elapsed_seconds": 0.04023890002281405
+  },
+  {
+    "name": "git_experiment",
+    "argv": [
+      "git",
+      "log",
+      "-6",
+      "--oneline"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 128,
+    "elapsed_seconds": 0.03959699999541044
+  },
+  {
+    "name": "pip_check",
+    "argv": [
+      "E:\\CoNN\\conn_experiment_01\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 0,
+    "elapsed_seconds": 0.6116619000094943
+  },
+  {
+    "name": "requirements",
+    "argv": [
+      "E:\\CoNN\\conn_experiment_01\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 0,
+    "elapsed_seconds": 0.6341563999885693
+  },
+  {
+    "name": "nvidia_smi",
+    "argv": [
+      "C:\\Windows\\system32\\nvidia-smi.EXE"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 0,
+    "elapsed_seconds": 0.12060240001301281
+  },
+  {
+    "name": "pytest",
+    "argv": [
+      "E:\\CoNN\\conn_experiment_01\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-v",
+      "-rs",
+      "--durations=10",
+      "-o",
+      "cache_dir=E:\\CoNN\\CoNN_Associative_Relationships\\results\\runs\\20261019T024656620209Z_audit_recovery_v1\\pytest_cache",
+      "--junitxml=E:\\CoNN\\CoNN_Associative_Relationships\\results\\runs\\20261019T024656620209Z_audit_recovery_v1\\pytest.xml"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 0,
+    "elapsed_seconds": 7.973920900025405
+  },
+  {
+    "name": "inspect_entrypoint_after",
+    "argv": [
+      "E:\\CoNN\\conn_experiment_01\\.venv\\Scripts\\python.exe",
+      "scripts/inspect.py",
+      "--output",
+      "E:\\CoNN\\CoNN_Associative_Relationships\\results\\runs\\20261019T024656620209Z_audit_recovery_v1\\inspection_cli.json"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 0,
+    "elapsed_seconds": 3.424899400008144
+  }
+]

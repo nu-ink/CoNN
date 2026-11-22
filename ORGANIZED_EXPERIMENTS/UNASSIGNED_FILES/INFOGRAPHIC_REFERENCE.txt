@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\Collapsible Neural Network Infographic.png
+Exists: True
+Files: 1
+Bytes: 2058134
+Reason: Promotional infographic. It is not a protocol for any numbered experiment.
+Per-file SHA-256 was not computed for this referenced tree.

@@ -1,0 +1,149 @@
+{
+  "inspected_utc": "2026-10-19T02:47:14.015340+00:00",
+  "protocol_sha256": "e97d35bab3e684cd4ce09fe8dc8e8bafa22371b6f9c0c4801b1fd84eb0f01c48",
+  "archive": "E:\\CoNN\\conn_experiment_01\\data\\raw\\uci_har_original.zip",
+  "experiment2_run": "E:\\CoNN\\conn_experiment_01\\results\\runs\\20261019T004346Z_experiment2_har_v1",
+  "overlap_exclusion_available": false,
+  "subject_sets": {
+    "engineered": {
+      "fit": [
+        1,
+        3,
+        5,
+        6,
+        16,
+        17,
+        19,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "validation": [
+        7,
+        8,
+        11,
+        14,
+        15
+      ],
+      "test": [
+        2,
+        4,
+        9,
+        10,
+        12,
+        13,
+        18,
+        20,
+        24
+      ]
+    },
+    "temporal": {
+      "fit": [
+        1,
+        3,
+        5,
+        6,
+        16,
+        17,
+        19,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "validation": [
+        7,
+        8,
+        11,
+        14,
+        15
+      ],
+      "test": [
+        2,
+        4,
+        9,
+        10,
+        12,
+        13,
+        18,
+        20,
+        24
+      ]
+    }
+  },
+  "representations": {
+    "temporal": {
+      "official_train_shape": [
+        7352,
+        1152
+      ],
+      "fit_transform_max_abs": 9.5367431640625e-07,
+      "inverse_to_vendor_max_abs": 3.3049143066676834e-07,
+      "scaler_fit_subjects": [
+        1,
+        3,
+        5,
+        6,
+        16,
+        17,
+        19,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "constant_dimensions": 0
+    },
+    "engineered": {
+      "official_train_shape": [
+        7352,
+        561
+      ],
+      "fit_transform_max_abs": 1.9073486328125e-06,
+      "inverse_to_vendor_max_abs": 1.1727061921540383e-07,
+      "scaler_fit_subjects": [
+        1,
+        3,
+        5,
+        6,
+        16,
+        17,
+        19,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "constant_dimensions": 0
+    }
+  },
+  "raw_test_window_shape": [
+    2947,
+    128,
+    9
+  ],
+  "raw_windows_available": true,
+  "models_trained": 0,
+  "final_test_evaluation": "not_started"
+}

@@ -1,0 +1,69 @@
+{
+  "mermaid": "11.12.1",
+  "formal_model_checking": false,
+  "results": [
+    {
+      "name": "01_architecture",
+      "parsed": true,
+      "source_references_verified": true,
+      "rendered": true,
+      "width": 586,
+      "height": 838
+    },
+    {
+      "name": "02_dataset",
+      "parsed": true,
+      "source_references_verified": true,
+      "rendered": true,
+      "width": 820.53125,
+      "height": 787.90625
+    },
+    {
+      "name": "03_gating",
+      "parsed": true,
+      "source_references_verified": true,
+      "rendered": true,
+      "width": 1165.328125,
+      "height": 727.5
+    },
+    {
+      "name": "04_alignment",
+      "parsed": true,
+      "source_references_verified": true,
+      "rendered": true,
+      "width": 896,
+      "height": 574
+    },
+    {
+      "name": "05_training",
+      "parsed": true,
+      "source_references_verified": true,
+      "rendered": true,
+      "width": 759.1875,
+      "height": 1242.75
+    },
+    {
+      "name": "06_lifecycle",
+      "parsed": true,
+      "source_references_verified": true,
+      "rendered": false,
+      "note": "Standard Mermaid syntax parsed; pstack runtime unavailable; no formal checking."
+    },
+    {
+      "name": "07_evaluation",
+      "parsed": true,
+      "source_references_verified": true,
+      "rendered": true,
+      "width": 874.765625,
+      "height": 1062
+    },
+    {
+      "name": "08_history",
+      "parsed": true,
+      "source_references_verified": true,
+      "rendered": true,
+      "width": 1206,
+      "height": 422
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "columns": [
+    "representation",
+    "contrast",
+    "metric",
+    "primary",
+    "n",
+    "mean",
+    "sd",
+    "t_crit",
+    "ci_low",
+    "ci_high",
+    "spans_zero",
+    "cohen_dz",
+    "mean_percentage_points",
+    "positive_seeds",
+    "tied_seeds",
+    "negative_seeds"
+  ],
+  "rows": 28
+}

@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\conn_experiment_01\results\runs\20261018T001947Z_experiment1b_v1
+Exists: True
+Files: 6316
+Bytes: 322011340
+Reason: Full 1B run, including per-job checkpoints and curves.
+Per-file SHA-256 was not computed for this referenced tree.

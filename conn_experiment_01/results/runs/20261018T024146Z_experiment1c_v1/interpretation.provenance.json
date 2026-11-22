@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-18T03:01:37.633322+00:00",
+  "stage": "post-training descriptive interpretation",
+  "script_sha256": "6318a1bbfc837635a062edda3cd6b62db3c6b0df7c6097af5e3900c6365c40ad",
+  "scores_sha256": "035a11782ccff79f108e57756e07902ca9c691d013ec8b4e4e1e2c866687f941",
+  "contrasts_sha256": "3e31af8a1665f487887f9ba8643f20f1749e50163d56f23238228d1c19bd7229",
+  "input_report_without_addendum_text_sha256": "f06659ca8ca6a38b125fab54e58274576f089552798d7f29b3d9b2d758691849",
+  "output_report_sha256": "6d69f2c7c1ab0ac5b349ecc3c5151e5ac50e0f3bed64602d76de6f4a11ee9a38",
+  "frozen_training_source_unchanged": true,
+  "new_models": 0,
+  "new_test_evaluations": 0
+}

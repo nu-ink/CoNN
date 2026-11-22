@@ -1,0 +1,9 @@
+flowchart LR
+  X[128 x 9 HAR window] --> IH[IH linear]
+  X -. Gaussian or dense or shuffle .-> IH
+  IH --> R1[ReLU]
+  R1 --> HH[HH linear]
+  HH --> R2[ReLU]
+  R2 --> OUT[6-class output]
+  G1[Fixed schedule gate] -. detached G .-> IH
+  G1 -. or HH gate .-> HH

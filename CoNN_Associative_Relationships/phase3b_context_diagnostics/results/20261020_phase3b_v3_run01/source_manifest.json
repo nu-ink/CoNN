@@ -1,0 +1,15 @@
+{
+  "PROTOCOL_PHASE3B_v3.md": "901e57c4d5dcc9bf63b05eb297c75948698db232eec15361248f8c791157e72c",
+  "PROTOCOL_PHASE3B_v2.md": "ec098b5a07585c7040e3217455aedec19b857d42c2d915e9ba95fdeec482074d",
+  "config\\experiment.yaml": "c299e8a42cd2ce572e6f29f34c8c5ff062632a8487a079f7b6299d351c7c48a2",
+  "src\\common.py": "e7de3c70f133dc476dcb168726f3516ef75ff792b6dec4924772b2be201098d8",
+  "src\\diagnostics.py": "bf7f55c009726c3f23722f37d16707fda6524ef1c03cfd22515dc39b9654bd2a",
+  "src\\evaluation.py": "16cfba15ec96ac8f29fd1b71f2e8dd5e90e31d7ef46b1d5b4779d54e380b2af9",
+  "src\\models.py": "f5f00ef1930a91f280ba263f5721bdd1437f49d21472f883269f6d456fd775f9",
+  "src\\preflight.py": "25f110cd72de66fdb3215776172fed798c5f6f4df3f0b75d6c69fda4849cd1b2",
+  "src\\reporting.py": "af2ecdf9a32829789d0408ec77e9648bd9fdf276feb18effb3d5fd3d9bd079e7",
+  "src\\training.py": "7d7ac0079b0bafadb0192f93bc70040c07191b6f2cdc8bb7ec536327522db66c",
+  "src\\verify.py": "a8bb5d673c1cfa5996ffe63511fd46b05cb35e5abbd4bd5c270069ec02117d3b",
+  "scripts\\run.py": "19e4e0c691fe90388df61017a3da73bf12133116879f8872316498ed43f087f0",
+  "tests\\test_phase3b.py": "632be91993ba6f114a4ad095da75a9cb5dd5479213d94b3571a8a74c9ba1f8fd"
+}

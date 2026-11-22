@@ -1,0 +1,25 @@
+{
+  "frozen_utc": "2026-10-19T00:57:30.042328+00:00",
+  "learning_rates": {
+    "engineered": {
+      "A": 0.1,
+      "B": 0.05,
+      "C": 0.05,
+      "D": 0.1,
+      "S08": 0.1,
+      "S25": 0.1
+    },
+    "temporal": {
+      "A": 0.01,
+      "B": 0.01,
+      "C": 0.01,
+      "D": 0.01,
+      "S08": 0.05,
+      "S25": 0.01
+    }
+  },
+  "tuning_scores_sha256": "31950b688876d6268be3063113504028c8a8f500c5c70a33a0ffed09ade925fc",
+  "protocol_sha256": "7c469aea89cc73fa8de8373493755186a962bfb4bc200802882f8ae65b81cf83",
+  "final_test_model_evaluated": false,
+  "source_manifest_sha256": "99009c10d7a6c7840aeec6a5d22a4b36a4a2742988f2f2311207142dc92d9846"
+}

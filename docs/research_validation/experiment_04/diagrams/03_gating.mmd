@@ -1,0 +1,17 @@
+%% Gaussian and control calculations
+%% Sources: experiments/experiment_04/src/conn_exp04/{core,runner,analysis}.py
+%% Historical sources: conn_experiment_01/src/conn_exp/{gates,geometry,models,schedules}.py
+%% Verified references: core.Gates.at, conn_exp.geometry.make_task_geometry, conn_exp.geometry.pairwise_abs_distance, conn_exp.gates.gaussian_gate, conn_exp.models.GatedLinear.forward, conn_exp.schedules.schedule_at
+flowchart TB
+  A["make_task_geometry: fixed unit-interval coordinates"] --> B["pairwise_abs_distance: destination by source"]
+  C["schedule_at: smoothstep tau, then exact release"] --> D{Released?}
+  B --> E["gaussian_gate: exp of negative squared distance over 2 tau squared"]
+  D -->|no| E
+  D -->|yes| F["Exact ones for all conditions"]
+  E --> G["Aligned: use Gaussian"]
+  E --> H["Scrambled: frozen within-row column permutation"]
+  E --> I["Uniform: sqrt of layer mean square"]
+  G --> J["GatedLinear.forward: W_eff = W times detached gate"]
+  H --> J
+  I --> J
+  F --> J

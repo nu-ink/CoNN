@@ -1,0 +1,110 @@
+[
+  {
+    "total_steps": 400,
+    "lr": 0.01,
+    "B_prime_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "C_vs_D_layer_energy_max_abs": 5.960464477539063e-08,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  },
+  {
+    "total_steps": 400,
+    "lr": 0.05,
+    "B_prime_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "C_vs_D_layer_energy_max_abs": 5.960464477539063e-08,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  },
+  {
+    "total_steps": 400,
+    "lr": 0.1,
+    "B_prime_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "C_vs_D_layer_energy_max_abs": 5.960464477539063e-08,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  },
+  {
+    "total_steps": 800,
+    "lr": 0.01,
+    "B_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 2.384185791015625e-07,
+    "C_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 2.288818359375e-05
+  },
+  {
+    "total_steps": 800,
+    "lr": 0.05,
+    "B_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 2.384185791015625e-07,
+    "C_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 2.288818359375e-05
+  },
+  {
+    "total_steps": 800,
+    "lr": 0.1,
+    "B_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 2.384185791015625e-07,
+    "C_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 2.288818359375e-05
+  },
+  {
+    "total_steps": 1600,
+    "lr": 0.01,
+    "B_prime_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "C_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  },
+  {
+    "total_steps": 1600,
+    "lr": 0.05,
+    "B_prime_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "C_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  },
+  {
+    "total_steps": 1600,
+    "lr": 0.1,
+    "B_prime_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "C_vs_D_layer_energy_max_abs": 1.1920928955078125e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  },
+  {
+    "total_steps": 3200,
+    "lr": 0.01,
+    "B_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 2.384185791015625e-07,
+    "C_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  },
+  {
+    "total_steps": 3200,
+    "lr": 0.05,
+    "B_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 2.384185791015625e-07,
+    "C_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  },
+  {
+    "total_steps": 3200,
+    "lr": 0.1,
+    "B_prime_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_vs_D_layer_energy_max_abs": 2.384185791015625e-07,
+    "C_vs_D_layer_energy_max_abs": 1.7881393432617188e-07,
+    "A_prime_local_row_energy_std_max": 7.62939453125e-06,
+    "B_prime_vs_D_row_energy_max_abs": 1.52587890625e-05
+  }
+]

@@ -1,0 +1,10 @@
+flowchart TD
+  X[Known relationship features] --> M{PROPOSED conditions}
+  M --> A[Condition A dense]
+  M --> B[Condition B aligned geometry]
+  M --> C[Condition C scrambled geometry]
+  B --> BW[W_eff = W x detached G]
+  C --> CW[W_eff = W x scrambled G]
+  BW --> Head[Shared classifier]
+  CW --> Head
+  Head --> P[Preregistered paired outcome]

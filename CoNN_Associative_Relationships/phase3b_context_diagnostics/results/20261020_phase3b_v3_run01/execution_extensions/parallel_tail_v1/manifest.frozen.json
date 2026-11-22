@@ -1,0 +1,20 @@
+{
+  "kind": "execution_only_extension",
+  "training_source_manifest_sha256": "96eff6c7314032940eca43356ab4092f748ce220d1143e9fcefc47f2468900d7",
+  "driver_sha256": "8d087dccff9708d12aee60683f3090c6b5820fb471f51b99de169b41c9d32183",
+  "workers": 4,
+  "backend": "cpu",
+  "seeds": [
+    402,
+    403,
+    404
+  ],
+  "no_model_optimizer_data_or_statistical_changes": true,
+  "canonical_jobs_shared_with_original_runner": true,
+  "original_runner_retains_seeds": [
+    400,
+    401
+  ],
+  "schedule_rule": "future blocks only; queue stops before original seed401 begins",
+  "parameter": "all original source hashes remain unchanged"
+}

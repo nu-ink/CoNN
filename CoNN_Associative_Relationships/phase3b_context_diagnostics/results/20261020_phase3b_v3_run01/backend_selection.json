@@ -1,0 +1,11 @@
+{
+  "device": "cpu",
+  "mean_updates_per_second": {
+    "cpu": 329.5245396894343,
+    "cuda:0": 245.34734602693902
+  },
+  "conservative_estimated_total_seconds": 15586.092631645904,
+  "maximum_wall_seconds": 21600,
+  "benchmark_one_step_diagnostic_updates": 880,
+  "benchmark_classification_scores_examined": false
+}

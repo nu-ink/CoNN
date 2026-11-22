@@ -1,0 +1,32 @@
+{
+  "path": "E:\\CoNN\\CoNN_Associative_Relationships\\reports\\PHASE_2_3_IMPLEMENTATION_AND_RESULTS.md",
+  "sha256": "37ee898cb5818d22ef83e689b0167eb403a401f6be89da539631f19935f3ab9c",
+  "implementation_inventory": [
+    "PROTOCOL_PHASE23_v1.md",
+    "README_PHASE23.md",
+    "scripts/phase23_preflight.py",
+    "scripts/run_phase23.py",
+    "scripts/phase23_report.py",
+    "scripts/phase23_finish.ps1",
+    "scripts/phase23_finalize.py",
+    "src/conn_assoc/phase23_core.py",
+    "src/conn_assoc/phase23.py",
+    "src/conn_assoc/phase3_context.py",
+    "src/conn_assoc/phase23_analysis.py",
+    "src/conn_assoc/phase23_diagnostics.py",
+    "src/conn_assoc/phase23_verify.py",
+    "tests/test_phase2.py",
+    "tests/test_phase2_cuda.py",
+    "tests/test_phase3.py",
+    "tests/test_phase23_integrity.py",
+    "tests/test_phase23_io.py",
+    "config/phase23_active_run.txt",
+    "scripts/phase23_visual_review.py"
+  ],
+  "review": {
+    "preserved_prior_report_sha256": "7336406473d7ea5ef479933913b8a1931e56c306ca45b2533e6e99076815ab2f",
+    "precision_comparisons": 24,
+    "classification_measurements_changed": false
+  },
+  "curve_style_review": "Unique color per condition; line style identifies train versus validation; original plots retained."
+}

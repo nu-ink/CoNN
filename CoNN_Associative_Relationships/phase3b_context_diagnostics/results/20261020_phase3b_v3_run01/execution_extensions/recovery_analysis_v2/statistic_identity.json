@@ -1,0 +1,13 @@
+{
+  "before": {
+    "paired_contrasts.csv": "db80b2858a53311919a6da4b7bf66dce543f3b060b738a5253bbcb39d199891f",
+    "subject_differences.csv": "b377b3cd4233b1768b0baf48afdd36c5434ad984da6136e617d601a537c84ecb",
+    "seed_differences.csv": "37457e394ae21aaa881409beaa211103441c82934156fd8e548ff67c256916b7"
+  },
+  "after": {
+    "paired_contrasts.csv": "db80b2858a53311919a6da4b7bf66dce543f3b060b738a5253bbcb39d199891f",
+    "subject_differences.csv": "b377b3cd4233b1768b0baf48afdd36c5434ad984da6136e617d601a537c84ecb",
+    "seed_differences.csv": "37457e394ae21aaa881409beaa211103441c82934156fd8e548ff67c256916b7"
+  },
+  "bitwise_csv_identity": true
+}

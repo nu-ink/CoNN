@@ -1,0 +1,41 @@
+{
+  "frozen_utc": "2026-10-18T00:30:46.228128+00:00",
+  "total_steps": 3200,
+  "lr_by_condition": {
+    "A": 0.1,
+    "A_prime": 0.1,
+    "B_prime": 0.1,
+    "C": 0.05,
+    "D": 0.1,
+    "E": 0.1,
+    "S": 0.1
+  },
+  "replication_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119
+  ],
+  "tuning_scores_sha256": "e2c235f4b4b29f7ae0b5115ff5a98e6e13f382e1332e0c2677ef33bb8edf1764",
+  "protocol_sha256": "6c149c31237ffe5f48090e4ee08bd679b4d50f1124e36a153e7b8eacbd548993",
+  "source_manifest_sha256": "2e18a83d3633d3061d741cd27adeb130bdb638144360b16cda318938178aefd8",
+  "primary": "paired final test accuracy D minus B_prime, independent replication only",
+  "selection": "per-condition per-duration mean validation accuracy descending, mean validation loss ascending, lr ascending; common duration by macro mean across seven selected conditions, accuracy descending, loss ascending, steps ascending",
+  "replication_test_data_evaluated": false
+}

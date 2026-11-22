@@ -1,0 +1,141 @@
+{
+  "version": "experiment2_har_v1",
+  "frozen_utc": "2026-10-19T00:52:07.025158+00:00",
+  "configuration": {
+    "version": "experiment2_har_v1",
+    "hidden_sizes": [
+      64,
+      64
+    ],
+    "batch_size": 128,
+    "total_steps": 3200,
+    "eval_interval": 160,
+    "learning_rates": [
+      0.01,
+      0.05,
+      0.1
+    ],
+    "tuning_seeds": [
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "replication_seeds": [
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319
+    ],
+    "conditions": [
+      "A",
+      "S08",
+      "S25",
+      "D",
+      "B",
+      "C"
+    ],
+    "representations": [
+      "engineered",
+      "temporal"
+    ],
+    "d50_start": 0.08,
+    "d50_end": 1.0,
+    "release_fraction": 0.7,
+    "optimizer": "sgd",
+    "momentum": 0.0,
+    "weight_decay": 0.0,
+    "device": "cpu"
+  },
+  "subject_partition": {
+    "fit_subjects": [
+      1,
+      3,
+      5,
+      6,
+      16,
+      17,
+      19,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "validation_subjects": [
+      7,
+      8,
+      11,
+      14,
+      15
+    ],
+    "test_subjects": [
+      2,
+      4,
+      9,
+      10,
+      12,
+      13,
+      18,
+      20,
+      24
+    ],
+    "split_seed": 104729,
+    "rule": "Keep official 9-subject test; choose 5 of 21 official train subjects with a fixed RNG permutation; remaining 16 fit. No labels or feature values enter assignment."
+  },
+  "condition_names": {
+    "A": "conventional_dense",
+    "S08": "fixed_local_d50_0.08",
+    "S25": "fixed_local_d50_0.25",
+    "D": "structured_local_to_global",
+    "B": "row_shuffled_schedule",
+    "C": "permuted_input_coordinates_schedule"
+  },
+  "primary": "engineered: D minus B in final test macro-F1 across 20 paired initialization/order seeds on one fixed subject partition",
+  "primary_interval": "two-sided Student t 95% on paired seed differences, df=19; conditional on fixed subjects",
+  "secondary": "Accuracy for primary pair; D-A, S08-A, S25-A, D-C, S25-D, S08-D in both representations; temporal D-B; losses, gaps, per-class/per-subject metrics and training costs. Unadjusted exploratory intervals.",
+  "additional_subject_interval": "Average D-B accuracy/F1 differences across model seeds for each of the nine test subjects, then Student t interval over those nine subject means, df=8; descriptive, only nine subjects.",
+  "selection": "Each condition and representation gets the same three SGD LRs and five tuning seeds. Maximize mean final validation macro-F1, ties lower mean validation cross-entropy then lower LR. Final fixed-budget checkpoint only. No retraining on validation subjects.",
+  "feature_layout": "engineered j/560 in official metadata column order (semantic prior, not physical geometry); temporal time-major nine channels, t/127 shared by simultaneous channels. No values or labels define coordinates; no layout search.",
+  "preprocessing": "Train-subject-only per-feature engineered mean/std; train-subject-only per-channel temporal mean/std across training windows and time. Same frozen scaler for all models/seeds. Vendor upstream normalization/filtering documented as a limitation.",
+  "fixed_locality": "Both strict d50 .08 and medium .25 transferred as predeclared separate conditions from synthetic studies. Neither is chosen by test outcomes.",
+  "masks": "B frozen independent within-row column permutations on both gated layers; C frozen permutation of input coordinates only; hidden gate matches D. D/B/C gate row-energy matched at every schedule point.",
+  "architecture": "two ReLU hidden layers of 64, six-class dense output head, same learned parameters within representation. Dense A bypasses gate multiplication. All use multiclass cross-entropy and the original plain SGD optimizer.",
+  "batches": "Each training epoch gets an independent permutation from order seed; precomputed stream shared across all conditions/LRs within seed. Fixed batch size 128 and 3200 updates for every model.",
+  "streams": {
+    "initialization": 1000003,
+    "batches": 2000003,
+    "masks": 3000003,
+    "execution_order": 4000003,
+    "subject_split": 104729
+  },
+  "test_embargo": "Audit reads schema/counts, but tuning loads no test arrays and performs no model predictions on test. Freeze selected LRs before final models load test; evaluate native final test once. Subject/class metrics reuse those predictions. No test-time gate surgery or redesign.",
+  "timing": "Single Torch thread per worker; six concurrent CPU workers. Record update wall and process CPU time excluding diagnostics, plus job elapsed wall. Execution order randomized independently within seed. Wall times under contention are not isolated latency benchmarks; no sparse-kernel speed claim.",
+  "subject_dependence": "Overlapping windows stay within subjects. Seed intervals measure optimization variation on this fixed partition, not independent subject samples. Report subject-level results separately.",
+  "dataset_audit_sha256": "22aeab98f6f8de894e4c5079d6bfd8a62dd8ca2e7739b04779a4aadeacd18b27",
+  "prepared_manifest_sha256": "44840bb09ccaf8af79e6f2e4ed7c02713880895fe0a63e34e637b7ffb5d65517",
+  "source_manifest_sha256": "99009c10d7a6c7840aeec6a5d22a4b36a4a2742988f2f2311207142dc92d9846",
+  "tuning_models": 180,
+  "final_models": 240
+}

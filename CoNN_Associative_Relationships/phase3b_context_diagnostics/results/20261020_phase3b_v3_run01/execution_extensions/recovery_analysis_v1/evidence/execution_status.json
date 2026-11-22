@@ -1,0 +1,8 @@
+{
+  "stage": "completed",
+  "elapsed_seconds": 4090.9380000000237,
+  "verified_fits": 465,
+  "verified_logical_updates": 1488000,
+  "independent_metrics": true,
+  "official_test_model_evaluations": 0
+}

@@ -1,0 +1,5 @@
+{
+  "target_sha256": "13718d743ff03655487d9db12656ff60f73785fd824eb738a95f9e523a7147d3",
+  "source_sha256": "9ba9ce613d4cc4281f7ad928e41573621ab59a8f1cae6ec2cf0aea22045f882f",
+  "role": "post-training measured reporting only"
+}

@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\CoNN_Associative_Relationships\phase3b_context_diagnostics\results\20261020_phase3b_v3_run01\grid
+Exists: True
+Files: 7211
+Bytes: 10043554981
+Reason: Phase 3B grid checkpoints.
+Per-file SHA-256 was not computed for this referenced tree.

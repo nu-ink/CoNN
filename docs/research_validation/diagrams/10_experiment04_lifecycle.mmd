@@ -1,0 +1,10 @@
+stateDiagram-v2
+  [*] --> Proposal
+  Proposal --> Freeze: explicit approval
+  Freeze --> ValidationTuning
+  ValidationTuning --> SelectionSeal
+  SelectionSeal --> IndependentReplication
+  IndependentReplication --> FrozenTestEvaluation
+  FrozenTestEvaluation --> Report
+  Report --> [*]
+  Proposal --> [*]: no approval

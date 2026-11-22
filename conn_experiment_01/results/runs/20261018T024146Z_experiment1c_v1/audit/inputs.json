@@ -1,0 +1,9 @@
+{
+  "protocol.frozen.json": "6c149c31237ffe5f48090e4ee08bd679b4d50f1124e36a153e7b8eacbd548993",
+  "selection.frozen.json": "d5bc14c075c9a1f0dc372c7319833c568a6defe38848cfb5cdfad2b238c9f32c",
+  "research_summary.md": "906cc2a11d94bd05ad2b99b7ab1a41ca22ce3f2f1511696f2d57535331a2d305",
+  "replication/diagnostic_summary.csv": "45a77d176c7d4955c9d0e2e3ea37d80cb9c988cfcf17dde246793572763613d3",
+  "replication/checkpoint_ablation_summary.csv": "dec2916c68b6a5af4bcf562b41e4e0c855eb406665bf1cf13a89742869620f9c",
+  "replication/summary.json": "e632cc994e7b43532d0361308d709a25ce50747a6c6a25588b11b3610770fd14",
+  "replication/plots/learning_curves.png": "a84cd32c450000a652be4d22057aeb3eddcad78c58b89307b76337f24acd1f85"
+}

@@ -1,0 +1,7 @@
+{
+  "committed_step": 640,
+  "uncommitted_step": 800,
+  "replayed_optimizer_updates": 160,
+  "replayed_weights_bitwise_equal_to_preserved_uncommitted_checkpoint": true,
+  "scope": "recovery verification excluded from tuning selection"
+}

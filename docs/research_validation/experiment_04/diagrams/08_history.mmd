@@ -1,0 +1,13 @@
+%% Comparison with previous CoNN experiments
+%% Sources: experiments/experiment_04/src/conn_exp04/{core,runner,analysis}.py
+%% Historical sources: conn_experiment_01/src/conn_exp/{gates,geometry,models,schedules}.py
+%% Verified references: conn_exp.experiment1b, conn_exp.experiment1c, conn_exp.experiment2, core.generate_split, runner.train_run
+flowchart TB
+  A["Experiment 01 and 1B: synthetic motifs; aligned versus shuffled gates"] --> D["Experiment 04: new latent-interaction task and explicit negative geometry control"]
+  B["Experiment 1C: locality and release endpoints"] --> E["Experiment 04: fixed pre-release, immediate and final endpoints"]
+  C["Experiment 02: HAR; metadata geometry"] --> F["Experiment 04: ground-truth generative structure is specified"]
+  G["Phase 3B: context-factor diagnostics"] --> H["Experiment 04: no context factors or learned geometry"]
+  D --> I["Reuse unmodified gate, geometry, schedule, model and initializer"]
+  E --> I
+  F --> I
+  H --> I

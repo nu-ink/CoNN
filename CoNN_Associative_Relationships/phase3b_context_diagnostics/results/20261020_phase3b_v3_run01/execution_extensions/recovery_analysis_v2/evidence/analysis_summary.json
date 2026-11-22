@@ -1,0 +1,29 @@
+{
+  "complete": true,
+  "grid_fits": 455,
+  "pilot_fits": 10,
+  "verification": {
+    "verified_fits": 465,
+    "verified_logical_updates": 1488000,
+    "independent_metrics": true,
+    "official_test_model_evaluations": 0
+  },
+  "primary": {
+    "family": "primary",
+    "a": "gaussian_C4",
+    "b": "gaussian_masked",
+    "mean": 0.0021339832267019214,
+    "subject_sd": 0.005159161971100433,
+    "seed_sd": 0.002926468286497447,
+    "ci_low": 0.00011565544771546819,
+    "ci_high": 0.004446269568044705,
+    "paired_subject_dz": 0.4136298179153211,
+    "practical_threshold_reached": false,
+    "descriptive_ci_excludes_zero_positive": true
+  },
+  "gaussian_C4_level1_fits": 35,
+  "gaussian_C4_level1_denominator": 35,
+  "level2_passed_comparisons": 49,
+  "level2_denominator": 175,
+  "level3_predictive_criterion": false
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "first_seed",
+  "done": 42,
+  "failed": 0,
+  "already_completed": 0,
+  "pending_total": 42,
+  "elapsed_seconds": 59.80991260000155,
+  "last": {
+    "task": [
+      "P2_gaussian",
+      400,
+      2,
+      0.1,
+      "cpu"
+    ],
+    "job": "E:\\CoNN\\CoNN_Associative_Relationships\\results\\runs\\20261019T030442340025Z_phase23_v1\\jobs\\P2_gaussian_seed400_fold2_lr0.1",
+    "status": "complete"
+  }
+}

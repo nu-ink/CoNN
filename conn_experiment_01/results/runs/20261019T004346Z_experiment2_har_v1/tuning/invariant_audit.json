@@ -1,0 +1,8 @@
+{
+  "all_fit_pairings_checked": true,
+  "paired_initialization_batches_and_scaler": true,
+  "constant_parameter_count_within_representation": true,
+  "energy_schedule_checked_representations": 2,
+  "gate_energy_max_abs_gap": 0.000244140625,
+  "test_model_evaluations": 0
+}

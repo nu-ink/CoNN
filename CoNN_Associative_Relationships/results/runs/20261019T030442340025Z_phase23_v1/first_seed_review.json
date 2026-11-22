@@ -1,0 +1,10 @@
+{
+  "status": "accepted for implementation progression",
+  "fits_completed": 42,
+  "seed": 400,
+  "steps_per_fit": 3200,
+  "finite_validation_metrics": true,
+  "gradient_norms_finite": true,
+  "official_test_evaluations": 0,
+  "note": "Development engineering evidence only. No LR selected from this partial grid."
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "all",
+  "done": 745,
+  "failed": 0,
+  "already_completed": 305,
+  "pending_total": 745,
+  "elapsed_seconds": 1329.1596151000122,
+  "last": {
+    "task": [
+      "P2_fixed08",
+      403,
+      5,
+      0.05,
+      "cpu"
+    ],
+    "job": "E:\\CoNN\\CoNN_Associative_Relationships\\results\\runs\\20261019T030442340025Z_phase23_v1\\jobs\\P2_fixed08_seed403_fold5_lr0.05",
+    "status": "complete"
+  }
+}

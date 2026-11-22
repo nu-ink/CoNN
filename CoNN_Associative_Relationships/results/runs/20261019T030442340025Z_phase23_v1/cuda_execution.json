@@ -1,0 +1,26 @@
+{
+  "executable": "E:\\CoNN\\CoNN_Associative_Relationships\\.venv_cuda23\\Scripts\\python.exe",
+  "python": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
+  "torch": "2.14.1+cu130",
+  "torch_cuda": "13.0",
+  "available": true,
+  "device_count": 2,
+  "devices": [
+    {
+      "id": 0,
+      "name": "NVIDIA GeForce RTX 3070 Ti",
+      "total_memory_bytes": 8589410304,
+      "allocated_bytes": 67110400,
+      "peak_allocated_bytes": 67112448,
+      "allocation_matmul_backward_transfer": "passed"
+    },
+    {
+      "id": 1,
+      "name": "NVIDIA GeForce RTX 3070 Ti",
+      "total_memory_bytes": 8589410304,
+      "allocated_bytes": 67110400,
+      "peak_allocated_bytes": 67112448,
+      "allocation_matmul_backward_transfer": "passed"
+    }
+  ]
+}

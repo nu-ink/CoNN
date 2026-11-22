@@ -1,0 +1,7 @@
+{
+  "selected_jobs_inspected": 350,
+  "official_test_evaluations": 0,
+  "representative_plots": "predeclared seed 400 fold 0; not performance selected",
+  "weights_modified": false,
+  "ablation_scope": "post-selection development checkpoint diagnostic only"
+}

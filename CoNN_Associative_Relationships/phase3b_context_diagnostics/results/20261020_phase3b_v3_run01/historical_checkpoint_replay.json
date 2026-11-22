@@ -1,0 +1,38 @@
+[
+  {
+    "architecture": "dense",
+    "context": 0,
+    "exact_logits": true,
+    "exact_saved_predictions": true
+  },
+  {
+    "architecture": "dense",
+    "context": 1,
+    "exact_logits": true,
+    "exact_saved_predictions": true
+  },
+  {
+    "architecture": "dense",
+    "context": 2,
+    "exact_logits": true,
+    "exact_saved_predictions": true
+  },
+  {
+    "architecture": "gaussian",
+    "context": 0,
+    "exact_logits": true,
+    "exact_saved_predictions": true
+  },
+  {
+    "architecture": "gaussian",
+    "context": 1,
+    "exact_logits": true,
+    "exact_saved_predictions": true
+  },
+  {
+    "architecture": "gaussian",
+    "context": 2,
+    "exact_logits": true,
+    "exact_saved_predictions": true
+  }
+]

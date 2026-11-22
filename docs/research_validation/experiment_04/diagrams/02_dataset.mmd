@@ -1,0 +1,15 @@
+%% Synthetic data generation
+%% Sources: experiments/experiment_04/src/conn_exp04/{core,runner,analysis}.py
+%% Historical sources: conn_experiment_01/src/conn_exp/{gates,geometry,models,schedules}.py
+%% Verified references: core.stream, core.target_score, core.generate_split
+flowchart TB
+  A["stream: independent seed for train, val, test"] --> B["Five independent Gaussian pairs a,b"]
+  B --> C["Ten noisy measurements of a, then ten of b per group"]
+  B --> D["target_score: sum of abs(a+b) minus abs(a-b)"]
+  D --> E["Threshold at zero; independent label flip probability 0.05"]
+  C --> F{Task}
+  F -->|structured| G["Keep group order"]
+  F -->|negative| H["Seeded column permutation, same for all splits"]
+  G --> I["Observed features and labels"]
+  H --> I
+  E --> I

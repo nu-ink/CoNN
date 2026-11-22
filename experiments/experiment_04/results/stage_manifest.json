@@ -1,0 +1,23 @@
+{
+  "stages": {
+    "smoke": "run_20261121T031643_767335Z_7b6dcbc2",
+    "pilot": "run_20261121T031701_870795Z_ab99ae48",
+    "confirmatory": "run_20261121T031743_424624Z_7ac51c80"
+  },
+  "failed_smoke": "run_20261121T031540_242324Z_45abfa0e",
+  "unit_tests": {
+    "tests": 29,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "regression_tests": {
+    "tests": 32,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "pilot_test_accessed": false,
+  "confirmatory_fits": 80,
+  "confirmatory_endpoint_metrics": 240
+}

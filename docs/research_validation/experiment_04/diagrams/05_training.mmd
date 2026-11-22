@@ -1,0 +1,16 @@
+%% Actual training execution flow
+%% Sources: experiments/experiment_04/src/conn_exp04/{core,runner,analysis}.py
+%% Historical sources: conn_experiment_01/src/conn_exp/{gates,geometry,models,schedules}.py
+%% Verified references: runner.train_run, runner.fit_condition, runner.save_checkpoint, core.Gates.at
+flowchart TB
+  A["train_run: unique directory, frozen config and environment"] --> B["For each seed: audit gates, save initial state and batches"]
+  B --> C["generate_split: training and validation only"]
+  C --> D["fit_condition: shared raw initialization and SGD"]
+  D --> E["Gates.at, forward, BCE, finite checks, backward, update"]
+  E --> F{Completed updates}
+  F -->|1120| G["Save pre_release.pt with last active gate"]
+  G --> H["Next update uses exact ones"]
+  F -->|1600| I["Save final.pt, curves, diagnostics and trained status"]
+  H --> E
+  F -->|other| E
+  E -->|exception| J["Record failed or interrupted status and traceback"]

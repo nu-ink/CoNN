@@ -1,0 +1,19 @@
+{
+  "stage": "all",
+  "done": 250,
+  "failed": 1,
+  "already_completed": 42,
+  "pending_total": 1008,
+  "elapsed_seconds": 457.25351079998654,
+  "last": {
+    "task": [
+      "P2_rowshuffle",
+      403,
+      5,
+      0.1,
+      "cpu"
+    ],
+    "status": "failed",
+    "traceback": "Traceback (most recent call last):\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\phase23.py\", line 94, in worker\n    return {'task':list(task[1:]),'job':train_job(run,condition,seed,fold,lr,device),'status':'complete'}\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\phase23_core.py\", line 275, in train_job\n    save('latest',completed)\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\phase23_core.py\", line 232, in save\n    atomic_checkpoint(job/(name+'.pt'),state)\n  File \"E:\\CoNN\\CoNN_Associative_Relationships\\src\\conn_assoc\\phase23_core.py\", line 175, in atomic_checkpoint\n    path=Path(path);temp=path.with_suffix('.tmp');torch.save(state,temp);temp.replace(path)\n                                                                         ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ghost\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\pathlib.py\", line 1188, in replace\n    os.replace(self, target)\nPermissionError: [WinError 5] Access is denied: 'E:\\\\CoNN\\\\CoNN_Associative_Relationships\\\\results\\\\runs\\\\20261019T030442340025Z_phase23_v1\\\\jobs\\\\P2_rowshuffle_seed403_fold5_lr0.1\\\\latest.tmp' -> 'E:\\\\CoNN\\\\CoNN_Associative_Relationships\\\\results\\\\runs\\\\20261019T030442340025Z_phase23_v1\\\\jobs\\\\P2_rowshuffle_seed403_fold5_lr0.1\\\\latest.pt'\n"
+  }
+}

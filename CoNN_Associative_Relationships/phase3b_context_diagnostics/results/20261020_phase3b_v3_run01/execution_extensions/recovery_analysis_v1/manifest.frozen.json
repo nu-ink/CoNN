@@ -1,0 +1,14 @@
+{
+  "source_sha256": "96c7f3289ae579ca9b6ee4c37d5222ce1797d89ea94d7f0f4d823d58d8023deb",
+  "training_source_manifest_sha256": "96eff6c7314032940eca43356ab4092f748ce220d1143e9fcefc47f2468900d7",
+  "reporting_original_sha256": "af2ecdf9a32829789d0408ec77e9648bd9fdf276feb18effb3d5fd3d9bd079e7",
+  "reporting_repair_sha256": "0f1596b0214b63f23c4e80b9c6f9edc5bfb41171ee070fc32116d4c3e0ff0459",
+  "repair": "one lossless Python bool conversion at JSON serialization boundary",
+  "postprocessing_changes": "new stage directories and acknowledged recovery prerequisites only; numerical algorithms unchanged",
+  "copied_source_sha256": {
+    "measured_summary.py": "801175778bf013b6d9c7c73aaa771c5b9dd0a77bd8b38e607a0cbdb1b63dfdb2",
+    "forward_rank_sensitivity.py": "6ae4784d31c3d9d450670771fde9e6ecef575d311ccb6dd2dfde507a527cce47",
+    "final_qa.py": "90f7bdb904f951ce140fb9989b5ca1635f4a2edefc69b006653b46ab109d6f21"
+  },
+  "optimizer_updates": 0
+}

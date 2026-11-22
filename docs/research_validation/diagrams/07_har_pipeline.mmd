@@ -1,0 +1,8 @@
+flowchart TD
+  Archive[Official HAR archive] --> Prepare[Fit-only normalization]
+  Prepare --> Train[Training subjects]
+  Prepare --> Val[Validation subjects]
+  Prepare --> Test[Test subjects]
+  Train --> Fit[Paired condition fits]
+  Val --> Select[LR and model selection]
+  Test -. read once after freeze .-> Final[Final native predictions]

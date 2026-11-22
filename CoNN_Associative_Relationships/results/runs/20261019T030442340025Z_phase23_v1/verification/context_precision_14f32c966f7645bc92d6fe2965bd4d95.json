@@ -1,0 +1,7 @@
+{
+  "u_gradient_norm": 1.0816596613949514e-06,
+  "v_gradient_norm": 5.666045126417885e-07,
+  "u_updated": false,
+  "v_updated": true,
+  "note": "Individual U updates can round away near -6 in float32; frozen design retained."
+}

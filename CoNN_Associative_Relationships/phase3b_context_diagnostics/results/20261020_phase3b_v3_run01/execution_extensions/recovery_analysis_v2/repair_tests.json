@@ -1,0 +1,6 @@
+{
+  "passed": 6,
+  "failed": 0,
+  "optimizer_updates": 0,
+  "scope": "boolean true/false roundtrip, unchanged float, exact patch, preserved frozen source"
+}

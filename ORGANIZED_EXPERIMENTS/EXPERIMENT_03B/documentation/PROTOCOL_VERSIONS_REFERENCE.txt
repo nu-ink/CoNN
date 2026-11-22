@@ -1,0 +1,7 @@
+Reference only. This organized tree does not duplicate the original artifact.
+Original: E:\CoNN\CoNN_Associative_Relationships\phase3b_context_diagnostics\protocol_versions
+Exists: True
+Files: 10
+Bytes: 94181
+Reason: Sealed protocol-version directory. Not duplicated.
+Per-file SHA-256 was not computed for this referenced tree.

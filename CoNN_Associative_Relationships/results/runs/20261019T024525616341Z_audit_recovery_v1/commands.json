@@ -1,0 +1,58 @@
+[
+  {
+    "name": "git_workspace",
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "E:\\CoNN",
+    "exit_code": 128,
+    "elapsed_seconds": 0.039907700003823265
+  },
+  {
+    "name": "git_experiment",
+    "argv": [
+      "git",
+      "log",
+      "-6",
+      "--oneline"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 128,
+    "elapsed_seconds": 0.038567000010516495
+  },
+  {
+    "name": "pip_check",
+    "argv": [
+      "E:\\CoNN\\conn_experiment_01\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 0,
+    "elapsed_seconds": 0.7769512000086252
+  },
+  {
+    "name": "requirements",
+    "argv": [
+      "E:\\CoNN\\conn_experiment_01\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 0,
+    "elapsed_seconds": 0.6009007999964524
+  },
+  {
+    "name": "nvidia_smi",
+    "argv": [
+      "C:\\Windows\\system32\\nvidia-smi.EXE"
+    ],
+    "cwd": "E:\\CoNN\\CoNN_Associative_Relationships",
+    "exit_code": 0,
+    "elapsed_seconds": 0.12806749998708256
+  }
+]
