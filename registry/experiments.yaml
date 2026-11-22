@@ -1,0 +1,410 @@
+schema_version: 1
+verified_on: '2026-11-22'
+path_base: workspace_root
+workspace: E:/CoNN
+git_branch_at_verification: initial-repository
+scope: Eight requested experiment families; no authoritative implementation selected; no execution or scientific
+  reproduction performed.
+verification_policy:
+  verified_static: Source statements and local evidence were read and referenced files exist.
+  completed_as_recorded: Saved completion/status records support completion; not a new execution or a certification
+    of scientific success.
+  unresolved: Missing or ambiguous evidence is explicitly retained.
+  evidence_hashes: SHA-256 of each cited file at registry creation; no implied external timestamp or historical
+    authenticity.
+experiments:
+- id: experiment_01
+  name: Experiment 01
+  purpose: Compare task-aligned local-to-global Gaussian gating against magnitude/energy and alignment controls
+    on synthetic AND data.
+  status: historical_exploratory_outputs_present
+  status_basis: Local source, protocols and saved artifacts inspected; execution was not repeated.
+  implementation:
+    path: conn_experiment_01/src/conn_exp
+    entrypoint: conn_exp.runner
+    classification: existing_research_implementation
+    authoritative_for_all_runs: false
+  source_dependencies: []
+  dataset_ids:
+  - synthetic_and
+  historical_source_paths: []
+  evidence:
+  - path: conn_experiment_01/configs/pilot.yaml
+    role: Scientific defaults and smoke overrides
+    verification: file_read_static
+    sha256: 3b5d7711dc75c69837d9e88581f94b8e49e153cdaea4b386bc73c45bc591240b
+  - path: conn_experiment_01/results/runs/20261017T235839Z_pilot/summary.json
+    role: Recorded five-seed pilot summary
+    verification: file_read_static
+    sha256: a7a83830d42f986c88b498f08ca268d0413bec6485ec3f1a180876702688dd52
+  - path: conn_experiment_01/results/runs/20261017T235744Z_smoke/summary.json
+    role: Recorded smoke summary
+    verification: file_read_static
+    sha256: 620616ad4266f2961843bb46a4d9a334acd800850c8c0fd66517fa573b0470ec
+  - path: ORGANIZED_EXPERIMENTS/ORGANIZATION_REPORT.md
+    role: Documents reconstruction limits of organized source
+    verification: file_read_static
+    sha256: ee1fa478cc4130c659060840d675200ec0de952891b95e430445f5e9ceafcef8
+  verification:
+    scope: static_source_and_local_records
+    independent_reproduction: not_established
+    fresh_training_or_tests: false
+  assumptions: []
+  limitations_and_unresolved:
+  - Exact original smoke/pilot executing source is unresolved. Organized Experiment 01 source was reconstructed
+    from the later 1B snapshot; it is not an authenticated original snapshot.
+  - Current shared package contains later experiments. Presence of pilot results is not evidence of general
+    superiority.
+- id: experiment_1b
+  name: Experiment 1B
+  purpose: Compare scheduled aligned gating with controls after validation-only learning-rate/duration selection
+    and replication on seeds 100-119.
+  status: completed_as_recorded
+  status_basis: Local source, protocols and saved artifacts inspected; execution was not repeated.
+  implementation:
+    path: conn_experiment_01/src/conn_exp
+    entrypoint: conn_exp.experiment1b
+    classification: existing_research_implementation
+    authoritative_for_all_runs: false
+  source_dependencies:
+  - conn_experiment_01/src/conn_exp/runner.py
+  - conn_experiment_01/src/conn_exp/train.py
+  - conn_experiment_01/src/conn_exp/gates.py
+  dataset_ids:
+  - synthetic_and
+  historical_source_paths:
+  - conn_experiment_01/results/runs/20261018T001947Z_experiment1b_v1/source
+  evidence:
+  - path: conn_experiment_01/results/runs/20261018T001947Z_experiment1b_v1/protocol.frozen.json
+    role: Frozen study definitions
+    verification: file_read_static
+    sha256: 6c149c31237ffe5f48090e4ee08bd679b4d50f1124e36a153e7b8eacbd548993
+  - path: conn_experiment_01/results/runs/20261018T001947Z_experiment1b_v1/selection.frozen.json
+    role: Selected settings before replication
+    verification: file_read_static
+    sha256: d5bc14c075c9a1f0dc372c7319833c568a6defe38848cfb5cdfad2b238c9f32c
+  - path: conn_experiment_01/results/runs/20261018T001947Z_experiment1b_v1/completion.json
+    role: Recorded completion and preservation checks
+    verification: file_read_static
+    sha256: d8f129dc3f334c7125437770048576ccffc5b300921665458787fb555aa872ac
+  - path: conn_experiment_01/results/runs/20261018T001947Z_experiment1b_v1/research_summary.md
+    role: Historical report
+    verification: file_read_static
+    sha256: 906cc2a11d94bd05ad2b99b7ab1a41ca22ce3f2f1511696f2d57535331a2d305
+  verification:
+    scope: static_source_and_local_records
+    independent_reproduction: not_established
+    fresh_training_or_tests: false
+  assumptions: []
+  limitations_and_unresolved:
+  - Replication within this project is not an externally independent reproduction. Historical source is run-specific;
+    current source should not be substituted without hash comparison.
+- id: experiment_1c
+  name: Experiment 1C
+  purpose: Separate fixed locality, partial widening and exact dense release; include AND/XOR and alignment
+    degradation controls.
+  status: completed_as_recorded
+  status_basis: Local source, protocols and saved artifacts inspected; execution was not repeated.
+  implementation:
+    path: conn_experiment_01/src/conn_exp
+    entrypoint: conn_exp.experiment1c
+    classification: existing_research_implementation
+    authoritative_for_all_runs: false
+  source_dependencies:
+  - conn_experiment_01/src/conn_exp/experiment1b.py
+  - conn_experiment_01/src/conn_exp/experiment1c_core.py
+  - conn_experiment_01/src/conn_exp/experiment1c_audit.py
+  dataset_ids:
+  - synthetic_and
+  historical_source_paths:
+  - conn_experiment_01/results/runs/20261018T024146Z_experiment1c_v1/source
+  evidence:
+  - path: conn_experiment_01/results/runs/20261018T024146Z_experiment1c_v1/protocol.frozen.json
+    role: Frozen policy definitions
+    verification: file_read_static
+    sha256: 10e0d407109aef2657a4657a148ed0d85e8a57df6e1972351e22fb3b58acc836
+  - path: conn_experiment_01/results/runs/20261018T024146Z_experiment1c_v1/selection.frozen.json
+    role: Validation-selected settings
+    verification: file_read_static
+    sha256: 66c120c0217167fea6e69f5413e52f49db81b447462f1c5a75b81df5aaf60a4a
+  - path: conn_experiment_01/results/runs/20261018T024146Z_experiment1c_v1/completion.json
+    role: Recorded completion
+    verification: file_read_static
+    sha256: 49e54ba39ebbca65886247644ab62744d479d32d1c7ad2e34c137606540a8685
+  - path: conn_experiment_01/results/runs/20261018T024146Z_experiment1c_v1/research_report.md
+    role: Historical interpretation
+    verification: file_read_static
+    sha256: 6d69f2c7c1ab0ac5b349ecc3c5151e5ac50e0f3bed64602d76de6f4a11ee9a38
+  verification:
+    scope: static_source_and_local_records
+    independent_reproduction: not_established
+    fresh_training_or_tests: false
+  assumptions: []
+  limitations_and_unresolved:
+  - The pre-training audit depends on historical Experiment 1B. A completed study is not proof that release
+    improves over the best fixed gate.
+- id: experiment_02
+  name: Experiment 02
+  purpose: Evaluate scheduled and fixed Gaussian gating on engineered and temporal UCI HAR representations
+    with subject-disjoint final evaluation.
+  status: completed_as_recorded
+  status_basis: Local source, protocols and saved artifacts inspected; execution was not repeated.
+  implementation:
+    path: conn_experiment_01/src/conn_exp
+    entrypoint: conn_exp.experiment2
+    classification: existing_research_implementation
+    authoritative_for_all_runs: false
+  source_dependencies:
+  - conn_experiment_01/src/conn_exp/experiment1b.py
+  - conn_experiment_01/src/conn_exp/har_core.py
+  - conn_experiment_01/src/conn_exp/har_data.py
+  dataset_ids:
+  - uci_har_archive
+  - har_engineered_prepared
+  - har_temporal_prepared
+  - har_subject_partition
+  historical_source_paths:
+  - conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/source
+  evidence:
+  - path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/protocol.frozen.json
+    role: Study, controls and evaluation policy
+    verification: file_read_static
+    sha256: 7c469aea89cc73fa8de8373493755186a962bfb4bc200802882f8ae65b81cf83
+  - path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/subject_split.frozen.json
+    role: Fit/validation/test subject partition
+    verification: file_read_static
+    sha256: d941639621a5dcdd94623507c0e29c8a2b27886dc30813b6b3e207cd88adf698
+  - path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared_manifest.json
+    role: Prepared data identities
+    verification: file_read_static
+    sha256: 44840bb09ccaf8af79e6f2e4ed7c02713880895fe0a63e34e637b7ffb5d65517
+  - path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/completion.json
+    role: Recorded completion
+    verification: file_read_static
+    sha256: 57f527de9969103d88416c4a1c1941e9d7308d680867c2b7cc26e56494cfcd05
+  - path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/research_report.md
+    role: Historical results
+    verification: file_read_static
+    sha256: 733d638654307926be49bc841a27acead192720aa58f9fc0a97884ee9bc099b2
+  verification:
+    scope: static_source_and_local_records
+    independent_reproduction: not_established
+    fresh_training_or_tests: false
+  assumptions: []
+  limitations_and_unresolved:
+  - Final-model measurements and uncertainty are conditional on the fixed subject partition. Vendor preprocessing
+    cannot be reversed from the released data.
+- id: phase_01
+  name: Associative Phase 0/1
+  purpose: Freeze the associative research protocol, audit UCI HAR provenance and prepared arrays, and check
+    Gaussian-gate definitions before development training.
+  status: historical_audit_completed_as_recorded
+  status_basis: Local source, protocols and saved artifacts inspected; execution was not repeated.
+  implementation:
+    path: CoNN_Associative_Relationships/src/conn_assoc
+    entrypoint: conn_assoc.inspect
+    classification: existing_research_implementation
+    authoritative_for_all_runs: false
+  source_dependencies:
+  - CoNN_Associative_Relationships/src/conn_assoc/paths.py
+  - CoNN_Associative_Relationships/src/conn_assoc/data.py
+  dataset_ids:
+  - uci_har_archive
+  - har_engineered_prepared
+  - har_temporal_prepared
+  - har_subject_partition
+  historical_source_paths:
+  - CoNN_Associative_Relationships/results/runs/20261019T024656620209Z_audit_recovery_v1/original_snapshot
+  evidence:
+  - path: CoNN_Associative_Relationships/PROTOCOL_v2.md
+    role: Historical frozen Phase 0/1 protocol
+    verification: file_read_static
+    sha256: e97d35bab3e684cd4ce09fe8dc8e8bafa22371b6f9c0c4801b1fd84eb0f01c48
+  - path: CoNN_Associative_Relationships/MANIFEST.json
+    role: Protocol freeze record
+    verification: file_read_static
+    sha256: 55a9ac3bf581fc334ef6269eb3232646e8fd34f947e028e5c5133039dbd3d0c0
+  - path: CoNN_Associative_Relationships/audit/inspection.json
+    role: Saved inspection
+    verification: file_read_static
+    sha256: b86e77101e377e9b52e1583993b51022175bd03af49181c9ac8a0663093fb827
+  - path: CoNN_Associative_Relationships/results/runs/20261019T024656620209Z_audit_recovery_v1/completion.json
+    role: Completed audit; zero newly trained models
+    verification: file_read_static
+    sha256: 203735a2e0a38c7a45e3f5a6873e58fd60dd1367746df0b1d5c6f8fb973aa70f
+  - path: ORGANIZED_EXPERIMENTS/ORGANIZATION_REPORT.md
+    role: Explains mixed early snapshot boundary
+    verification: file_read_static
+    sha256: ee1fa478cc4130c659060840d675200ec0de952891b95e430445f5e9ceafcef8
+  verification:
+    scope: static_source_and_local_records
+    independent_reproduction: not_established
+    fresh_training_or_tests: false
+  assumptions: []
+  limitations_and_unresolved:
+  - Original README and protocol describe historical Phase 0/1 scope, not all later implementations.
+  - A clean phase-only executing source snapshot is unresolved; early snapshots already mix later work.
+- id: phase_23
+  name: Associative Phase 2/3
+  purpose: Run the temporal HAR development grid for Gaussian alignment, fixed widths and context modulation
+    across seven subject folds.
+  status: development_completed_as_recorded
+  status_basis: Local source, protocols and saved artifacts inspected; execution was not repeated.
+  implementation:
+    path: CoNN_Associative_Relationships/src/conn_assoc
+    entrypoint: conn_assoc.phase23
+    classification: existing_research_implementation
+    authoritative_for_all_runs: false
+  source_dependencies:
+  - conn_experiment_01/src/conn_exp/har_core.py
+  - conn_experiment_01/src/conn_exp/gates.py
+  - CoNN_Associative_Relationships/src/conn_assoc/phase3_context.py
+  dataset_ids:
+  - har_temporal_prepared
+  - har_subject_partition
+  historical_source_paths:
+  - CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/source/phase2_pretraining
+  - CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/source/phase2_ready
+  - CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/source/phase3_ready
+  - CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/source/recovery_io_retry
+  - CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/source/analysis_ready
+  - CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/source/delivery
+  evidence:
+  - path: CoNN_Associative_Relationships/PROTOCOL_PHASE23_v1.md
+    role: Development amendment and official-test embargo
+    verification: file_read_static
+    sha256: 8ed6dcdbefaa0c22b02fb9ec2c449d45e66e0e7e5ce8bf4b4ce7e783af0eab30
+  - path: CoNN_Associative_Relationships/README_PHASE23.md
+    role: Implementation and execution caveats
+    verification: file_read_static
+    sha256: a8f41790641984ebfa488692c9763966459fa607cabd2bf82238b1c30a5c61f1
+  - path: CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/completion.json
+    role: 1050 completed fits; no official-test model evaluations
+    verification: file_read_static
+    sha256: fce67180e84c99c6fc6022449da105b4e547b3ab8c279af25b53ff724d6e8849
+  - path: CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/protocol_seal.json
+    role: Protocol/configuration freeze
+    verification: file_read_static
+    sha256: a2cc10243c2af6866c4b50553fc5b9ff8e2079a267cd975cefde3eedfff31bf1
+  - path: CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/research_report.md
+    role: Recorded results and limitations
+    verification: file_read_static
+    sha256: 05c84803cad0403aa56eca01ba36e7c833630a1e210f713db0af3d9603cdad82
+  verification:
+    scope: static_source_and_local_records
+    independent_reproduction: not_established
+    fresh_training_or_tests: false
+  assumptions: []
+  limitations_and_unresolved:
+  - 'This is development CV: scaler overlap and selection reuse prevent an independent confirmatory interpretation.'
+  - Exact executing source-stage assignment for every fit remains unresolved.
+  - The active-run pointer uses an absolute path. No Phase 4 memory implementation is established.
+- id: phase_3b
+  name: Phase 3B context diagnostics
+  purpose: Diagnose context-factor symmetry, initialization, numerical precision, masking and forward-learning
+    effects on temporal HAR.
+  status: diagnostic_study_completed_as_recorded
+  status_basis: Local source, protocols and saved artifacts inspected; execution was not repeated.
+  implementation:
+    path: CoNN_Associative_Relationships/phase3b_context_diagnostics/src
+    entrypoint: CoNN_Associative_Relationships/phase3b_context_diagnostics/scripts/run.py
+    classification: existing_research_implementation
+    authoritative_for_all_runs: false
+  source_dependencies:
+  - CoNN_Associative_Relationships/src/conn_assoc/phase23_core.py
+  - CoNN_Associative_Relationships/src/conn_assoc/phase3_context.py
+  - conn_experiment_01/src/conn_exp/har_core.py
+  dataset_ids:
+  - har_temporal_prepared
+  - har_subject_partition
+  historical_source_paths:
+  - CoNN_Associative_Relationships/phase3b_context_diagnostics/results/20261020_phase3b_v3_run01/source
+  evidence:
+  - path: CoNN_Associative_Relationships/phase3b_context_diagnostics/PROTOCOL_PHASE3B_v3.md
+    role: Operative historical v3 protocol
+    verification: file_read_static
+    sha256: 901e57c4d5dcc9bf63b05eb297c75948698db232eec15361248f8c791157e72c
+  - path: CoNN_Associative_Relationships/phase3b_context_diagnostics/results/20261020_phase3b_v3_run01/protocol_seal.json
+    role: Recorded freeze
+    verification: file_read_static
+    sha256: e2bbe514341a2cf2fccce99b54306288d370f5ad9e716038deaba82ff7dad5a2
+  - path: CoNN_Associative_Relationships/phase3b_context_diagnostics/results/20261020_phase3b_v3_run01/completion.json
+    role: 455 grid fits, 10 pilots, 70 omitted fits
+    verification: file_read_static
+    sha256: 19c3ba57fc639d13bc45e0702db3dfbdb5c6c1588875a11610c5398a50501fa2
+  - path: CoNN_Associative_Relationships/phase3b_context_diagnostics/reports/PHASE3B_FINAL_REPORT.md
+    role: Reported diagnostic findings
+    verification: file_read_static
+    sha256: d197cde3114cd2742e9fd20215e8eddc418bdb284958791d8908e228d5bfa39b
+  - path: CoNN_Associative_Relationships/phase3b_context_diagnostics/reports/PROTOCOL_RECONCILIATION_20261020.md
+    role: Post-outcome review and open definitions
+    verification: file_read_static
+    sha256: e4498cba85fa82db49aa6c1dc29c78197e20cbf55cd57e7a717720d7b07c5a72
+  verification:
+    scope: static_source_and_local_records
+    independent_reproduction: not_established
+    fresh_training_or_tests: false
+  assumptions: []
+  limitations_and_unresolved:
+  - The completion record says the predictive threshold was not met.
+  - The v2 reference and later protocol review are not separate executed studies.
+  - Post-outcome reconciliation cannot preregister the completed run. Null-population, layer-attribution and
+    C3 futility definitions remain unresolved for a future freeze.
+  - Failures and recovery extensions remain evidence; their status must not be overwritten by parent completion.
+- id: experiment_04
+  name: Experiment 04
+  purpose: Compare aligned, scrambled, uniform and dense controls on fixed latent-interaction geometry and
+    a negative geometry control.
+  status: completed_as_recorded
+  status_basis: Local source, protocols and saved artifacts inspected; execution was not repeated.
+  implementation:
+    path: experiments/experiment_04/src/conn_exp04
+    entrypoint: conn_exp04.runner
+    classification: existing_research_implementation
+    authoritative_for_all_runs: false
+  source_dependencies:
+  - conn_experiment_01/src/conn_exp/gates.py
+  - conn_experiment_01/src/conn_exp/geometry.py
+  - conn_experiment_01/src/conn_exp/models.py
+  - conn_experiment_01/src/conn_exp/schedules.py
+  dataset_ids:
+  - synthetic_geometry04
+  historical_source_paths:
+  - experiments/experiment_04/results/run_20261121T031743_424624Z_7ac51c80/source_snapshot
+  evidence:
+  - path: experiments/experiment_04/PREREGISTRATION.md
+    role: Local pre-fit specification; not an external registry
+    verification: file_read_static
+    sha256: b1219d0957961e4685d7557d53d59c2eb1a69ab4664f5328bfd6334349d57a72
+  - path: experiments/experiment_04/results/stage_manifest.json
+    role: Smoke/pilot/confirmatory mapping and failed smoke
+    verification: file_read_static
+    sha256: 3150ef6001a63f4e5e5bf13e140b243ea6bb292b31f023e952ed44571916b828
+  - path: experiments/experiment_04/results/run_20261121T031743_424624Z_7ac51c80/status.json
+    role: Confirmatory evaluated state
+    verification: file_read_static
+    sha256: f2c3016d05f9d9a490756ebeee9f2090ad247ac97d10b4b5f36a8a53d3525b55
+  - path: experiments/experiment_04/results/completion.json
+    role: Recorded study completion
+    verification: file_read_static
+    sha256: 53b69f12386f3e437108fb25b58c408af5baeeca7c06b761be2723295fd4cfb7
+  - path: docs/research_validation/experiment_04/RESULTS.md
+    role: Results and unmet practical-support threshold
+    verification: file_read_static
+    sha256: fe3c517dca2e3f586a9c0c64209d7681ade832ca0ef22d67586b7acd0854b18b
+  - path: docs/research_validation/experiment_04/REPRODUCTION.md
+    role: Recorded environment and replay policy
+    verification: file_read_static
+    sha256: 9532039fd96ac4ff0f67be5891180b713de850e19c4d6c299e32d7095995cb34
+  verification:
+    scope: static_source_and_local_records
+    independent_reproduction: not_established
+    fresh_training_or_tests: false
+  assumptions: []
+  limitations_and_unresolved:
+  - Pilot test evaluation was intentionally withheld; trained is its expected recorded state.
+  - The first smoke failed before fitting; its failed directory is retained.
+  - Local preregistration is not independently timestamped. No learned relationships were implemented.
+  - The statistical result does not meet the practical-support criterion in the report.
+  - Recorded Python 3.10.1 execution imports historical modules directly; packaged projects declare Python
+    >=3.11.

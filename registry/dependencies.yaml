@@ -1,0 +1,394 @@
+schema_version: 1
+verified_on: '2026-11-22'
+path_base: workspace_root
+verification_scope: Static imports, literal paths, local configuration and recorded provenance; no runtime
+  dependency resolution or scientific reproduction.
+edges_are_exhaustive: false
+scope_notes:
+- Edges cover verified cross-directory and scientifically important source/data dependencies, not every intra-package
+  import.
+- Python path insertion and absolute references remain unchanged.
+- Dataset parent relationships describe documented provenance; no transformation was rerun.
+- Installed package versions and broad dependency ranges are not a reconstructed environment lock.
+dependencies:
+- id: dependency_01
+  from_path: conn_experiment_01/src/conn_exp/experiment1b.py
+  to_path: conn_experiment_01/results/runs/20261017T235839Z_pilot
+  relation: historical_run_input
+  verification: verified_static
+  mechanism: Fixed pilot path for preservation and configuration provenance.
+  evidence:
+    path: conn_experiment_01/src/conn_exp/experiment1b.py
+    line: 36
+    excerpt: PILOT = REPO / "results/runs/20261017T235839Z_pilot"
+    sha256: 45e4604d6984f638f1191188030dc184e8a906f5729c410f33ce9946b03ec8ac
+- id: dependency_02
+  from_path: conn_experiment_01/src/conn_exp/experiment1c_audit.py
+  to_path: conn_experiment_01/results/runs/20261018T001947Z_experiment1b_v1
+  relation: historical_run_input
+  verification: verified_static
+  mechanism: Audit reads saved Experiment 1B artifacts.
+  evidence:
+    path: conn_experiment_01/src/conn_exp/experiment1c_audit.py
+    line: 20
+    excerpt: PRIOR = REPO / 'results/runs/20261018T001947Z_experiment1b_v1'
+    sha256: 228d396f2eb1ba30ef4918996c3f4cd5e924a1262962fb274e2233e8ab46e2b8
+- id: dependency_03
+  from_path: conn_experiment_01/src/conn_exp/experiment1c.py
+  to_path: conn_experiment_01/src/conn_exp/experiment1b.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Imports repository paths, sealing and manifest helpers.
+  evidence:
+    path: conn_experiment_01/src/conn_exp/experiment1c.py
+    line: 21
+    excerpt: from conn_exp.experiment1b import REPO, dump, seal, sha, tree_manifest, utc
+    sha256: ba5e9ab72075645fa91ec36030c684d81ec8ad4b83b8362b07754e7fc0292c94
+- id: dependency_04
+  from_path: conn_experiment_01/src/conn_exp/experiment2.py
+  to_path: conn_experiment_01/src/conn_exp/experiment1b.py
+  relation: python_import
+  verification: verified_static
+  mechanism: HAR orchestration shares historical experiment helpers.
+  evidence:
+    path: conn_experiment_01/src/conn_exp/experiment2.py
+    line: 19
+    excerpt: from conn_exp.experiment1b import REPO,dump,seal,sha,tree_manifest,utc
+    sha256: 8c29b5363b278dea55de7831d83792fb48915ea9a40d9bd9a65099e6991b9ff7
+- id: dependency_05
+  from_path: conn_experiment_01/src/conn_exp/experiment2.py
+  to_path: conn_experiment_01/src/conn_exp/har_core.py
+  relation: python_import
+  verification: verified_static
+  mechanism: HAR model/training and pairing primitives.
+  evidence:
+    path: conn_experiment_01/src/conn_exp/experiment2.py
+    line: 21
+    excerpt: from conn_exp.har_core import CONDITION_NAMES,HARGates,geometry_from_coordinates,initial_state,paired_batches,train
+    sha256: 8c29b5363b278dea55de7831d83792fb48915ea9a40d9bd9a65099e6991b9ff7
+- id: dependency_06
+  from_path: conn_experiment_01/src/conn_exp/har_data.py
+  to_path: conn_experiment_01/data/raw/uci_har_original.zip
+  relation: raw_dataset_input
+  verification: verified_static
+  mechanism: Raw UCI HAR archive path; no new download performed.
+  evidence:
+    path: conn_experiment_01/src/conn_exp/har_data.py
+    line: 184
+    excerpt: parser.add_argument('--archive',type=Path,default=REPO/'data/raw/uci_har_original.zip')
+    sha256: e7b1a6acffb2109755ad5d8e0bd9f5e818430d8f362cfc4967d257995fd04fdf
+- id: dependency_07
+  from_path: CoNN_Associative_Relationships/src/conn_assoc/paths.py
+  to_path: conn_experiment_01
+  relation: sibling_path
+  verification: verified_static
+  mechanism: Resolves the original sibling project; moving directories changes this dependency.
+  evidence:
+    path: CoNN_Associative_Relationships/src/conn_assoc/paths.py
+    line: 14
+    excerpt: return (EXPERIMENT_ROOT / ".." / "conn_experiment_01").resolve()
+    sha256: cb82eded65c5783fb07ed8b40ec42a9b07f3a8daa1f3931367c3ec406cbce726
+- id: dependency_08
+  from_path: CoNN_Associative_Relationships/src/conn_assoc/paths.py
+  to_path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1
+  relation: fixed_historical_run_path
+  verification: verified_static
+  mechanism: Exact historical Experiment 02 identifier is embedded in the path helper.
+  evidence:
+    path: CoNN_Associative_Relationships/src/conn_assoc/paths.py
+    line: 18
+    excerpt: return experiment2_root() / "results" / "runs" / "20261019T004346Z_experiment2_har_v1"
+    sha256: cb82eded65c5783fb07ed8b40ec42a9b07f3a8daa1f3931367c3ec406cbce726
+- id: dependency_09
+  from_path: CoNN_Associative_Relationships/src/conn_assoc/data.py
+  to_path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared
+  relation: prepared_dataset_input
+  verification: verified_static
+  mechanism: Reads the original engineered/temporal arrays and associated scalers.
+  evidence:
+    path: CoNN_Associative_Relationships/src/conn_assoc/data.py
+    line: 78
+    excerpt: return experiment2_run() / "prepared" / representation
+    sha256: 8c9d7514387df28331095a5863a849a97b3fd8ae1a68ea64cc67e110806ff7eb
+- id: dependency_10
+  from_path: CoNN_Associative_Relationships/src/conn_assoc/data.py
+  to_path: conn_experiment_01/data/raw/uci_har_original.zip
+  relation: raw_dataset_input
+  verification: verified_static
+  mechanism: Accesses and verifies the archive through the original path helper.
+  evidence:
+    path: CoNN_Associative_Relationships/src/conn_assoc/data.py
+    line: 36
+    excerpt: path = archive_path()
+    sha256: 8c9d7514387df28331095a5863a849a97b3fd8ae1a68ea64cc67e110806ff7eb
+- id: dependency_11
+  from_path: CoNN_Associative_Relationships/src/conn_assoc/phase23_core.py
+  to_path: conn_experiment_01/src/conn_exp/har_core.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Imports HARMLP, initial_state and paired_batches after original source-path insertion.
+  evidence:
+    path: CoNN_Associative_Relationships/src/conn_assoc/phase23_core.py
+    line: 25
+    excerpt: from conn_exp.har_core import HARMLP, initial_state, paired_batches
+    sha256: 4e5c05965ac8669b66f77a596b79fed659d197f32646de835bc5edfd3a5ad172
+- id: dependency_12
+  from_path: CoNN_Associative_Relationships/src/conn_assoc/phase23_core.py
+  to_path: conn_experiment_01/src/conn_exp/gates.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Imports historical mask generation.
+  evidence:
+    path: CoNN_Associative_Relationships/src/conn_assoc/phase23_core.py
+    line: 26
+    excerpt: from conn_exp.gates import draw_masks
+    sha256: 4e5c05965ac8669b66f77a596b79fed659d197f32646de835bc5edfd3a5ad172
+- id: dependency_13
+  from_path: CoNN_Associative_Relationships/src/conn_assoc/phase3_context.py
+  to_path: conn_experiment_01/src/conn_exp/har_core.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Context model depends on the original HAR implementation.
+  evidence:
+    path: CoNN_Associative_Relationships/src/conn_assoc/phase3_context.py
+    line: 10
+    excerpt: from conn_exp.har_core import HARMLP
+    sha256: 0e41483164f823d32b415dd4307a72ba10fa7794a58808c8f0a196a5fce70e05
+- id: dependency_14
+  from_path: CoNN_Associative_Relationships/src/conn_assoc/phase23.py
+  to_path: CoNN_Associative_Relationships/config/phase23_active_run.txt
+  relation: configuration_reference
+  verification: verified_static
+  mechanism: Reads a mutable active-run pointer; it is not a universal scientific authority.
+  evidence:
+    path: CoNN_Associative_Relationships/src/conn_assoc/phase23.py
+    line: 23
+    excerpt: def active_run():return Path((EXPERIMENT_ROOT/'config/phase23_active_run.txt').read_text().strip())
+    sha256: 06aaabd6dc27559b6a7c200aec20153c4f20fff8552de95943afbecfa3953065
+- id: dependency_15
+  from_path: CoNN_Associative_Relationships/config/phase23_active_run.txt
+  to_path: CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1
+  relation: active_run_pointer
+  verification: verified_static
+  mechanism: Pointer currently names this run using an absolute Windows path.
+  evidence:
+    path: CoNN_Associative_Relationships/config/phase23_active_run.txt
+    line: 1
+    excerpt: E:\CoNN\CoNN_Associative_Relationships\results\runs\20261019T030442340025Z_phase23_v1
+    sha256: d24d6cf55eb85fa10fdf765d5a02688a0632d413af38001302e4fc389e5596fb
+- id: dependency_16
+  from_path: CoNN_Associative_Relationships/phase3b_context_diagnostics/src/models.py
+  to_path: CoNN_Associative_Relationships/src/conn_assoc/phase3_context.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Imports ContextFactor and mask_input from the parent implementation.
+  evidence:
+    path: CoNN_Associative_Relationships/phase3b_context_diagnostics/src/models.py
+    line: 11
+    excerpt: from conn_assoc.phase3_context import ContextFactor, mask_input
+    sha256: f5f00ef1930a91f280ba263f5721bdd1437f49d21472f883269f6d456fd775f9
+- id: dependency_17
+  from_path: CoNN_Associative_Relationships/phase3b_context_diagnostics/src/models.py
+  to_path: CoNN_Associative_Relationships/src/conn_assoc/phase23_core.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Imports gates, runtime setup, initialization and HARMLP.
+  evidence:
+    path: CoNN_Associative_Relationships/phase3b_context_diagnostics/src/models.py
+    line: 12
+    excerpt: from conn_assoc.phase23_core import Gates, configure, initial_state, HARMLP
+    sha256: f5f00ef1930a91f280ba263f5721bdd1437f49d21472f883269f6d456fd775f9
+- id: dependency_18
+  from_path: CoNN_Associative_Relationships/phase3b_context_diagnostics/src/preflight.py
+  to_path: CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1
+  relation: historical_integrity_input
+  verification: verified_static
+  mechanism: Verifies prior manifests and job artifacts rather than constituting a new independent study.
+  evidence:
+    path: CoNN_Associative_Relationships/phase3b_context_diagnostics/src/preflight.py
+    line: 16
+    excerpt: OLD=PROJECT/'results/runs/20261019T030442340025Z_phase23_v1'
+    sha256: 25f110cd72de66fdb3215776172fed798c5f6f4df3f0b75d6c69fda4849cd1b2
+- id: dependency_19
+  from_path: CoNN_Associative_Relationships/phase3b_context_diagnostics/src/preflight.py
+  to_path: CoNN_Associative_Relationships/src/conn_assoc/data.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Uses original raw/prepared-data verification.
+  evidence:
+    path: CoNN_Associative_Relationships/phase3b_context_diagnostics/src/preflight.py
+    line: 13
+    excerpt: from conn_assoc.data import verify_archive,verify_prepared_manifest
+    sha256: 25f110cd72de66fdb3215776172fed798c5f6f4df3f0b75d6c69fda4849cd1b2
+- id: dependency_20
+  from_path: experiments/experiment_04/src/conn_exp04/__init__.py
+  to_path: conn_experiment_01/src
+  relation: source_path_insertion
+  verification: verified_static
+  mechanism: Root is inferred with parents[4]; existing conn_exp is imported without installation.
+  evidence:
+    path: experiments/experiment_04/src/conn_exp04/__init__.py
+    line: 7
+    excerpt: sys.path.insert(0, str(ROOT / 'conn_experiment_01' / 'src'))
+    sha256: a88d4b0e96bf6deb2d16b36b32cda774650183225d475f9d20c3acdd2af9e45b
+- id: dependency_21
+  from_path: experiments/experiment_04/src/conn_exp04/core.py
+  to_path: conn_experiment_01/src/conn_exp/gates.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Reuses original gates primitives; historical semantics must be retained.
+  evidence:
+    path: experiments/experiment_04/src/conn_exp04/core.py
+    line: 12
+    excerpt: from conn_exp.gates import gaussian_gate, apply_row_permutation, scalar_gate, draw_masks
+    sha256: 1f470e626ede36e5d69f090c6a6e678c508a14069135efcc2eaced01818132d2
+- id: dependency_22
+  from_path: experiments/experiment_04/src/conn_exp04/core.py
+  to_path: conn_experiment_01/src/conn_exp/geometry.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Reuses original geometry primitives; historical semantics must be retained.
+  evidence:
+    path: experiments/experiment_04/src/conn_exp04/core.py
+    line: 13
+    excerpt: from conn_exp.geometry import make_task_geometry
+    sha256: 1f470e626ede36e5d69f090c6a6e678c508a14069135efcc2eaced01818132d2
+- id: dependency_23
+  from_path: experiments/experiment_04/src/conn_exp04/core.py
+  to_path: conn_experiment_01/src/conn_exp/models.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Reuses original models primitives; historical semantics must be retained.
+  evidence:
+    path: experiments/experiment_04/src/conn_exp04/core.py
+    line: 14
+    excerpt: from conn_exp.models import CoNNMLP, initial_state_dict, fingerprint_state, build_optimizer, trainable_count
+    sha256: 1f470e626ede36e5d69f090c6a6e678c508a14069135efcc2eaced01818132d2
+- id: dependency_24
+  from_path: experiments/experiment_04/src/conn_exp04/core.py
+  to_path: conn_experiment_01/src/conn_exp/schedules.py
+  relation: python_import
+  verification: verified_static
+  mechanism: Reuses original schedules primitives; historical semantics must be retained.
+  evidence:
+    path: experiments/experiment_04/src/conn_exp04/core.py
+    line: 15
+    excerpt: from conn_exp.schedules import schedule_at, EXACT_FACTOR, release_step_index
+    sha256: 1f470e626ede36e5d69f090c6a6e678c508a14069135efcc2eaced01818132d2
+datasets:
+- id: synthetic_and
+  kind: generated_synthetic_family
+  source_paths:
+  - conn_experiment_01/src/conn_exp/data.py
+  - conn_experiment_01/configs/pilot.yaml
+  parent_dataset_ids: []
+  evidence:
+  - path: conn_experiment_01/src/conn_exp/data.py
+    role: Generator implementation
+    verification: file_read_static
+    sha256: 3994c240b0040146c553eeb2c7d36140b9dc7bdff501986712a7a34e7719b557
+  limitations:
+  - AND/XOR variants and their run-specific data are not one globally shared split; use each frozen run configuration.
+- id: uci_har_archive
+  kind: raw_vendor_archive
+  source_paths:
+  - conn_experiment_01/data/raw/uci_har_original.zip
+  parent_dataset_ids: []
+  evidence:
+  - path: CoNN_Associative_Relationships/audit/normalization_history.md
+    role: Vendor and later preprocessing history
+    verification: file_read_static
+    sha256: 288cd6a313d5a761eb899c3eef71b86b68018bd4cbc00ed874b6755729fe5024
+  - path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/audit/dataset_audit.json
+    role: Historical archive audit
+    verification: file_read_static
+    sha256: 22aeab98f6f8de894e4c5079d6bfd8a62dd8ca2e7739b04779a4aadeacd18b27
+  limitations:
+  - Vendor filtering/windowing/normalization is already applied; original continuous recordings cannot be reconstructed
+    from this archive.
+- id: har_subject_partition
+  kind: frozen_subject_partition
+  source_paths:
+  - conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/subject_split.frozen.json
+  parent_dataset_ids:
+  - uci_har_archive
+  evidence:
+  - path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/subject_split.frozen.json
+    role: Frozen fit/validation/test subject identities
+    verification: file_read_static
+    sha256: d941639621a5dcdd94623507c0e29c8a2b27886dc30813b6b3e207cd88adf698
+  limitations:
+  - Later seven-fold development CV is not identical to the Experiment 02 fit/validation split.
+- id: har_engineered_prepared
+  kind: derived_prepared_dataset
+  source_paths:
+  - conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared/engineered
+  - conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared/engineered/scaler.npz
+  - conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared/engineered/feature_coordinates.csv
+  parent_dataset_ids:
+  - uci_har_archive
+  - har_subject_partition
+  evidence:
+  - path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared_manifest.json
+    role: Prepared-file hashes
+    verification: file_read_static
+    sha256: 44840bb09ccaf8af79e6f2e4ed7c02713880895fe0a63e34e637b7ffb5d65517
+  - path: CoNN_Associative_Relationships/audit/normalization_history.md
+    role: Frozen fit-subject z-score provenance
+    verification: file_read_static
+    sha256: 288cd6a313d5a761eb899c3eef71b86b68018bd4cbc00ed874b6755729fe5024
+  limitations:
+  - 561-feature vendor normalization precedes the later z-score; use run-specific split/scaler records.
+- id: har_temporal_prepared
+  kind: derived_prepared_dataset
+  source_paths:
+  - conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared/temporal
+  - conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared/temporal/scaler.npz
+  - conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared/temporal/feature_coordinates.csv
+  parent_dataset_ids:
+  - uci_har_archive
+  - har_subject_partition
+  evidence:
+  - path: conn_experiment_01/results/runs/20261019T004346Z_experiment2_har_v1/prepared_manifest.json
+    role: Prepared-file hashes
+    verification: file_read_static
+    sha256: 44840bb09ccaf8af79e6f2e4ed7c02713880895fe0a63e34e637b7ffb5d65517
+  - path: CoNN_Associative_Relationships/PROTOCOL_PHASE23_v1.md
+    role: Temporal development input policy
+    verification: file_read_static
+    sha256: 8ed6dcdbefaa0c22b02fb9ec2c449d45e66e0e7e5ce8bf4b4ce7e783af0eab30
+  limitations:
+  - Phase 2/3 and 3B reuse the original scaler over development folds; preprocessing overlap and selection
+    reuse are disclosed.
+- id: synthetic_geometry04
+  kind: generated_synthetic_family
+  source_paths:
+  - experiments/experiment_04/src/conn_exp04/core.py
+  - experiments/experiment_04/config/confirmatory.json
+  - experiments/experiment_04/results/run_20261121T031743_424624Z_7ac51c80
+  parent_dataset_ids: []
+  evidence:
+  - path: experiments/experiment_04/PREREGISTRATION.md
+    role: Latent-interaction DGP, split policy and negative-control pairing
+    verification: file_read_static
+    sha256: b1219d0957961e4685d7557d53d59c2eb1a69ab4664f5328bfd6334349d57a72
+  limitations:
+  - Does not use UCI HAR. Structured and negative tasks are paired variants within a seed, not independent
+    studies.
+unresolved:
+- question: Which source-stage version executed each Phase 2/3 fit?
+  evidence_paths:
+  - CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/source
+  - CoNN_Associative_Relationships/results/runs/20261019T030442340025Z_phase23_v1/jobs
+  status: unresolved
+- question: Can all studies be replayed with pinned transitive dependencies in a separate environment?
+  evidence_paths:
+  - conn_experiment_01/pyproject.toml
+  - CoNN_Associative_Relationships/pyproject.toml
+  - docs/research_validation/experiment_04/REPRODUCTION.md
+  status: unresolved
+- question: Which Phase 3B null population, layer attribution and futility rule should a future protocol freeze
+    use?
+  evidence_paths:
+  - CoNN_Associative_Relationships/phase3b_context_diagnostics/reports/PROTOCOL_RECONCILIATION_20261020.md
+  status: unresolved

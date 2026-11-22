@@ -1,0 +1,30 @@
+# CoNN text file line-ending policy
+* text=auto
+
+# Source code and documentation
+*.py      text eol=lf
+*.pyi     text eol=lf
+*.md      text eol=lf
+*.yaml    text eol=lf
+*.yml     text eol=lf
+*.toml    text eol=lf
+*.json    text eol=lf
+*.jsonl   text eol=lf
+*.csv     text eol=lf
+*.sh      text eol=lf
+
+# Windows scripts
+*.ps1     text eol=crlf
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
+
+# Binary files
+*.png     binary
+*.jpg     binary
+*.pdf     binary
+*.pt      binary
+*.pth     binary
+*.ckpt    binary
+*.npy     binary
+*.npz     binary
+*.zip     binary
